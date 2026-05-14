@@ -39,6 +39,18 @@
 		}
 	];
 
+	const rempahOrganik = [
+		{
+			index: 1,
+			subtitle: 'Coconut Oil',
+			image: { placeholder2 }
+		},
+		{
+			index: 2,
+			subtitle: 'Coconut Oil',
+			image: { placeholder2 }
+		}
+	];
 	let current = $state(0);
 	function nextSlide() {
 		current = (current + 1) % slides.length;
@@ -54,7 +66,7 @@
 		{#each slides as item}
 			<div class="flex h-full min-w-full flex-col">
 				<!-- slide content -->
-				<div class="relative flex h-[75%] w-full shrink-0">
+				<div class="relative flex h-[67%] w-full shrink-0">
 					<img
 						src={placeholder1}
 						alt="placeholder1"
@@ -67,7 +79,7 @@
 						{item.subtitle.toUpperCase()}
 					</div>
 				</div>
-				<div class="flex min-h-[25%] flex-col justify-center bg-gray-500 px-6 text-justify">
+				<div class="flex min-h-[33%] flex-col justify-center bg-gray-500 px-6 text-justify">
 					<p class="">
 						{item.paragraph}
 					</p>
