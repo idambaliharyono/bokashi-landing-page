@@ -186,6 +186,8 @@
 	function nextSlide() {
 		current = (current + 1) % slides.length;
 	}
+
+	let showAll = $state(false);
 </script>
 
 <!-- hero section -->
@@ -322,16 +324,50 @@
 	</div>
 </section>
 
-<section id="produk" class="mt-10 h-[80vh] w-full text-center">
-	<div>
+<section id="produk" class="mt-10 h-[60vh] w-full overflow-hidden text-center">
+	<div class="flex h-full flex-col">
 		<div class="carousel-track flex h-full w-full gap-8">
 			{#each loopRempah as item}
-				<div class="relative aspect-9/16 max-h-[100%] w-[40%]">
-					<img src={item.image} alt={item.subtitle} class="h-full w-full rounded-xl object-cover" />
+				<div class="relative flex aspect-9/16 max-h-[100%] w-[40%] flex-col border border-black">
+					<img
+						src={item.image}
+						alt={item.subtitle}
+						class="min-h-0 w-full flex-1 rounded-xl border border-black object-cover"
+					/>
+					<div class="p-4 text-left">
+						<h4 class="font-bold">Product</h4>
+						<p>
+							Product Brief Info Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+						</p>
+					</div>
 				</div>
 			{/each}
 		</div>
 		<Button class="mx-auto">View All</Button>
+	</div>
+</section>
+
+<section id="otherBusiness" class="mt-10">
+	<h1 class="mx-auto text-center text-3xl font-bold">Other Business Line</h1>
+	<div class="mx-2 grid grid-cols-1 justify-items-center">
+		<div class="flex flex-col items-center justify-center gap-4 border border-black">
+			{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
+				<div>
+					<img
+						src={item.image}
+						alt={item.subtitle}
+						class="aspect-square w-full border border-black"
+					/>
+					<div class="text-center">
+						<h4 class="font-bold">{item.subtitle}</h4>
+						<p>
+							{item.paragraph}
+						</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+		<button onclick={() => (showAll = !showAll)}>{showAll ? 'Show less' : 'Show All'}</button>
 	</div>
 </section>
 
