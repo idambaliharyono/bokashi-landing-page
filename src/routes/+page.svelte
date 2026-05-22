@@ -199,7 +199,7 @@
 	>
 		{#each slides as item}
 			<div class="flex h-full min-w-full flex-col">
-				<div class="relative flex h-[45%] shrink-0">
+				<div class="relative flex h-[50%] shrink-0">
 					<img
 						src={placeholder1}
 						alt="placeholder1"
@@ -208,7 +208,7 @@
 
 					<div class="absolute inset-0 z-10 bg-black/20"></div>
 				</div>
-				<div class="flex min-h-[55%] w-full flex-col justify-center gap-4 px-6 text-center">
+				<div class="mt-8 flex w-full flex-col justify-center gap-4 px-6 text-center">
 					<div class="mx-4 flex flex-col justify-center text-2xl font-black">
 						{#each item.subtitle.toUpperCase().split('|') as line}
 							<span>{line}</span>
@@ -252,7 +252,7 @@
 	</button>
 </section>
 <section class="flex h-screen w-full flex-col justify-center gap-6 px-2">
-	<img src={placeholder2} class="rounded-xl object-cover object-center p-2" alt="" />
+	<img src={placeholder2} class="aspect-3/4 rounded-xl object-cover object-center p-2" alt="" />
 	<div class="flex flex-col text-center text-3xl">
 		<span>Sacred Herbs for Body,</span>
 		<span>Mind, and Soul</span>
@@ -267,19 +267,19 @@
 	</div>
 	<Button class="mx-auto">Read More</Button>
 </section>
-<section class="flex h-[70vh] w-full overflow-x-hidden">
-	<div class="flex h-full w-full flex-col gap-4 bg-gray-200 px-2 py-8 text-center">
+<section class="flex h-[70vh] w-full overflow-x-auto">
+	<div class="flex h-full w-full flex-col gap-4 bg-gray-200 py-8 text-center">
 		<div class="flex h-[20%] flex-col gap-4">
 			<h2 class="text-2xl font-bold">100% REMPAH ORGANIK</h2>
 			<p>Ditanam oleh petani lokal Indonesia</p>
 		</div>
 
 		<!-- carausel  -->
-		<div class="relative h-full w-full overflow-x-hidden">
+		<div class="relative h-full w-full overflow-x-auto">
 			<!-- sliding carausel content -->
 			<div class="carousel-track flex h-full gap-8">
 				{#each loopRempah as item}
-					<div class="relative aspect-9/16 max-h-[100%] w-[40%]">
+					<div class="relative aspect-2/3 max-h-[100%] w-[40%]">
 						<img
 							src={item.image}
 							alt={item.subtitle}
@@ -324,7 +324,7 @@
 	</div>
 </section>
 
-<section id="produk" class="mt-10 h-[60vh] w-full overflow-hidden text-center">
+<section id="produk" class="mt-10 h-[60vh] w-full overflow-x-auto text-center">
 	<div class="flex h-full flex-col">
 		<div class="carousel-track flex h-full w-full gap-8">
 			{#each loopRempah as item}
