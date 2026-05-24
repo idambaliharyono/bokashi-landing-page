@@ -4,6 +4,9 @@
 	import placeholder2 from '$lib/assets/5563.jpg';
 	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import Button from '$lib/components/Button.svelte';
+	import slides_3 from '$lib/assets/slides_index_3.jpg';
+	import slides_4 from '$lib/assets/slides_index_4.jpg';
+
 	import {
 		Badge,
 		BadgeCent,
@@ -13,9 +16,9 @@
 		BadgeIndianRupee
 	} from '@lucide/svelte';
 
-	const isMobile = new MediaQuery('(max-width: 383px)');
-	const isTablet = new MediaQuery('(min-width: 384px) and (max-width: 1279px)');
-	const isDesktop = new MediaQuery('(min-width: 1280px)');
+	// const isMobile = new MediaQuery('(max-width: 383px)');
+	// const isTablet = new MediaQuery('(min-width: 384px) and (max-width: 1279px)');
+	// const isDesktop = new MediaQuery('(min-width: 1280px)');
 
 	const slides = [
 		{
@@ -37,14 +40,14 @@
 			subtitle: 'Holistic Wellness| From Balinese| Heritage',
 			paragraph_mobile:
 				'Menghadirkan terapi enzim| ala Jepang pertama di Indonesia.| Usada Pak Oles memadukan pijat| tradisional Bali dengan Minyak Oles| Bokashi. Perawatan alami untuk| membantu meredakan nyeri,| mengurangi stres, dan mendetoks| racun dalam tubuh.',
-			image: 'image'
+			image: slides_3
 		},
 		{
 			index: 4,
 			subtitle: 'Living Gently| in the Heart| of North Bali',
 			paragraph_mobile:
 				'Villa Ipsa menawarkan pengalaman| menginap  menenangkan di jantung| Bali Utara. Memadukan aktivitas| berwisata dengan holistic wellness yang| memberikan nuansa damai, jauh dari| hiruk-pikuk kota. Villa Ipsa memberi| ruang untuk bernapas dan menikmati| ketenangan dalam kesederhanaan.',
-			image: 'image'
+			image: slides_4
 		}
 	];
 
@@ -198,15 +201,15 @@
 		style={`transform: translateX(-${current * 100}%);`}
 	>
 		{#each slides as item}
-			<div class="flex h-full min-w-full flex-col">
+			<div class="flex h-full min-w-full flex-col p-2">
 				<div class="relative flex h-[50%] shrink-0">
-					<img
-						src={placeholder1}
-						alt="placeholder1"
-						class="absolute inset-0 h-full w-full rounded-xl object-cover object-center p-2"
+					<enhanced:img
+						src={item.image}
+						alt={item.subtitle}
+						class="absolute inset-0 h-full w-full rounded-2xl object-cover object-center"
 					/>
 
-					<div class="absolute inset-0 z-10 bg-black/20"></div>
+					<div class="absolute inset-0 z-10 rounded-2xl bg-black/20"></div>
 				</div>
 				<div class="mt-8 flex w-full flex-col justify-center gap-4 px-6 text-center">
 					<div class="mx-4 flex flex-col justify-center text-2xl font-black">
@@ -232,7 +235,7 @@
 		onclick={nextSlide}
 		class="
 			absolute
-			top-[40%]
+			top-[45%]
 			right-4
 			z-50
 			-translate-y-1/2
@@ -251,8 +254,12 @@
 		>>
 	</button>
 </section>
-<section class="flex h-screen w-full flex-col justify-center gap-6 px-2">
-	<img src={placeholder2} class="aspect-3/4 rounded-xl object-cover object-center p-2" alt="" />
+<section class="my-8 flex h-screen w-full flex-col justify-center gap-6 px-2">
+	<img
+		src={placeholder2}
+		class="aspect-3/4 h-[50%] rounded-xl border border-black object-cover object-center p-2"
+		alt=""
+	/>
 	<div class="flex flex-col text-center text-3xl">
 		<span>Sacred Herbs for Body,</span>
 		<span>Mind, and Soul</span>
@@ -265,7 +272,7 @@
 			tubuh dan kesehatan yang efektif, aman, dan selaras dengan alam.
 		</p>
 	</div>
-	<Button class="mx-auto">Read More</Button>
+	<Button variant="primary" class="mx-auto">Read More</Button>
 </section>
 <section class="flex h-[70vh] w-full overflow-x-auto">
 	<div class="flex h-full w-full flex-col gap-4 bg-gray-200 py-8 text-center">
@@ -367,7 +374,7 @@
 				</div>
 			{/each}
 		</div>
-		<button onclick={() => (showAll = !showAll)}>{showAll ? 'Show less' : 'Show All'}</button>
+		<Button onclick={() => (showAll = !showAll)}>{showAll ? 'Show less' : 'Show All'}</Button>
 	</div>
 </section>
 
