@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import whatsapp from '$lib/assets/whatsappIcon.png';
 	// import { MediaQuery } from 'svelte/reactivity';
 	//
 	// const isMobile = new MediaQuery('(max-width: 383px)');
@@ -19,9 +20,14 @@
 	<section id="topNav" class="">
 		<h1 class="sticky h-10">top nav</h1>
 	</section>
-	{@render children()}
+	<section class="font-body">
+		{@render children()}
+		<a href="google.com" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
+			<enhanced:img src={whatsapp} alt="" />
+		</a>
+	</section>
 
-	<section id="footer" class=" py-4 text-xs">
+	<section id="footer" class=" z-51 pt-4 pb-2 text-xs">
 		<div class="px-4">
 			<div class="flex w-full flex-col gap-4">
 				<h3>Bokashi Indonesia</h3>
@@ -41,7 +47,11 @@
 				</div>
 			</div>
 			<div class="-mx-3.5 my-2 h-px bg-black"></div>
-			<div class="">© 2026 PT. Karya Pak Oles Tokcer Group. All Rights Reserved.</div>
+			<div class=" text-center">
+				<p>© 2026 PT. Karya Pak Oles Tokcer Group.</p>
+				All Rights Reserved.
+				<p></p>
+			</div>
 		</div>
 	</section>
 </div>

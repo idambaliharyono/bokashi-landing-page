@@ -2,7 +2,7 @@
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import type { Snippet } from 'svelte';
 
-	type Variant = 'primary' | 'secondary';
+	type Variant = 'primary' | 'secondary' | 'square';
 	type Size = 'sm' | 'md' | 'lg';
 	type ButtonProps = HTMLButtonAttributes & {
 		href?: undefined;
@@ -31,11 +31,13 @@
 	}: Props = $props();
 
 	const base =
-		'inline-flex items-center justify-center rounded-xl font-black transition-colors disabled:opacity-50 disabled:pointer-events-none';
+		'inline-flex items-center justify-center transition-colors disabled:opacity-50 disabled:pointer-events-none';
 
 	const variants: Record<Variant, string> = {
-		primary: 'bg-secondary text-primary hover:bg-secondary/80',
-		secondary: 'bg-primary text-secondary hover:bg-primary/80'
+		primary: 'bg-secondary font-heading text-primary hover:bg-secondary/80 font-black rounded-xl ',
+		secondary: 'bg-primary text-secondary font-heading hover:bg-primary/80 rounded-xl font-black ',
+
+		square: 'bg-primary text-secondary hover:bg-primary/80 text-secondary'
 	};
 
 	const sizes: Record<Size, string> = {

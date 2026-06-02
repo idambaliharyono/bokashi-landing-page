@@ -4,4 +4,7 @@
 	--color-primary: oklch(29% 0.05 196);
 	--color-secondary: oklch(95% 0.02 140);
 	--color-accent: oklch(52% 0.12 168);
+
+	--font-heading: 'Montserrat', sans-serif;
+	--font-body: 'Questrial', sans-serif;
 }
