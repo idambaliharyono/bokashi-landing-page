@@ -34,7 +34,7 @@
 				id: 'Bokashi menghadirkan rangkaian produk kesehatan berbasis rempah nusantara dipadukan dengan teknologi fermentasi EM dari Jepang sejak 1997. Setiap formulanya dirancang untuk membantu menyehatkan tubuh keluarga Indonesia.'
 			},
 			image: slides1,
-			page: '/about'
+			page: '/about-us'
 		},
 		{
 			index: 2,
@@ -62,7 +62,7 @@
 				id: 'Usada Pak Oles memadukan pijat tradisional Bali dengan Minyak Oles Bokashi. Perawatan alami untuk membantu meredakan nyeri, mengurangi stres, dan mendetoks racun dalam tubuh.'
 			},
 			image: slides3,
-			page: '/usadaPakOles'
+			page: '/usada-pak-oles'
 		},
 		{
 			index: 4,
@@ -76,7 +76,7 @@
 				id: 'Memadukan aktivitas berwisata dengan holistic wellness yang memberikan nuansa damai, jauh dari hiruk-pikuk kota. Villa Ipsa memberi ruang untuk bernapas dan menikmati ketenangan dalam kesederhanaan.'
 			},
 			image: slides4,
-			page: '/villaIpsa'
+			page: '/villa-ipsa'
 		}
 	];
 	const slides = [
@@ -261,7 +261,6 @@
 </script>
 
 <!-- hero section -->
-<div></div>
 <section class="relative w-full overflow-hidden text-primary">
 	<!-- slide content -->
 	<div class="relative">
@@ -325,10 +324,10 @@
 		<!-- slide button -->
 	</div>
 </section>
-<section class="relative my-8 flex h-screen w-full flex-col justify-center gap-6 px-2 text-primary">
+<section class="relative my-20 flex w-full flex-col justify-center gap-6 px-2 text-primary">
 	<enhanced:img
 		src={placeholder2}
-		class="aspect-3/4 h-[50%] rounded-xl border border-black object-cover object-center p-2"
+		class="mx-auto aspect-3/4 w-sm rounded-xl border border-black object-cover object-center p-2"
 		alt=""
 	/>
 
@@ -344,7 +343,7 @@
 			tubuh dan kesehatan yang efektif, aman, dan selaras dengan alam.
 		</p>
 	</div>
-	<Button variant="primary" class="mx-auto">Read More</Button>
+	<Button variant="primary" class="mx-auto" href="/production">Read More</Button>
 </section>
 <section class="flex h-[70vh] w-full overflow-x-auto text-white">
 	<div class="flex h-full w-full flex-col gap-4 bg-primary py-8 text-center">
@@ -405,7 +404,9 @@
 			bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
 		</p>
 	</div>
-	<Button variant="square">Learn More</Button>
+	<div class="flex justify-center">
+		<Button variant="square" class="mx-auto">Learn More</Button>
+	</div>
 </section>
 
 <!-- todo -->
