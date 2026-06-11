@@ -15,12 +15,12 @@
 <div
 	class="mx-auto
   sm:max-w-xl
-  xl:max-w-7xl"
+  lg:max-w-5xl"
 >
 	<section id="topNav" class="">
 		<h1 class="sticky h-10">top nav</h1>
 	</section>
-	<section class="font-body">
+	<section class="font-heading">
 		{@render children()}
 		<a href="google.com" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
 			<enhanced:img src={whatsapp} alt="" />
