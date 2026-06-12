@@ -26,7 +26,7 @@
 
 		<div
 			class="absolute inset-0 bg-gradient-to-{gradientDirection} from-transparent to-{overlayOpacity}"
-		/>
+		></div>
 
 		<!-- Slot for custom content -->
 		<div

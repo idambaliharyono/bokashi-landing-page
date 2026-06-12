@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { MediaQuery } from 'svelte/reactivity';
 	import placeholder1 from '$lib/assets/27002.jpg';
 	import placeholder2 from '$lib/assets/5563.jpg';
 	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
@@ -9,18 +8,17 @@
 	import slides3 from '$lib/assets/slides3.jpg';
 	import slides4 from '$lib/assets/slides4.jpg';
 
-	import {
-		Badge,
-		BadgeCent,
-		BadgeCheck,
-		BadgeDollarSign,
-		BadgeInfo,
-		BadgeIndianRupee
-	} from '@lucide/svelte';
+	// import {
+	// 	Badge,
+	// 	BadgeCent,
+	// 	BadgeCheck,
+	// 	BadgeDollarSign,
+	// 	BadgeInfo,
+	// 	BadgeIndianRupee
+	// } from '@lucide/svelte';
 
 	// const isMobile = new MediaQuery('(max-width: 383px)');
 	// const isTablet = new MediaQuery('(min-width: 384px) and (max-width: 1279px)');
-	const isDesktop = new MediaQuery('(min-width: 1024px)');
 	const slidesNew = [
 		{
 			index: 1,
@@ -106,6 +104,8 @@
 			page: '/usadaPakOles',
 			paragraph_mobile:
 				'Menghadirkan terapi enzim| ala Jepang pertama di Indonesia.| Usada Pak Oles memadukan pijat| tradisional Bali dengan Minyak Oles| Bokashi. Perawatan alami untuk| membantu meredakan nyeri,| mengurangi stres, dan mendetoks| racun dalam tubuh.',
+			paragraph_desktop:
+				'Menghadirkan terapi enzim| ala Jepang pertama di Indonesia.| Usada Pak Oles memadukan pijat| tradisional Bali dengan Minyak Oles| Bokashi. Perawatan alami untuk| membantu meredakan nyeri,| mengurangi stres, dan mendetoks| racun dalam tubuh.',
 			image: slides3
 		},
 		{
@@ -113,6 +113,8 @@
 			subtitle: 'Living Gently | in the Heart | of North Bali',
 			page: '/villaIpsa',
 			paragraph_mobile:
+				'Villa Ipsa menawarkan pengalaman| menginap  menenangkan di jantung| Bali Utara. Memadukan aktivitas| berwisata dengan holistic wellness yang| memberikan nuansa damai, jauh dari| hiruk-pikuk kota. Villa Ipsa memberi| ruang untuk bernapas dan menikmati| ketenangan dalam kesederhanaan.',
+			paragraph_desktop:
 				'Villa Ipsa menawarkan pengalaman| menginap  menenangkan di jantung| Bali Utara. Memadukan aktivitas| berwisata dengan holistic wellness yang| memberikan nuansa damai, jauh dari| hiruk-pikuk kota. Villa Ipsa memberi| ruang untuk bernapas dan menikmati| ketenangan dalam kesederhanaan.',
 			image: slides4
 		}
@@ -272,7 +274,7 @@
 				<div class="flex h-full min-w-full flex-col p-2">
 					<div
 						class="relative flex aspect-square shrink-0
-            lg:aspect-[16/9]"
+            lg:aspect-video"
 					>
 						<enhanced:img
 							src={item.image}
@@ -470,7 +472,6 @@
 	</div>
 </section>
 
-<!-- todo -->
 <section id="produk" class="mt-12 w-full overflow-x-hidden text-center">
 	<div class="flex flex-col gap-6">
 		<div class="carousel-track w-ful flex gap-12 overflow-x-hidden">
@@ -562,9 +563,6 @@
 	}
 
 	.carousel-track:hover {
-		animation-play-state: paused;
-	}
-	carousel-track-badge:hover {
 		animation-play-state: paused;
 	}
 </style>

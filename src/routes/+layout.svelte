@@ -2,11 +2,6 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import whatsapp from '$lib/assets/whatsappIcon.png';
-	// import { MediaQuery } from 'svelte/reactivity';
-	//
-	// const isMobile = new MediaQuery('(max-width: 383px)');
-	// const isTablet = new MediaQuery('(min-width: 384px) and (max-width: 1279px)');
-	// const isDesktop = new MediaQuery('(min-width: 1280px)');
 
 	let { children } = $props();
 </script>
@@ -22,7 +17,7 @@
 	</section>
 	<section class="font-heading">
 		{@render children()}
-		<a href="google.com" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
+		<a href="/" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
 			<enhanced:img src={whatsapp} alt="" />
 		</a>
 	</section>
@@ -39,11 +34,11 @@
 					</button>
 				</div>
 				<div class=" mb-2 flex justify-between">
-					<a href="">Home</a>
-					<a href="">About Us</a>
-					<a href="">Products</a>
-					<a href="">Media</a>
-					<a href="">Contacts</a>
+					<a href="/">Home</a>
+					<a href="/">About Us</a>
+					<a href="/">Products</a>
+					<a href="/">Media</a>
+					<a href="/">Contacts</a>
 				</div>
 			</div>
 			<div class="-mx-3.5 my-2 h-px bg-black"></div>

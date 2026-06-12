@@ -8,7 +8,7 @@
 		textColor = 'text-primary'
 	} = $props();
 
-	const hadingClass = `text-${headingSizeMobile} lg:text-${headingSizeDesktop}`;
+	const headingClass = $derived(`text-${headingSizeMobile} lg:text-${headingSizeDesktop}`);
 </script>
 
 <div class="mt-4 flex w-full flex-col justify-center gap-4 px-2 text-center {textColor} lg:px-10">
@@ -17,7 +17,7 @@
     text-2xl font-black tracking-tight
     lg:flex-row lg:gap-2"
 	>
-		<h2 class={hadingClass}>{heading}</h2>
+		<h2 class={headingClass}>{heading}</h2>
 	</div>
 	<div class="flex flex-col gap-4">
 		<div class="w-full font-body">
