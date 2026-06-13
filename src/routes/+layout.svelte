@@ -18,7 +18,7 @@
 	<section class="font-heading">
 		{@render children()}
 		<a href="/" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
-			<enhanced:img src={whatsapp} alt="" />
+			<img src={whatsapp} alt="" />
 		</a>
 	</section>
 

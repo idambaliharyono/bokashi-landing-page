@@ -1,4 +1,4 @@
-<script lang="Ts">
+<script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import hero from '$lib/assets/slides3.jpg';
 	import CenterText from '$lib/components/CenterText.svelte';
@@ -50,7 +50,7 @@
 <section>
 	<div class="rounded-xl bg-primary px-4 py-8 text-white">
 		<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-			<enhanced:img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
+			<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
 			<div>
 				<h6 class="italic underline">Good Manufacturing Practice</h6>
 				<p>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-			<enhanced:img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
+			<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
 			<div>
 				<h6 class="italic underline">EM Technology</h6>
 
@@ -71,7 +71,7 @@
 			</div>
 		</div>
 		<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-			<enhanced:img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
+			<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
 			<div>
 				<h6 class="italic underline">Halal and BPOM Certified</h6>
 
@@ -93,7 +93,7 @@
 	<div class="mt-4 flex flex-col gap-4 px-2">
 		{#each imagesVertical as item}
 			<div class="aspect-video w-full overflow-hidden rounded-2xl border border-black">
-				<enhanced:img
+				<img
 					src={item.image}
 					alt={item.subtitle}
 					class="h-full w-full object-cover object-center"
@@ -124,11 +124,7 @@
 <div class="mt-4 flex flex-col gap-4 px-2">
 	{#each imagesVertical as item}
 		<div class="aspect-square w-full overflow-hidden rounded-2xl border border-black">
-			<enhanced:img
-				src={item.image}
-				alt={item.subtitle}
-				class="h-full w-full object-cover object-center"
-			/>
+			<img src={item.image} alt={item.subtitle} class="h-full w-full object-cover object-center" />
 		</div>
 	{/each}
 </div>

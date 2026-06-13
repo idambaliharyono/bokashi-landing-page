@@ -122,7 +122,7 @@
 	{/each}
 </div>
 <CenterText heading="OUR JOURNEY" headingSizeDesktop="xl" headingSizeMobile="xl" />
-<enhanced:img src={verticalPlaceholder} alt="Dadong Bandung" class="mx-auto aspect-2/3 w-sm" />
+<img src={verticalPlaceholder} alt="Dadong Bandung" class="mx-auto aspect-2/3 w-sm" />
 <CenterText
 	heading="EMPOWERING LOCAL WISDOM"
 	headingSizeMobile="base"
@@ -131,7 +131,7 @@
 	]}
 />
 <div class="bg-primary px-3 py-4">
-	<enhanced:img
+	<img
 		src={verticalPlaceholder}
 		alt="Integrasi Teknologi Jepang"
 		class="mx-auto aspect-3/4 w-sm rounded-3xl"
@@ -145,7 +145,7 @@
 	/>
 </div>
 <div class="px-3 py-4">
-	<enhanced:img
+	<img
 		src={verticalPlaceholder}
 		alt="Integrasi Teknologi Jepang"
 		class="mx-auto aspect-3/4 w-sm rounded-3xl"
@@ -164,7 +164,7 @@
 	<div class="mt-4 flex flex-col gap-4 px-2">
 		{#each imagesVertical as item}
 			<div class="aspect-video w-full overflow-hidden rounded-2xl border border-black">
-				<enhanced:img
+				<img
 					src={item.image}
 					alt={item.subtitle}
 					class="h-full w-full object-cover object-center"
@@ -222,7 +222,7 @@
 			{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 				<div class="px-2">
 					<div class="mx-auto aspect-square w-xs border border-black">
-						<enhanced:img src={item.image} alt={item.subtitle} class="" />
+						<img src={item.image} alt={item.subtitle} class="" />
 					</div>
 					<div class="text-center">
 						<h4 class="font-bold">{item.subtitle}</h4>

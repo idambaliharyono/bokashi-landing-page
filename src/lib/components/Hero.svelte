@@ -18,7 +18,7 @@
 			? 'border border-black'
 			: ''}"
 	>
-		<enhanced:img
+		<img
 			{src}
 			{alt}
 			class="[&>img]:absolute [&>img]:inset-0 [&>img]:h-full [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>picture]:absolute [&>picture]:inset-0 [&>picture]:h-full [&>picture]:w-full"

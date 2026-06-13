@@ -276,7 +276,7 @@
 						class="relative flex aspect-square shrink-0
             lg:aspect-video"
 					>
-						<enhanced:img
+						<img
 							src={item.image}
 							alt={item.subtitle.id}
 							class="w-full rounded-2xl object-cover object-center
@@ -349,7 +349,7 @@
 	class="relative my-20 flex w-full flex-col justify-center gap-6 px-2 text-primary
   lg:grid lg:grid-cols-2 lg:gap-1 lg:px-20"
 >
-	<enhanced:img
+	<img
 		src={placeholder2}
 		class="mx-auto aspect-square w-lg rounded-xl border border-black object-cover object-center p-2
     lg:my-10"
@@ -403,7 +403,7 @@
 			<div class="carousel-track flex h-full gap-12">
 				{#each loopRempah as item}
 					<div class="aspect-3/4 w-xs">
-						<enhanced:img
+						<img
 							src={item.image}
 							alt={item.subtitle}
 							class="h-full w-full rounded-xl object-center"
@@ -425,7 +425,7 @@
 				class="flex aspect-square h-full w-18 justify-center rounded-full border border-black align-middle
         lg:w-24"
 			>
-				<enhanced:img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
+				<img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
 			</div>
 		{/each}
 	</div>
@@ -438,23 +438,19 @@
 	</div>
 
 	<div class="hidden p-6 lg:flex lg:justify-center">
-		<enhanced:img
+		<img
 			src={placeholder1}
 			alt="placeholder1"
 			class="aspect-square w-md rounded-2xl border border-black"
 		/>
-		<enhanced:img
+		<img
 			src={placeholder1}
 			alt="placeholder1"
 			class="aspect-square w-md rounded-2xl border border-black"
 		/>
 	</div>
 	<div class="flex justify-center p-6 lg:hidden">
-		<enhanced:img
-			src={placeholder1}
-			alt="placeholder1"
-			class="aspect-square w-md border border-black"
-		/>
+		<img src={placeholder1} alt="placeholder1" class="aspect-square w-md border border-black" />
 	</div>
 
 	<div class="text-center text-3xl font-bold">
@@ -477,7 +473,7 @@
 		<div class="carousel-track w-ful flex gap-12 overflow-x-hidden">
 			{#each loopRempah as item}
 				<div class="relative flex aspect-2/3 w-3xs shrink-0 flex-col border border-black">
-					<enhanced:img
+					<img
 						src={item.image}
 						alt={item.subtitle}
 						class="h-full w-full rounded-4xl border border-black object-cover"
@@ -526,7 +522,7 @@
 			{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 				<div class="px-2">
 					<div class="mx-auto aspect-square w-sm border border-black lg:w-3xs">
-						<enhanced:img src={item.image} alt={item.subtitle} class="" />
+						<img src={item.image} alt={item.subtitle} class="" />
 					</div>
 					<div class="mt-2 px-2 text-center text-xl">
 						<h4 class="italic underline">{item.subtitle}</h4>
