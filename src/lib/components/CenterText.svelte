@@ -1,31 +1,32 @@
 <!-- Hero.svelte -->
-<script>
+<script lang="ts">
 	let {
 		heading = 'this is heading',
 		body = [],
 		headingSizeMobile = '2xl',
-		headingSizeDesktop = '2xl',
-		textColor = 'text-primary'
+		headingSizeDesktop = '4xl',
+		paragraphColor = 'primary/80',
+		headingColor = 'primary',
+		paragraphAlignment = 'center'
 	} = $props();
 
-	const headingClass = $derived(`text-${headingSizeMobile} lg:text-${headingSizeDesktop}`);
+	const headingClass = $derived(
+		`text-${headingSizeMobile} lg:text-${headingSizeDesktop} lg:my-10 font-semibold text-${headingColor}`
+	);
+	const paragraphClass = $derived(
+		`mb-4 text-${paragraphAlignment} text-${paragraphColor} lg:mb-6 lg:text-xl/7 lg:tracking-wide `
+	);
 </script>
 
-<div class="mt-4 flex w-full flex-col justify-center gap-4 px-2 text-center {textColor} lg:px-10">
-	<div
-		class="gap-1/3 mx-4 flex flex-col justify-center font-heading
-    text-2xl font-black tracking-tight
-    lg:flex-row lg:gap-2"
-	>
-		<h2 class={headingClass}>{heading}</h2>
-	</div>
-	<div class="flex flex-col gap-4">
-		<div class="w-full font-body">
-			{#each body as paragraph}
-				<p class="mb-4">
-					{paragraph}
-				</p>
-			{/each}
-		</div>
+<div class="mt-4 flex w-full flex-col justify-center gap-4 px-2 text-center lg:px-10">
+	<h2 class={headingClass}>{heading}</h2>
+</div>
+<div class="flex flex-col gap-4 tracking-wide">
+	<div class="w-full font-body">
+		{#each body as paragraph}
+			<p class={paragraphClass}>
+				{paragraph}
+			</p>
+		{/each}
 	</div>
 </div>

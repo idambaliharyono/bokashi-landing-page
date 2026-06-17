@@ -308,11 +308,11 @@
 						</button>
 					</div>
 					<div
-						class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center
-            lg:px-18"
+						class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center lg:px-8
+            "
 					>
 						<div
-							class="gap-1/3 -mx-8 hidden font-heading text-4xl font-black tracking-wide lg:block"
+							class="gap-1/3 -mx-20 hidden font-heading text-4xl font-black tracking-wide lg:block"
 						>
 							{item.subtitle.id
 								.split('|')
@@ -330,7 +330,7 @@
 						<div class="flex flex-col gap-6">
 							<div
 								class="w-full font-body text-lg tracking-wider text-primary/80
-                lg:text-xl"
+                lg:text-xl lg:tracking-wide"
 							>
 								<p>{item.intro.id}</p>
 								<p>{item.content.id}</p>
