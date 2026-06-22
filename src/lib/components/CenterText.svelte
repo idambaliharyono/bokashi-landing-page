@@ -7,7 +7,8 @@
 		headingSizeDesktop = '4xl',
 		paragraphColor = 'primary/80',
 		headingColor = 'primary',
-		paragraphAlignment = 'center'
+		paragraphAlignment = 'center',
+		...rest
 	} = $props();
 
 	const headingClass = $derived(
@@ -18,7 +19,11 @@
 	);
 </script>
 
-<div class="mt-4 flex w-full flex-col justify-center gap-4 px-2 text-center lg:px-10">
+<div
+	class="mt-6 mb-6 flex w-full flex-col justify-center gap-4 px-2 text-center
+  lg:mt-4 lg:mb-0 lg:px-10"
+	{...rest}
+>
 	<h2 class={headingClass}>{heading}</h2>
 </div>
 <div class="flex flex-col gap-4 tracking-wide">
