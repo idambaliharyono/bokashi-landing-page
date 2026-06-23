@@ -30,49 +30,49 @@
 					<h3 class="mt-4 text-3xl font-bold">Bokashi Indonesia</h3>
 				</div>
 				<div>
-					<a href="" class="italic underline">About Us</a>
+					<a href="/" class="italic underline">About Us</a>
 					<div class="mt-8 flex flex-col text-left">
-						<a href="">Our Story</a>
-						<a href="">Ingredients</a>
-						<a href="">Our Impact</a>
-						<a href="">Our Journey</a>
-						<a href="">Production</a>
+						<a href="/">Our Story</a>
+						<a href="/">Ingredients</a>
+						<a href="/">Our Impact</a>
+						<a href="/">Our Journey</a>
+						<a href="/">Production</a>
 					</div>
 				</div>
 				<div>
-					<a href="" class="italic underline">Shop</a>
+					<a href="/" class="italic underline">Shop</a>
 					<div class="mt-8 flex flex-col text-left">
-						<a href="">Shopee Mall</a>
-						<a href="">Tokopedia</a>
-						<a href="">TikTok Shop </a>
-						<a href="">Lazada</a>
-						<a href="">Reseller</a>
-						<a href="">Offline Store</a>
+						<a href="/">Shopee Mall</a>
+						<a href="/">Tokopedia</a>
+						<a href="/">TikTok Shop </a>
+						<a href="/">Lazada</a>
+						<a href="/">Reseller</a>
+						<a href="/">Offline Store</a>
 					</div>
 				</div>
 				<div>
-					<a href="" class="italic underline">Bantuan</a>
+					<a href="/" class="italic underline">Bantuan</a>
 					<div class="mt-8 flex flex-col text-left">
-						<a href="">Contact</a>
-						<a href="">Karir</a>
-						<a href="">FAQs</a>
+						<a href="/">Contact</a>
+						<a href="/">Karir</a>
+						<a href="/">FAQs</a>
 					</div>
 				</div>
 			</div>
 			<div class="mt-12 flex justify-between px-8">
-				<a href="">
+				<a href="/">
 					<img src={whatsapp} alt="" class="w-14" />
 				</a>
-				<a href="">
+				<a href="/">
 					<img src={whatsapp} alt="" class="w-14" />
 				</a>
-				<a href="">
+				<a href="/">
 					<img src={whatsapp} alt="" class="w-14" />
 				</a>
-				<a href="">
+				<a href="/">
 					<img src={whatsapp} alt="" class="w-14" />
 				</a>
-				<a href="">
+				<a href="/">
 					<img src={whatsapp} alt="" class="w-14" />
 				</a>
 			</div>
@@ -109,7 +109,7 @@
 						<a href="/about-us">Production</a>
 						<a href="shopee.com">Reseller</a>
 					</div>
-					<a href="" class="text-right">Offline Store</a>
+					<a href="/" class="text-right">Offline Store</a>
 				</div>
 				<div>
 					<a href="/help" class="italic underline">Bantuan</a>
@@ -121,19 +121,19 @@
 				</div>
 
 				<div class="mt-12 flex justify-between">
-					<a href="">
+					<a href="/">
 						<img src={whatsapp} alt="" class="w-10" />
 					</a>
-					<a href="">
+					<a href="/">
 						<img src={whatsapp} alt="" class="w-10" />
 					</a>
-					<a href="">
+					<a href="/">
 						<img src={whatsapp} alt="" class="w-10" />
 					</a>
-					<a href="">
+					<a href="/">
 						<img src={whatsapp} alt="" class="w-10" />
 					</a>
-					<a href="">
+					<a href="/">
 						<img src={whatsapp} alt="" class="w-10" />
 					</a>
 				</div>

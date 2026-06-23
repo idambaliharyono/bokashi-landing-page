@@ -7,7 +7,19 @@
 	import slides2 from '$lib/assets/slides21.jpg';
 	import slides3 from '$lib/assets/slides3.jpg';
 	import slides4 from '$lib/assets/slides4.jpg';
-
+	import { CircleArrowRight } from '@lucide/svelte';
+	import logoBokashiFarm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo_ Bokashi Farm Waribang.webp';
+	import logoBalokEmas from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Balok Emas Wididana.webp';
+	import logoBpom from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo BPOM.webp';
+	import logoEm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo- EM.webp';
+	import logoJamu from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo Jamu.webp';
+	import logoMui from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo- MUI- Halal.webp';
+	import logoParabenFree from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo- Paraben Free.webp';
+	import logoPreservative from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo- Preservatives.webp';
+	import logoRadioBokashi from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Bokashi Raya.webp';
+	import logoRadioHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Hexon.webp';
+	import logoRadioPakoles from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Pak Oles Fm.webp';
+	import logoWarungBukitHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo Warung Bukit Hexon.webp';
 	// import {
 	// 	Badge,
 	// 	BadgeCent,
@@ -141,62 +153,32 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: logoPreservative
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: logoParabenFree
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image: logoJamu
 		},
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: logoMui
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: logoBpom
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
-		},
-		{
-			index: 1,
-			subtitle: 'Coconut Oil',
-			image: placeholder1
-		},
-		{
-			index: 2,
-			subtitle: 'Coconut Oil',
-			image: placeholderPhone
-		},
-		{
-			index: 3,
-			subtitle: 'Coconut Oil',
-			image: placeholder2
-		},
-		{
-			index: 1,
-			subtitle: 'Coconut Oil',
-			image: placeholder1
-		},
-		{
-			index: 2,
-			subtitle: 'Coconut Oil',
-			image: placeholderPhone
-		},
-		{
-			index: 3,
-			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image: logoEm
 		}
 	];
 	const loopBadge = [...badge, ...badge];
@@ -289,22 +271,13 @@
 							class="
 			absolute
 			right-3
-			bottom-6
+			bottom-12
       z-50
 			translate-y-1/2
               rounded-4xl
-			bg-black/40
-			p-8
-			text-white
-			backdrop-blur-sm
-			transition-all
-			duration-300
-			hover:scale-110
-			hover:bg-black/60
-			active:scale-95
 		"
 						>
-							>>
+							<CircleArrowRight class="h-18 w-18 font-black text-secondary" />
 						</button>
 					</div>
 					<div
@@ -312,7 +285,7 @@
             "
 					>
 						<div
-							class="gap-1/3 -mx-20 hidden font-heading text-4xl font-black tracking-wide lg:block"
+							class="gap-1/3 -mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
 						>
 							{item.subtitle.id
 								.split('|')
@@ -352,7 +325,7 @@
 	<img
 		src={placeholder2}
 		class="mx-auto aspect-square w-lg rounded-xl border border-black object-cover object-center p-2
-    lg:my-10"
+    lg:-mx-15 lg:my-10"
 		alt=""
 	/>
 	<div
@@ -361,7 +334,7 @@
 	>
 		<div
 			class="flex flex-col text-center text-3xl tracking-wide
-      lg:text-4xl lg:leading-12.5"
+      lg:text-[2.15rem] lg:leading-12.5"
 		>
 			<span>Sacred Herbs for Body,</span>
 			<span>Mind, and Soul</span>
@@ -418,12 +391,12 @@
 <section class="my-10 w-full overflow-hidden text-primary" id="rollingBadge">
 	<div
 		class="carousel-track-badge mx-2 flex h-full w-full gap-8 overflow-hidden
-    lg:gap-10"
+    lg:gap-8"
 	>
 		{#each loopBadge as item}
 			<div
-				class="flex aspect-square h-full w-18 justify-center rounded-full border border-black align-middle
-        lg:w-24"
+				class="flex aspect-square h-full w-18 justify-center rounded-full align-middle
+        lg:w-28"
 			>
 				<img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
 			</div>
