@@ -2,6 +2,10 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import whatsapp from '$lib/assets/whatsappIcon.png';
+	import FacebookIcon from '$lib/assets/icons8-facebook-50.png';
+	import TiktokIcon from '$lib/assets/icons8-tiktok-50.png';
+	import InstagramIcon from '$lib/assets/instagram.png';
+	import { Mail } from '@lucide/svelte';
 
 	let { children } = $props();
 </script>
@@ -61,19 +65,19 @@
 			</div>
 			<div class="mt-12 flex justify-between px-8">
 				<a href="/">
-					<img src={whatsapp} alt="" class="w-14" />
+					<img src={InstagramIcon} alt="" class="mt-1 w-13 invert" />
 				</a>
 				<a href="/">
-					<img src={whatsapp} alt="" class="w-14" />
+					<img src={TiktokIcon} alt="" class="w-14 invert" />
 				</a>
 				<a href="/">
-					<img src={whatsapp} alt="" class="w-14" />
+					<img src={FacebookIcon} alt="" class="w-14 invert" />
 				</a>
 				<a href="/">
-					<img src={whatsapp} alt="" class="w-14" />
+					<Mail class="h-14 w-14 text-white" />
 				</a>
 				<a href="/">
-					<img src={whatsapp} alt="" class="w-14" />
+					<img src={whatsapp} alt="" class="w-14 brightness-[10] grayscale" />
 				</a>
 			</div>
 
@@ -122,24 +126,24 @@
 
 				<div class="mt-12 flex justify-between">
 					<a href="/">
-						<img src={whatsapp} alt="" class="w-10" />
+						<img src={InstagramIcon} alt="" class="mt-0.5 w-9 invert" />
 					</a>
 					<a href="/">
-						<img src={whatsapp} alt="" class="w-10" />
+						<img src={TiktokIcon} alt="" class="w-10 invert" />
 					</a>
 					<a href="/">
-						<img src={whatsapp} alt="" class="w-10" />
+						<img src={FacebookIcon} alt="" class="w-10 invert" />
 					</a>
 					<a href="/">
-						<img src={whatsapp} alt="" class="w-10" />
+						<Mail class="h-10 w-10 text-white" />
 					</a>
 					<a href="/">
-						<img src={whatsapp} alt="" class="w-10" />
+						<img src={whatsapp} alt="" class="text w-10 brightness-[10] grayscale" />
 					</a>
 				</div>
 			</div>
-			<hr class="mt-6 w-full" />
-			<div class="my-4 text-center text-sm">
+			<hr class="mt-3 w-full" />
+			<div class="my-3 text-center text-sm">
 				<p>© 2026 PT. Karya Pak Oles Tokcer Group.</p>
 				<p>All Right Reserved.</p>
 			</div>

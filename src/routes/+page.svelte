@@ -7,7 +7,19 @@
 	import slides2 from '$lib/assets/slides21.jpg';
 	import slides3 from '$lib/assets/slides3.jpg';
 	import slides4 from '$lib/assets/slides4.jpg';
-	import { CircleArrowRight } from '@lucide/svelte';
+	import { CircleArrowRight, Mail } from '@lucide/svelte';
+
+	//image and logo
+
+	import MOBpic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /MOB.webp';
+	import BokashiCarePic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Bocare.webp';
+	import MaduWididanaPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Geruh.webp';
+	import BalineseHerbalIndustry from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Balinese  Herbal Industry.webp';
+	import CoconutOilPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (5).webp';
+	import GingerPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (6).webp';
+	import TurmericPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (7).webp';
+	import SirihPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (9).webp';
+	import SambilotoPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (8).webp';
 	import logoBokashiFarm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo_ Bokashi Farm Waribang.webp';
 	import logoBalokEmas from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Balok Emas Wididana.webp';
 	import logoBpom from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo BPOM.webp';
@@ -20,14 +32,8 @@
 	import logoRadioHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Hexon.webp';
 	import logoRadioPakoles from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Pak Oles Fm.webp';
 	import logoWarungBukitHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo Warung Bukit Hexon.webp';
-	// import {
-	// 	Badge,
-	// 	BadgeCent,
-	// 	BadgeCheck,
-	// 	BadgeDollarSign,
-	// 	BadgeInfo,
-	// 	BadgeIndianRupee
-	// } from '@lucide/svelte';
+	import SacredHerbsForBody from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Sacred Herbs for Body,  Mind, and Soul.webp';
+	//image and logo
 
 	// const isMobile = new MediaQuery('(max-width: 383px)');
 	// const isTablet = new MediaQuery('(min-width: 384px) and (max-width: 1279px)');
@@ -136,17 +142,27 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: CoconutOilPic
 		},
 		{
 			index: 2,
-			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			subtitle: 'Ginger',
+			image: GingerPic
 		},
 		{
 			index: 3,
-			subtitle: 'Coconut Oil',
-			image: placeholder2
+			subtitle: 'Turmeric',
+			image: TurmericPic
+		},
+		{
+			index: 4,
+			subtitle: 'Sirih',
+			image: SirihPic
+		},
+		{
+			index: 5,
+			subtitle: 'Sambiloto',
+			image: SambilotoPic
 		}
 	];
 	const badge = [
@@ -181,8 +197,32 @@
 			image: logoEm
 		}
 	];
+	const products = [
+		{
+			index: 1,
+			subtitle: 'Bokashi Care 15ml',
+			image: BokashiCarePic,
+			desc: 'Minyak Angin Aromaterapi',
+			harga: '23.000'
+		},
+		{
+			index: 2,
+			subtitle: 'Minyak Oles Bokashi',
+			image: MOBpic,
+			desc: 'Minyak Balur Multifungsi',
+			harga: '23.000'
+		},
+		{
+			index: 1,
+			subtitle: 'Madu Wididana',
+			image: MaduWididanaPic,
+			desc: 'Madu Alami Tanpa Campuran Rempah',
+			harga: '23.000'
+		}
+	];
 	const loopBadge = [...badge, ...badge];
 	const loopRempah = [...rempahOrganik, ...rempahOrganik];
+	const loopProduct = [...products, ...products];
 
 	const otherBusiness = [
 		{
@@ -190,15 +230,15 @@
 			subtitle: 'Warung Bukit Hexon',
 			paragraph:
 				'Restoran masakan Bali dan Western dengan pemandangan alam dan Danau Buyan dan Tamblingan.',
-			image: placeholder2,
-			link: '/home'
+			image: logoWarungBukitHexon,
+			link: 'https://www.instagram.com/warung_bukithexon/'
 		},
 		{
 			index: 2,
 			subtitle: 'Bokashi Farm Waribang',
 			paragraph:
 				'Green School, pusat edukasi & budidaya tanaman, dilengkapi dengan restoran Sunda yang memanjakan.',
-			image: placeholder2,
+			image: logoBokashiFarm,
 			link: '/home'
 		},
 		{
@@ -206,15 +246,15 @@
 			subtitle: 'Radio Bokashi Raya',
 			paragraph:
 				'Stasiun radio dari Pak Oles Network yang mengudara khusus untuk menjangkau wilayah Bali Timur',
-			image: placeholder2,
-			link: '/home'
+			image: logoRadioBokashi,
+			link: ''
 		},
 		{
 			index: 4,
 			subtitle: 'Radio Pak Oles FM',
 			paragraph:
 				'Stasiun radio yang berbasis di Tabanan. Mengudara khusus untuk wilayah Bali Tengah',
-			image: placeholder2,
+			image: logoRadioPakoles,
 			link: '/home'
 		},
 		{
@@ -222,7 +262,7 @@
 			subtitle: 'Radio Hexon',
 			paragraph:
 				'Stasiun radio Pak Oles Network yang mengudara khusus untuk menjangkau wilayah Bali Utara dan Barat.',
-			image: placeholder2,
+			image: logoRadioHexon,
 			link: '/home'
 		},
 		{
@@ -230,7 +270,7 @@
 			subtitle: 'Balok Emas Wididana',
 			paragraph:
 				'Lini bisnis dari Pak Oles Network yang berfokus pada penyediaan alat kesehatan (alkes) berkualitas di Bali',
-			image: placeholder2,
+			image: logoBalokEmas,
 			link: '/home'
 		}
 	];
@@ -319,13 +359,13 @@
 	</div>
 </section>
 <section
-	class="relative my-20 flex w-full flex-col justify-center gap-6 px-2 text-primary
-  lg:grid lg:grid-cols-2 lg:gap-1 lg:px-20"
+	class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2
+  text-primary lg:grid lg:grid-cols-2 lg:gap-1 lg:px-20"
 >
 	<img
-		src={placeholder2}
-		class="mx-auto aspect-square w-lg rounded-xl border border-black object-cover object-center p-2
-    lg:-mx-15 lg:my-10"
+		src={SacredHerbsForBody}
+		class="aspect-square w-lg max-w-3xl self-center rounded-xl object-cover object-center
+		  lg:-mx-20 lg:my-10 lg:w-xl"
 		alt=""
 	/>
 	<div
@@ -333,19 +373,19 @@
     lg:justify-center"
 	>
 		<div
-			class="flex flex-col text-center text-3xl tracking-wide
-      lg:text-[2.15rem] lg:leading-12.5"
+			class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
+      lg:pt-10 lg:text-[2.15rem] lg:leading-12.5"
 		>
 			<span>Sacred Herbs for Body,</span>
 			<span>Mind, and Soul</span>
 		</div>
 		<div
-			class="mx-10 mb-2 tracking-wide text-primary/80
+			class="mx-10 mb-2 px-15 tracking-wide text-primary/80
       lg:mx-2 lg:px-10"
 		>
 			<p
-				class="text-center text-lg text-primary/80
-        lg:text-xl"
+				class="text-center text-xl
+        text-primary/80"
 			>
 				Terinspirasi oleh <span class="font-bold">tradisi</span>, disempurnakan dengan teknologi.
 				Memadukan keunggulan alami rempah Indonesia dengan teknologi
@@ -353,7 +393,7 @@
 				tubuh dan kesehatan yang efektif, aman, dan selaras dengan alam.
 			</p>
 		</div>
-		<Button variant="primary" class="mx-auto" href="/production">Read More</Button>
+		<Button variant="primary" class="mx-auto lg:mt-6" href="/production">Read More</Button>
 	</div>
 </section>
 <section class="flex w-full overflow-x-auto text-white">
@@ -371,7 +411,7 @@
 		</div>
 
 		<!-- carausel  -->
-		<div class="h-full w-full overflow-x-auto">
+		<div class="carousel-track-wrapper overflow-x-auto">
 			<!-- sliding carausel content -->
 			<div class="carousel-track flex h-full gap-12">
 				{#each loopRempah as item}
@@ -388,14 +428,14 @@
 	</div>
 </section>
 
-<section class="my-10 w-full overflow-hidden text-primary" id="rollingBadge">
+<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
 	<div
-		class="carousel-track-badge mx-2 flex h-full w-full gap-8 overflow-hidden
+		class="carousel-track-badge mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-8"
 	>
 		{#each loopBadge as item}
 			<div
-				class="flex aspect-square h-full w-18 justify-center rounded-full align-middle
+				class="flex aspect-square h-full w-25 justify-center rounded-full align-middle
         lg:w-28"
 			>
 				<img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
@@ -405,32 +445,28 @@
 </section>
 
 <section id="partnership" class="mx-2 mt-20 text-primary">
-	<div class="text-center font-heading text-3xl font-bold italic lg:text-5xl">
+	<div class="text-center font-heading text-4xl font-bold italic lg:text-5xl">
 		<h1 class="underline">#1 Balinese</h1>
 		<h1>Herbal Industry</h1>
 	</div>
 
 	<div class="hidden p-6 lg:flex lg:justify-center">
-		<img
-			src={placeholder1}
-			alt="placeholder1"
-			class="aspect-square w-md rounded-2xl border border-black"
-		/>
-		<img
-			src={placeholder1}
-			alt="placeholder1"
-			class="aspect-square w-md rounded-2xl border border-black"
-		/>
+		<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-md rounded-2xl" />
+		<img src={BalineseHerbalIndustry} alt="placeholder1" class="aspect-square w-md rounded-2xl" />
 	</div>
-	<div class="flex justify-center p-6 lg:hidden">
-		<img src={placeholder1} alt="placeholder1" class="aspect-square w-md border border-black" />
+	<div class="-mx-2 my-6 flex justify-center overflow-x-hidden lg:hidden">
+		<img
+			src={BalineseHerbalIndustry}
+			alt="placeholder1"
+			class="aspect-square w-sm max-w-md self-center rounded-2xl border border-black"
+		/>
 	</div>
 
 	<div class="text-center text-3xl font-bold">
 		<p>We're Open For</p>
 		<p class="">Partnership</p>
 	</div>
-	<div class="mt-6 px-6 text-center text-xl">
+	<div class="mt-6 px-6 text-center text-xl text-primary/80">
 		<p>
 			Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di
 			bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
@@ -444,19 +480,19 @@
 <section id="produk" class="mt-12 w-full overflow-x-hidden text-center">
 	<div class="flex flex-col gap-6">
 		<div class="carousel-track w-ful flex gap-12 overflow-x-hidden">
-			{#each loopRempah as item}
-				<div class="relative flex aspect-2/3 w-3xs shrink-0 flex-col border border-black">
+			{#each loopProduct as item}
+				<div class="relative flex shrink-0 flex-col">
 					<img
 						src={item.image}
 						alt={item.subtitle}
-						class="h-full w-full rounded-4xl border border-black object-cover"
+						class=" aspect-2/3 w-3xs rounded-4xl object-cover object-center"
 					/>
-					<div class="p-4 text-left text-xl">
-						<h4 class="font-bold">Product</h4>
-						<p>
-							Product Brief Info Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+					<div class="p-4 text-left text-xl text-primary/80">
+						<h4 class="font-bold text-primary">{item.subtitle}</h4>
+						<p class="max-w-[12rem]">
+							{item.desc}
 						</p>
-						<p class="mt-6 font-bold">20.000</p>
+						<p class="mt-6 font-bold text-primary">Rp {item.harga}</p>
 					</div>
 				</div>
 			{/each}
@@ -476,7 +512,9 @@
 					class="aspect-square w-sm rounded-5xl border border-black"
 				/>
 				<div class=" mt-10 px-2 text-center text-lg">
-					<h4 class="italic underline">{item.subtitle}</h4>
+					<a href={item.link}>
+						<h4 class="italic underline">{item.subtitle}</h4>
+					</a>
 					<p>
 						{item.paragraph}
 					</p>
@@ -488,17 +526,16 @@
 <section id="otherBusiness" class="mt-10 text-primary lg:hidden">
 	<h1 class="mx-auto text-center text-3xl">Other Business Line</h1>
 	<div class="grid grid-cols-1 justify-items-center">
-		<div
-			class="mb-4 flex flex-col items-center justify-center gap-8 border border-black
-      "
-		>
+		<div class="mb-4 flex flex-col items-center justify-center gap-8">
 			{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 				<div class="px-2">
 					<div class="mx-auto aspect-square w-sm border border-black lg:w-3xs">
 						<img src={item.image} alt={item.subtitle} class="" />
 					</div>
 					<div class="mt-2 px-2 text-center text-xl">
-						<h4 class="italic underline">{item.subtitle}</h4>
+						<a href={item.link}>
+							<h4 class="italic underline">{item.subtitle}</h4>
+						</a>
 						<p>
 							{item.paragraph}
 						</p>
@@ -516,6 +553,9 @@
 	.carousel-track {
 		animation: scroll-left 20s linear infinite;
 		width: max-content;
+	}
+	.carousel-track-wrapper::-webkit-scrollbar {
+		display: none;
 	}
 	.carousel-track-badge {
 		animation: scroll-left 10s linear infinite;
