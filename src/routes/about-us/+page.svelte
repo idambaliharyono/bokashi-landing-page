@@ -10,18 +10,18 @@
 
 	// images etc
 	import hero from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/OUR STORY  OF PURPOSE.webp';
-	import IntegrasiTeknologiJepangPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/OUR STORY  OF PURPOSE.webp';
-	import DadongBandungPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/EM TECHNOLOGY IN INDONESIA.webp';
+	import IntegrasiTeknologiJepangPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Mobile.webp';
+	import DadongBandungPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/222.webp';
 	import MobPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
 
 	import ImageVertical1 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/1.webp';
 	import ImageVertical2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/2.webp';
 	import ImageVertical3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
 
-	import ImpactPic1 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
-	import ImpactPic2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
-	import ImpactPic3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
-	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
+	import ImpactPic1 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Pemberdayaan Masyarakat.webp';
+	import ImpactPic2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Penyerapan Tenaga Kerja Lokal & Lansia.webp';
+	import ImpactPic3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Pusat Edukasi Industri Herbal No.1 Di Bali.webp';
+	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
 
 	const heroNumbers = [
 		{
@@ -58,10 +58,10 @@
 	const otherBusiness = [
 		{
 			index: 1,
-			subtitle: 'Pemberdayaan masyarakat',
+			subtitle: 'Pemberdayaan Masyarakat',
 			paragraph:
 				'Kami memberikan pelatihan hidup sehat pada masyarakat desa, pengembangan pertanian organik hingga yoga gratis.',
-			image: placeholder2,
+			image: ImpactPic1,
 			link: '/home'
 		},
 		{
@@ -69,7 +69,7 @@
 			subtitle: 'Penyerapan Tenaga Kerja Lokal & Lansia',
 			paragraph:
 				'Kami membuka kesempatan untuk masyarakat dari segala kalangan untuk terus berkarya, tak peduli berapa usianya.',
-			image: placeholder2,
+			image: ImpactPic2,
 			link: '/home'
 		},
 		{
@@ -78,7 +78,7 @@
 
 			paragraph:
 				'Kami membuka kesempatan pada akademisi dan praktisi untuk magang dan belajar dari para ahli di Bokashi.',
-			image: placeholder2,
+			image: ImpactPic3,
 			link: '/home'
 		},
 		{
@@ -86,7 +86,7 @@
 			subtitle: 'Bakti Sosial',
 			paragraph:
 				'Berdampak langsung pada masyarakat melalui kegiatan rutin di panti jompo, panti asuhan, serta aktivitas donor darah.',
-			image: placeholder2,
+			image: ImpactPic4,
 			link: '/home'
 		}
 	];
@@ -94,12 +94,13 @@
 </script>
 
 <Hero src={hero} alt="images">OUR STORY OF PURPOSE</Hero>
-<LgContainer>
+<LgContainer class="text-sm">
 	<div class="lg:-mx-16">
 		<CenterText
 			heading="FROM VILLAGE WISDOM TO GLOBAL WELLNESS"
 			headingSizeMobile="2xl"
 			headingSizeDesktop="4xl"
+			headingParagraphSpace="1"
 			body={[
 				'Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak Bokashi.'
 			]}
@@ -116,14 +117,16 @@
 			</div>
 		{/each}
 	</div>
-	<CenterText heading="OUR JOURNEY" headingSizeDesktop="3xl" headingSizeMobile="xl" />
-	<img
-		src={DadongBandungPic}
-		alt="Dadong Bandung"
-		class="mx-auto aspect-2/3 w-sm
-  lg:aspect-square lg:w-2xl"
-	/>
-	<div class="lg:px-16">
+	<div class="my-8 text-center text-xl font-bold text-primary lg:text-3xl">OUR JOURNEY</div>
+	<div class="overflow-clip">
+		<img
+			src={DadongBandungPic}
+			alt="Dadong Bandung"
+			class="relative left-1/2 z-0 aspect-6/5 w-sm max-w-5xl -translate-x-1/2
+   lg:w-3xl"
+		/>
+	</div>
+	<div class="z-10 lg:px-16">
 		<CenterText
 			heading="EMPOWERING LOCAL WISDOM"
 			headingSizeMobile="base"
@@ -131,50 +134,54 @@
 			body={[
 				'Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan alami yang berkelanjutan bagi masyarakat luas.'
 			]}
+			headingParagraphSpace="1"
 		/>
 	</div>
-	<div class="bg-primary px-3 py-4 lg:px-0 lg:py-12">
+	<div class="-mx-1 bg-primary px-3 py-8 lg:px-0 lg:py-12">
 		<img
 			src={IntegrasiTeknologiJepangPic}
 			alt="Integrasi Teknologi Jepang"
-			class="mx-auto aspect-3/4 w-sm rounded-3xl lg:aspect-square lg:w-2xl"
+			class="mx-auto aspect-square w-sm rounded-3xl lg:aspect-square lg:w-2xl"
 		/>
 		<div class="lg:-my-8 lg:mb-0 lg:px-16">
 			<CenterText
 				heading="#1 EM TECHNOLOGY IN INDONESIA"
-				body={[
-					'Sebagai pemegang lisensi tunggal teknologi Effective Microorganisms (EM) di Indonesia, Pak Oles mengintegrasikan inovasi fermentasi asal Jepang tersebut dengan kearifan lokal Bali. Melalui riset mendalam sejak tahun 1995, pemanfaatan teknologi EM ini menjadi fondasi utama dalam menjamin standar kualitas dan efektivitas produk herbal kami yang telah dipercaya lintas generasi. Komitmen kami terhadap keunggulan teknologi ini memastikan setiap produk yang dihasilkan selaras dengan prinsip kesehatan alami yang berkelanjutan bagi masyarakat luas.'
-				]}
 				paragraphColor="white"
 				headingColor="white"
 				headingSizeDesktop="3xl"
+				headingSizeMobile="lg"
+				body={[
+					'Sebagai pemegang lisensi tunggal teknologi Effective Microorganisms (EM) di Indonesia, Pak Oles mengintegrasikan inovasi fermentasi asal Jepang tersebut dengan kearifan lokal Bali. Melalui riset mendalam sejak tahun 1995, pemanfaatan teknologi EM ini menjadi fondasi utama dalam menjamin standar kualitas dan efektivitas produk herbal kami yang telah dipercaya lintas generasi. Komitmen kami terhadap keunggulan teknologi ini memastikan setiap produk yang dihasilkan selaras dengan prinsip kesehatan alami yang berkelanjutan bagi masyarakat luas.'
+				]}
+				headingParagraphSpace="1"
 			/>
+			<CenterText />
 		</div>
 	</div>
-	<div class="px-3 py-4">
-		<img
-			src={MobPic}
-			alt="Integrasi Teknologi Jepang"
-			class="mx-auto aspect-3/4 w-sm rounded-3xl
-    lg:aspect-square lg:w-2xl"
-		/>
-		<div class="lg:px-16">
+	<div class="  px-3 pt-4 lg:py-4">
+		<div class="mx-auto aspect-square w-xs overflow-hidden lg:w-2xl">
+			<img
+				src={MobPic}
+				alt="Integrasi Teknologi Jepang"
+				class="aspect-square h-full w-full scale-125 self-center rounded-3xl"
+			/>
+		</div>
+		<div class="-mx-2.5 mt-4 lg:px-16">
 			<CenterText
-				headingSizeMobile="xl"
+				headingSizeMobile="lg"
 				headingSizeDesktop="3xl"
 				heading="High Quality, Science-Backed Products"
 				body={[
 					'Berlandaskan latar belakang pendidikan di Fakultas Pertanian Universitas Udayana dan University of the Ryukyus, Jepang, Dr. Gede Ngurah Wididana (Pak Oles) mengintegrasikan keahlian agrikulturnya dengan teknologi Effective Microorganisms (EM). Implementasi inovasi fermentasi asal Okinawa tersebut menjadi fondasi utama dalam riset dan pengembangan kami untuk menjamin standar kualitas tinggi pada setiap produk herbal yang dihasilkan secara konsisten hingga saat ini.'
 				]}
+				headingParagraphSpace="0.5"
 			/>
 		</div>
 	</div>
-	<section class="mt-6">
-		<div class="mt-4 flex flex-col gap-8 px-2">
+	<section class="mt-0">
+		<div class="mt-0 flex flex-col gap-4 px-2 lg:mt-4 lg:gap-10">
 			{#each imagesVertical as item}
-				<div
-					class="aspect-video w-full overflow-hidden rounded-xl border border-black lg:rounded-5xl"
-				>
+				<div class="aspect-video w-full overflow-hidden rounded-xl lg:rounded-5xl">
 					<img
 						src={item.image}
 						alt={item.subtitle}
@@ -186,8 +193,10 @@
 	</section>
 	<div class="lg:mx-36">
 		<section>
-			<div class="mx-2 mt-1 flex flex-col gap-4 p-4 text-justify text-primary lg:my-6 lg:text-xl">
-				<h4 class="text-center text-2xl font-bold lg:text-3xl">GROWING WITH PURPOSE</h4>
+			<div
+				class="mx-2 mt-1 flex flex-col gap-4 p-4 text-left tracking-wide text-primary lg:my-6 lg:text-xl"
+			>
+				<h4 class="text-center text-xl font-bold lg:text-3xl">GROWING WITH PURPOSE</h4>
 				<div class="flex flex-col lg:mt-4">
 					<h4 class="text-center text-xl font-bold lg:text-3xl">VISI</h4>
 					<ul class="list-disc px-2 text-primary/80">
@@ -233,25 +242,27 @@
 			</div>
 		</section>
 		<section id="otherBusiness" class="mt-10 text-primary">
-			<h1 class="mx-auto text-center text-2xl font-bold lg:text-3xl">OUR IMPACT</h1>
+			<h1 class="mx-auto mb-4 text-center text-2xl font-bold lg:text-3xl">OUR IMPACT</h1>
 			<div class="grid grid-cols-1 justify-items-center lg:mt-6">
 				<div class="mb-4 flex flex-col items-center justify-center gap-4">
 					{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 						<div class="">
-							<div class="mx-auto aspect-square w-sm border border-black lg:w-2xl">
-								<img src={item.image} alt={item.subtitle} class="lg:rounded-5xl" />
+							<div class="mx-auto mb-2 aspect-square w-xs lg:w-2xl">
+								<img src={item.image} alt={item.subtitle} class="rounded-xl lg:rounded-5xl" />
 							</div>
-							<div class="text-center lg:px-16 lg:text-xl">
-								<h4 class="italic underline">{item.subtitle}</h4>
-								<p>
-									{item.paragraph}
-								</p>
+							<div class=" text-center lg:w-full lg:px-16 lg:text-xl">
+								<h4 class=" font-semibold italic underline">{item.subtitle}</h4>
+								<div class="mx-auto w-[18rem] lg:w-full">
+									<p>
+										{item.paragraph}
+									</p>
+								</div>
 							</div>
 						</div>
 					{/each}
 				</div>
-				<Button variant="secondary" onclick={() => (showAll = !showAll)}
-					>{showAll ? 'Show less' : 'Show All'}</Button
+				<Button variant="square" onclick={() => (showAll = !showAll)}
+					>{showAll ? 'VIEW LESS' : 'VIEW MORE'}</Button
 				>
 			</div>
 		</section>

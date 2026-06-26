@@ -8,6 +8,7 @@
 		paragraphColor = 'primary/80',
 		headingColor = 'primary',
 		paragraphAlignment = 'center',
+		headingParagraphSpace = '0',
 		...rest
 	} = $props();
 
@@ -15,23 +16,20 @@
 		`text-${headingSizeMobile} lg:text-${headingSizeDesktop} lg:my-10 font-semibold text-${headingColor}`
 	);
 	const paragraphClass = $derived(
-		`mb-4 text-${paragraphAlignment} text-${paragraphColor} lg:mb-6 lg:text-xl/7 lg:tracking-wide `
+		`mb-4 text-${paragraphAlignment} text-${paragraphColor} lg:mb-6 lg:mt-4 lg:text-xl/7 lg:tracking-wide `
 	);
 </script>
 
-<div
-	class="mt-6 mb-6 flex w-full flex-col justify-center gap-4 px-2 text-center
-  lg:mt-4 lg:mb-0 lg:px-10"
-	{...rest}
->
-	<h2 class={headingClass}>{heading}</h2>
-</div>
-<div class="flex flex-col gap-4 tracking-wide">
-	<div class="w-full font-body">
-		{#each body as paragraph}
-			<p class={paragraphClass}>
-				{paragraph}
-			</p>
-		{/each}
+{#if body.length > 0}
+	<div class="mt-6 flex w-full flex-col justify-center px-2 text-center lg:mt-4 lg:px-10" {...rest}>
+		<h2 class={headingClass} style="margin-bottom:{headingParagraphSpace}rem">{heading}</h2>
+
+		<div class="flex flex-col gap-4 tracking-wide">
+			<div class="w-full font-body">
+				{#each body as paragraph}
+					<p class={paragraphClass}>{paragraph}</p>
+				{/each}
+			</div>
+		</div>
 	</div>
-</div>
+{/if}

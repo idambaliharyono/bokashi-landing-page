@@ -21,9 +21,6 @@
 	</section>
 	<section class="font-heading">
 		{@render children()}
-		<a href="/" class="fixed right-2 bottom-4 z-50 mr-4 w-8">
-			<img src={whatsapp} alt="" />
-		</a>
 	</section>
 
 	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-lg text-white lg:text-lg">
