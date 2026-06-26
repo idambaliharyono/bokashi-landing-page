@@ -1,13 +1,27 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import verticalPlaceholder from '$lib/assets/placeholder-portrait-9-16.jpg';
-	import hero from '$lib/assets/slides3.jpg';
 	import CenterText from '$lib/components/CenterText.svelte';
 	import placeholder1 from '$lib/assets/27002.jpg';
 	import placeholder2 from '$lib/assets/5563.jpg';
 	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import Button from '$lib/components/Button.svelte';
 	import LgContainer from '$lib/components/LgContainer.svelte';
+
+	// images etc
+	import hero from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/OUR STORY  OF PURPOSE.webp';
+	import IntegrasiTeknologiJepangPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/OUR STORY  OF PURPOSE.webp';
+	import DadongBandungPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/EM TECHNOLOGY IN INDONESIA.webp';
+	import MobPic from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
+
+	import ImageVertical1 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/1.webp';
+	import ImageVertical2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/2.webp';
+	import ImageVertical3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
+
+	import ImpactPic1 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
+	import ImpactPic2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
+	import ImpactPic3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
+	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/High Quality, Science-Backed Products.webp';
 
 	const heroNumbers = [
 		{
@@ -27,17 +41,17 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: ImageVertical1
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: ImageVertical2
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image: ImageVertical3
 		}
 	];
 
@@ -96,7 +110,7 @@
     grid-cols-3 gap-2 p-1 lg:mt-4 lg:gap-12 lg:px-10"
 	>
 		{#each heroNumbers as item}
-			<div class="rounded-2xl bg-secondary px-4 py-4 text-center text-primary lg:px-14 lg:py-12">
+			<div class="mi rounded-2xl bg-secondary px-4 py-4 text-center text-primary lg:px-14 lg:py-12">
 				<h4 class="text-xl font-bold lg:text-3xl">{item.number}+</h4>
 				<p class="lg:mt-2 lg:text-xl">{item.body}</p>
 			</div>
@@ -104,7 +118,7 @@
 	</div>
 	<CenterText heading="OUR JOURNEY" headingSizeDesktop="3xl" headingSizeMobile="xl" />
 	<img
-		src={verticalPlaceholder}
+		src={DadongBandungPic}
 		alt="Dadong Bandung"
 		class="mx-auto aspect-2/3 w-sm
   lg:aspect-square lg:w-2xl"
@@ -121,7 +135,7 @@
 	</div>
 	<div class="bg-primary px-3 py-4 lg:px-0 lg:py-12">
 		<img
-			src={verticalPlaceholder}
+			src={IntegrasiTeknologiJepangPic}
 			alt="Integrasi Teknologi Jepang"
 			class="mx-auto aspect-3/4 w-sm rounded-3xl lg:aspect-square lg:w-2xl"
 		/>
@@ -139,7 +153,7 @@
 	</div>
 	<div class="px-3 py-4">
 		<img
-			src={verticalPlaceholder}
+			src={MobPic}
 			alt="Integrasi Teknologi Jepang"
 			class="mx-auto aspect-3/4 w-sm rounded-3xl
     lg:aspect-square lg:w-2xl"

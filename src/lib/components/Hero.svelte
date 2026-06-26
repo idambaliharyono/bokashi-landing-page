@@ -4,35 +4,30 @@
 		src = '',
 		alt = 'hero section',
 		overlayOpacity = 'black/50',
-		gradientDirection = 'to-b',
 		aspectRatio = 'video',
 		rounded = 'xl',
-		border = true,
+		border = false,
 		children
 	} = $props();
+	const imageClass = `aspect-video w-full rounded-xl rounded-4xl `;
 </script>
 
-<section class="px-1">
+<section class="w-full">
 	<div
-		class="relative aspect-{aspectRatio} w-full overflow-hidden rounded-{rounded} {border
+		class="relative aspect-{aspectRatio} overflow-hidden rounded-{rounded} {border
 			? 'border border-black'
 			: ''}"
 	>
-		<img
-			{src}
-			{alt}
-			class="[&>img]:absolute [&>img]:inset-0 [&>img]:h-full [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>picture]:absolute [&>picture]:inset-0 [&>picture]:h-full [&>picture]:w-full"
-		/>
+		<img {src} {alt} class="absolute aspect-{aspectRatio} rounded-{rounded} scale-110" />
 
-		<div
-			class="absolute inset-0 bg-gradient-to-{gradientDirection} from-transparent to-{overlayOpacity}"
-		></div>
+		<div class="absolute inset-0 from-transparent to-{overlayOpacity}"></div>
 
-		<!-- Slot for custom content -->
 		<div
 			class="absolute inset-0 z-10 flex items-center justify-center text-center font-heading text-5xl leading-tight font-bold text-white"
 		>
-			{@render children?.()}
+			<h3 class="text-shadow-lg">
+				{@render children?.()}
+			</h3>
 		</div>
 	</div>
 </section>
