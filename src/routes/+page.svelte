@@ -285,31 +285,39 @@
 	let showAll = $state(false);
 </script>
 
-<!-- hero section -->
-<section class="relative w-full overflow-hidden text-primary">
-	<!-- slide content -->
-	<div class="relative">
-		<div
-			class="flex h-full w-full transition-transform duration-1000"
-			style={`transform: translateX(-${current * 100}%);`}
-		>
-			{#each slidesNew as item}
-				<div class="flex h-full min-w-full flex-col p-2">
-					<div
-						class="relative flex aspect-square shrink-0
+<div class="relative">
+	<div class="sticky top-[calc(88vh)] z-100 mb-2 h-0">
+		<div class="mr-6 ml-auto w-12 lg:w-16">
+			<a href="/">
+				<img src={whtasappIcon} alt="" class="w-12 lg:w-20" />
+			</a>
+		</div>
+	</div>
+	<!-- hero section -->
+	<section class="relative w-full overflow-hidden text-primary">
+		<!-- slide content -->
+		<div class="relative">
+			<div
+				class="flex h-full w-full transition-transform duration-1000"
+				style={`transform: translateX(-${current * 100}%);`}
+			>
+				{#each slidesNew as item}
+					<div class="flex h-full min-w-full flex-col p-2">
+						<div
+							class="relative flex aspect-square shrink-0
             lg:aspect-video"
-					>
-						<img
-							src={item.image}
-							alt={item.subtitle.id}
-							class="w-full rounded-2xl object-cover object-center
+						>
+							<img
+								src={item.image}
+								alt={item.subtitle.id}
+								class="w-full rounded-2xl object-cover object-center
               lg:rounded-5xl"
-						/>
+							/>
 
-						<!-- <div class="absolute inset-0 z-10 rounded-2xl bg-black/20"></div> -->
-						<button
-							onclick={nextSlide}
-							class="
+							<!-- <div class="absolute inset-0 z-10 rounded-2xl bg-black/20"></div> -->
+							<button
+								onclick={nextSlide}
+								class="
 			absolute
 			right-3
 			bottom-12
@@ -317,56 +325,50 @@
 			translate-y-1/2
               rounded-4xl
 		"
-						>
-							<CircleArrowRight class="h-18 w-18 font-black text-secondary" />
-						</button>
-					</div>
-					<div
-						class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center lg:px-8
-            "
-					>
-						<div
-							class="gap-1/3 -mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
-						>
-							{item.subtitle.id
-								.split('|')
-								.map((l) => l.trim())
-								.join(' ')}
-						</div>
-						<div
-							class="gap-1/3 mx-4 flex flex-col justify-center font-heading text-3xl font-black tracking-tight lg:hidden"
-						>
-							{#each item.subtitle.id.split('|') as line}
-								<span>{line.trim()}</span>
-							{/each}
-						</div>
-
-						<div class="flex flex-col gap-6">
-							<div
-								class="w-full font-body text-lg tracking-wider text-primary/80
-                lg:text-xl lg:tracking-wide"
 							>
-								<p>{item.intro.id}</p>
-								<p>{item.content.id}</p>
+								<CircleArrowRight class="h-18 w-18 font-black text-secondary" />
+							</button>
+						</div>
+						<div
+							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center lg:px-8
+            "
+						>
+							<div
+								class="gap-1/3 -mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
+							>
+								{item.subtitle.id
+									.split('|')
+									.map((l) => l.trim())
+									.join(' ')}
 							</div>
-							<Button class="mx-auto" href={item.page}>Read More</Button>
+							<div
+								class="gap-1/3 mx-4 flex flex-col justify-center font-heading text-3xl font-black tracking-tight lg:hidden"
+							>
+								{#each item.subtitle.id.split('|') as line}
+									<span>{line.trim()}</span>
+								{/each}
+							</div>
+
+							<div class="flex flex-col gap-6">
+								<div
+									class="w-full font-body text-lg tracking-wider text-primary/80
+                lg:text-xl lg:tracking-wide"
+								>
+									<p>{item.intro.id}</p>
+									<p>{item.content.id}</p>
+								</div>
+								<Button class="mx-auto" href={item.page}>Read More</Button>
+							</div>
 						</div>
 					</div>
-				</div>
-			{/each}
-			<!-- slide content -->
+				{/each}
+				<!-- slide content -->
+			</div>
+			<!-- slide button -->
 		</div>
-		<!-- slide button -->
-	</div>
-</section>
+	</section>
 
-<!-- sticky whatsapp button container -->
-<div class="relative">
-	<div class="sticky top-4 z-100 mr-4 ml-auto w-10 lg:top-40 lg:w-20">
-		<a href="/">
-			<img src={whtasappIcon} alt="" class="w-10 lg:w-20" />
-		</a>
-	</div>
+	<!-- sticky whatsapp button container -->
 	<section
 		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
   lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-1 lg:px-20"
@@ -538,7 +540,7 @@
 			<div class="mb-4 flex flex-col items-center justify-center gap-8">
 				{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 					<div class="px-2">
-						<div class="mx-auto aspect-square w-sm border border-black lg:w-3xs">
+						<div class="mx-auto aspect-square w-full border border-black lg:w-3xs">
 							<img src={item.image} alt={item.subtitle} class="" />
 						</div>
 						<div class="mt-2 px-2 text-center text-xl">

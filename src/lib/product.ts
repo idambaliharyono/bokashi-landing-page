@@ -1,9 +1,9 @@
 import placeholder from '$lib/assets/27002.jpg';
-import { Certificate } from 'node:crypto';
 const product = [
 	{
 		id: 'minyak-oles-bokashi',
 		name: 'Minyak Oles Bokashi',
+		tags: ['beauty', 'health'],
 		descicription:
 			'Obat tradisional herbal alami untuk membantu meredakan masalah kulit, pegal linu, masuk angin, serta digunakan sebagai minyak urut. Dibuat dari fermentasi berbagai tanaman berkhasiat dengan Teknologi Effective Microorganisms (EM) Jepang. Aman digunakan untuk semua usia, cocok sebagai pelengkap P3K keluarga.',
 		kegunaan: [
