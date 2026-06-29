@@ -122,7 +122,7 @@
 		<img
 			src={DadongBandungPic}
 			alt="Dadong Bandung"
-			class="relative left-1/2 z-0 aspect-6/5 w-sm max-w-5xl -translate-x-1/2
+			class="relative left-1/2 z-0 aspect-6/5 w-full max-w-5xl -translate-x-1/2
    lg:w-3xl"
 		/>
 	</div>
@@ -179,7 +179,7 @@
 		</div>
 	</div>
 	<section class="mt-0">
-		<div class="mt-0 flex flex-col gap-4 px-2 lg:mt-4 lg:gap-10">
+		<div class="mt-0 flex flex-col gap-4 lg:mt-4 lg:gap-10">
 			{#each imagesVertical as item}
 				<div class="aspect-video w-full overflow-hidden rounded-xl lg:rounded-5xl">
 					<img
@@ -247,7 +247,7 @@
 				<div class="mb-4 flex flex-col items-center justify-center gap-4">
 					{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 						<div class="">
-							<div class="mx-auto mb-2 aspect-square w-xs lg:w-2xl">
+							<div class="mx-auto mb-2 aspect-square w-full lg:w-2xl">
 								<img src={item.image} alt={item.subtitle} class="rounded-xl lg:rounded-5xl" />
 							</div>
 							<div class=" text-center lg:w-full lg:px-16 lg:text-xl">
