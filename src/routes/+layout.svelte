@@ -7,8 +7,14 @@
 	import InstagramIcon from '$lib/assets/instagram.png';
 	import { Mail, Menu, X } from '@lucide/svelte';
 	import { fly } from 'svelte/transition';
+	import { page } from '$app/state';
 
-	let { children } = $props();
+	interface Props {
+		href: string;
+		children: import('svelte').Snippet;
+	}
+	let { children }: Props = $props();
+
 	let sideBarMobile = $state(false);
 	function triggerSideBarMobile() {
 		sideBarMobile = !sideBarMobile;
@@ -30,6 +36,13 @@
 			document.body.style.overflow = '';
 		};
 	});
+	const navigationLinks = [
+		{ href: '/', label: 'Home' },
+		{ href: '/about-us', label: 'About Us' },
+		{ href: '/production', label: 'Production' },
+		{ href: '/villa-ipsa', label: 'Villa Ipsa' },
+		{ href: '/songgoLangitPersada', label: 'PT Songgo Langit Persada' }
+	];
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
@@ -66,9 +79,9 @@
 				onclick={triggerSideBarMobile}
 			>
 				<div
-					class=" mx-auto my-auto w-11/12 rounded-xl bg-white px-2 pt-8 pb-4"
+					class=" mx-auto mt-15 mb-auto w-11/12 rounded-xl bg-white px-2 pt-8 pb-4"
 					onclick={(e) => e.stopPropagation()}
-					transition:fly={{ x: -320, duration: 300 }}
+					transition:fly={{ x: 200, duration: 300 }}
 				>
 					<!-- header -->
 					<div class="relative">
@@ -77,10 +90,23 @@
 							<X />
 						</button>
 					</div>
-					<div class="flex flex-col">
-						<div class="w-full hover:bg-secondary">
-							<a href="/" class=" active:bg-secondary">Shop</a>
-						</div>
+					<div class="mt-4 flex flex-col">
+						{#each navigationLinks as item}
+							{@const isActive = page.url.pathname === item.href}
+							<div
+								class="w-full rounded-md px-3 py-2 text-2xl transition-[background-color] duration-150 ease-out
+                hover:bg-secondary
+                 active:bg-secondary/80"
+								class:bg-secondary={isActive}
+								aria-current={isActive ? 'page' : undefined}
+							>
+								<a
+									href={item.href}
+									class="block transition-transform duration-150 ease-out active:scale-95"
+									>{item.label}</a
+								>
+							</div>
+						{/each}
 					</div>
 					<!-- footer -->
 					<div class="mt-20">
@@ -138,7 +164,7 @@
 					<img src={TiktokIcon} alt="" class="w-14 invert" />
 				</a>
 				<a href="/">
-					<img src={FacebookIcon} alt="" class="w-14 invert" />
+					<img src={FacebookIcon} alt="" class="w-12 invert" />
 				</a>
 				<a href="/">
 					<Mail class="h-14 w-14 text-white" />
