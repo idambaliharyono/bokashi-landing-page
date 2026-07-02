@@ -93,7 +93,7 @@
 
 <section class=" px-1">
 	<div class="relative aspect-video w-full overflow-hidden rounded-2xl border border-black">
-		<enhanced:img
+		<img
 			src={hero}
 			alt="hero section"
 			class="[&>img]:absolute [&>img]:inset-0 [&>img]:h-full [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>picture]:absolute [&>picture]:inset-0 [&>picture]:h-full [&>picture]:w-full"
@@ -136,7 +136,7 @@
 			<div class="carousel-track flex h-full gap-8">
 				{#each loopHorizontal as item}
 					<div class="relative aspect-2/3 w-xs">
-						<enhanced:img
+						<img
 							src={item.image}
 							alt={item.subtitle}
 							class="h-full w-full rounded-xl object-cover"
@@ -168,7 +168,7 @@
 	<div class="mt-4 flex flex-col gap-4 px-2">
 		{#each locationImage as item}
 			<div class="aspect-video w-full overflow-hidden rounded-2xl border border-black">
-				<enhanced:img
+				<img
 					src={item.image}
 					alt={item.subtitle}
 					class="h-full w-full object-cover object-center"

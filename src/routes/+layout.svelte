@@ -40,19 +40,21 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about-us', label: 'About Us' },
 		{ href: '/production', label: 'Production' },
-		{ href: '/villa-ipsa', label: 'Villa Ipsa' },
-		{ href: '/songgoLangitPersada', label: 'PT Songgo Langit Persada' }
+		{ href: '/songgoLangitPersada', label: 'PT Songgo Langit Persada' },
+		{ href: '/usada-pak-oles', label: 'Klinik Pijat Usada Pak Oles' },
+		{ href: '/villa-ipsa', label: 'Villa Ipsa' }
 	];
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <div
-	class="mx-auto
-  sm:max-w-xl
-  lg:max-w-5xl"
+	class="2xl:
+  mx-auto
+  max-w-[1921px]
+  sm:max-w-xl lg:max-w-full"
 >
 	<section id="topNav" class="sticky top-0 z-200 bg-white">
-		<div class="mx-4 flex justify-between text-2xl font-semibold text-primary">
+		<div class="mx-4 flex justify-between text-2xl font-semibold text-primary lg:hidden">
 			<a href="/">
 				<div class="my-3 flex gap-2">
 					<img src={FacebookIcon} alt="" class="w-12" />
@@ -65,6 +67,9 @@
 					<Menu class="h-8 w-8" />
 				</button>
 			</div>
+		</div>
+		<div class=" hidden bg-white py-4 text-center font-bold text-primary lg:block">
+			this is top navbar
 		</div>
 	</section>
 
@@ -90,7 +95,7 @@
 							<X />
 						</button>
 					</div>
-					<div class="mt-4 flex flex-col">
+					<div class="mt-4 flex h-full flex-col overflow-y-auto">
 						{#each navigationLinks as item}
 							{@const isActive = page.url.pathname === item.href}
 							<div
@@ -102,7 +107,7 @@
 							>
 								<a
 									href={item.href}
-									class="block transition-transform duration-150 ease-out active:scale-95"
+									class="block origin-left transition-transform duration-150 ease-out active:scale-95"
 									>{item.label}</a
 								>
 							</div>

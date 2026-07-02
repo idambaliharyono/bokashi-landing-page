@@ -286,7 +286,7 @@
 </script>
 
 <div class="relative">
-	<div class="sticky top-[calc(88vh)] z-100 mb-2 h-0">
+	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
 			<a href="/">
 				<img src={whtasappIcon} alt="" class="w-12 lg:w-20" />
@@ -302,16 +302,16 @@
 				style={`transform: translateX(-${current * 100}%);`}
 			>
 				{#each slidesNew as item}
-					<div class="flex h-full min-w-full flex-col p-2">
+					<div class="flex h-full min-w-full flex-col">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-video"
+            lg:aspect-3/1 lg:overflow-hidden lg:rounded-5xl"
 						>
 							<img
 								src={item.image}
 								alt={item.subtitle.id}
 								class="w-full rounded-2xl object-cover object-center
-              lg:rounded-5xl"
+              lg:scale-110"
 							/>
 
 							<!-- <div class="absolute inset-0 z-10 rounded-2xl bg-black/20"></div> -->
@@ -330,11 +330,11 @@
 							</button>
 						</div>
 						<div
-							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center lg:px-8
+							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center
             "
 						>
 							<div
-								class="gap-1/3 -mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
+								class="gap-1/3 mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
 							>
 								{item.subtitle.id
 									.split('|')
@@ -352,7 +352,7 @@
 							<div class="flex flex-col gap-6">
 								<div
 									class="w-full font-body text-lg tracking-wider text-primary/80
-                lg:text-xl lg:tracking-wide"
+                lg:px-100 lg:text-xl lg:tracking-wide"
 								>
 									<p>{item.intro.id}</p>
 									<p>{item.content.id}</p>
@@ -371,21 +371,21 @@
 	<!-- sticky whatsapp button container -->
 	<section
 		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
-  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-1 lg:px-20"
+  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-1"
 	>
 		<img
 			src={SacredHerbsForBody}
 			class="aspect-square w-lg max-w-3xl self-center rounded-xl object-cover object-center
-		  lg:-mx-20 lg:my-10 lg:w-xl"
+		  lg:my-10 lg:ml-60 lg:w-full"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-    lg:justify-center"
+    lg:mr-60 lg:justify-center lg:px-20"
 		>
 			<div
 				class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
-      lg:pt-10 lg:text-[2.15rem] lg:leading-12.5"
+        lg:mb-4 lg:text-[2.15rem] lg:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
@@ -455,15 +455,19 @@
 		</div>
 	</section>
 
-	<section id="partnership" class="mx-2 mt-20 text-primary">
+	<section id="partnership" class="mt-20 text-primary">
 		<div class="text-center font-heading text-4xl font-bold italic lg:text-5xl">
 			<h1 class="underline">#1 Balinese</h1>
 			<h1>Herbal Industry</h1>
 		</div>
 
-		<div class="hidden p-6 lg:flex lg:justify-center">
-			<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-md rounded-2xl" />
-			<img src={BalineseHerbalIndustry} alt="placeholder1" class="aspect-square w-md rounded-2xl" />
+		<div class="hidden lg:flex lg:justify-center">
+			<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-full rounded-2xl" />
+			<img
+				src={BalineseHerbalIndustry}
+				alt="placeholder1"
+				class="aspect-square w-full rounded-2xl"
+			/>
 		</div>
 		<div class="-mx-2 my-6 flex justify-center overflow-x-hidden lg:hidden">
 			<img
