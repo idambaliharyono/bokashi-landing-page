@@ -50,11 +50,11 @@
 <div
 	class="2xl:
   mx-auto
-  max-w-[1921px]
-  sm:max-w-xl lg:max-w-full"
+   sm:max-w-xl lg:max-w-[1921px]
+ "
 >
 	<section id="topNav" class="sticky top-0 z-200 bg-white">
-		<div class="mx-4 flex justify-between text-2xl font-semibold text-primary lg:hidden">
+		<div class="mx-1 flex justify-between text-2xl font-semibold text-primary lg:hidden">
 			<a href="/">
 				<div class="my-3 flex gap-2">
 					<img src={FacebookIcon} alt="" class="w-12" />

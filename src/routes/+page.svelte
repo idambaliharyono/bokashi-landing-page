@@ -7,7 +7,7 @@
 	import slides2 from '$lib/assets/slides21.jpg';
 	import slides3 from '$lib/assets/slides3.jpg';
 	import slides4 from '$lib/assets/slides4.jpg';
-	import { CircleArrowRight, Mail } from '@lucide/svelte';
+	import { CircleArrowRight, ChevronRight } from '@lucide/svelte';
 	import whtasappIcon from '$lib/assets/whatsappIcon.png';
 
 	//image and logo
@@ -47,6 +47,9 @@
 			intro: {
 				id: 'Pionir minyak herbal di Bali.'
 			},
+			introDesktop: {
+				id: 'Pionir produk herbal berkualitas di Bali sejak 1997.'
+			},
 			content: {
 				id: 'Bokashi menghadirkan rangkaian produk kesehatan berbasis rempah nusantara dipadukan dengan teknologi fermentasi EM dari Jepang sejak 1997. Setiap formulanya dirancang untuk membantu menyehatkan tubuh keluarga Indonesia.'
 			},
@@ -60,6 +63,9 @@
 			},
 			intro: {
 				id: '#1 Teknologi EM di Indonesia.'
+			},
+			introDesktop: {
+				id: 'Pelopor kultur pertanian ramah lingkungan.'
 			},
 			content: {
 				id: 'Pelopor sistem agrikultur ramah lingkungan dan berkelanjutan melalui kerja mikroorganisme yang selaras dengan alam. Memadukan kearifan alam dengan konsep Effective Microorganisms yang dikembangkan di Jepang.'
@@ -75,6 +81,9 @@
 			intro: {
 				id: 'Menghadirkan terapi enzim ala Jepang pertama di Indonesia.'
 			},
+			introDesktop: {
+				id: 'Terapi kubur rempah ala Jepang pertama di Indonesia.'
+			},
 			content: {
 				id: 'Usada Pak Oles memadukan pijat tradisional Bali dengan Minyak Oles Bokashi. Perawatan alami untuk membantu meredakan nyeri, mengurangi stres, dan mendetoks racun dalam tubuh.'
 			},
@@ -88,6 +97,9 @@
 			},
 			intro: {
 				id: 'Villa Ipsa menawarkan pengalaman menginap menenangkan di jantung Bali Utara.'
+			},
+			introDesktop: {
+				id: 'Pusat wisata alam, budaya dan holistic wellness di Bali Utara.'
 			},
 			content: {
 				id: 'Memadukan aktivitas berwisata dengan holistic wellness yang memberikan nuansa damai, jauh dari hiruk-pikuk kota. Villa Ipsa memberi ruang untuk bernapas dan menikmati ketenangan dalam kesederhanaan.'
@@ -285,6 +297,7 @@
 	let showAll = $state(false);
 </script>
 
+<!-- sticky whatsapp button container -->
 <div class="relative">
 	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
@@ -302,10 +315,10 @@
 				style={`transform: translateX(-${current * 100}%);`}
 			>
 				{#each slidesNew as item}
-					<div class="flex h-full min-w-full flex-col">
+					<div class="flex h-full min-w-full flex-col lg:gap-4">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-3/1 lg:overflow-hidden lg:rounded-5xl"
+            lg:aspect-2.5/1 lg:overflow-hidden"
 						>
 							<img
 								src={item.image}
@@ -326,21 +339,45 @@
               rounded-4xl
 		"
 							>
-								<CircleArrowRight class="h-18 w-18 font-black text-secondary" />
+								<div class="flex w-25 gap-0">
+									<ChevronRight class="-mr-10 h-18 w-18 font-black text-secondary" />
+									<ChevronRight class="h-18 w-18 font-black text-secondary" />
+								</div>
 							</button>
+							<div class="absolute inset-0 hidden bg-black/50 lg:block"></div>
+
+							<!-- text inside hero banner -->
+							<div
+								class="absolute top-1/2 hidden -translate-y-1/2 grid-cols-2 text-secondary lg:grid"
+							>
+								<div
+									class="mx-20 flex w-full flex-col justify-center gap-8 px-1 text-left
+            "
+								>
+									<div class="gap-1/3 hidden text-5xl font-black tracking-tight lg:block">
+										{item.subtitle.id
+											.split('|')
+											.map((l) => l.trim())
+											.join(' ')}
+									</div>
+
+									<div class="">
+										<div
+											class=" w-full text-lg font-bold tracking-wider text-secondary
+                "
+										>
+											<p>{item.introDesktop.id}</p>
+										</div>
+									</div>
+									<Button class="mr-auto" href={item.page}>Read More</Button>
+								</div>
+								<div></div>
+							</div>
 						</div>
 						<div
 							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center
             "
 						>
-							<div
-								class="gap-1/3 mx-20 hidden font-heading text-[2.15rem] font-black tracking-wide lg:block"
-							>
-								{item.subtitle.id
-									.split('|')
-									.map((l) => l.trim())
-									.join(' ')}
-							</div>
 							<div
 								class="gap-1/3 mx-4 flex flex-col justify-center font-heading text-3xl font-black tracking-tight lg:hidden"
 							>
@@ -352,12 +389,12 @@
 							<div class="flex flex-col gap-6">
 								<div
 									class="w-full font-body text-lg tracking-wider text-primary/80
-                lg:px-100 lg:text-xl lg:tracking-wide"
+                 lg:px-20"
 								>
-									<p>{item.intro.id}</p>
+									<p class="lg:hidden">{item.intro.id}</p>
 									<p>{item.content.id}</p>
 								</div>
-								<Button class="mx-auto" href={item.page}>Read More</Button>
+								<Button class="mx-auto lg:hidden" href={item.page}>Read More</Button>
 							</div>
 						</div>
 					</div>
@@ -368,35 +405,34 @@
 		</div>
 	</section>
 
-	<!-- sticky whatsapp button container -->
 	<section
 		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
-  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-1"
+  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-10"
 	>
 		<img
 			src={SacredHerbsForBody}
-			class="aspect-square w-lg max-w-3xl self-center rounded-xl object-cover object-center
-		  lg:my-10 lg:ml-60 lg:w-full"
+			class="  aspect-square w-lg max-w-3xl self-center rounded-xl
+		  object-cover object-center lg:w-2xl lg:justify-self-end"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-    lg:mr-60 lg:justify-center lg:px-20"
+       lg:mr-20 lg:justify-center lg:gap-10 lg:justify-self-start lg:pr-20"
 		>
 			<div
 				class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
-        lg:mb-4 lg:text-[2.15rem] lg:leading-12.5"
+         lg:text-[2.15rem] lg:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
 			</div>
 			<div
 				class="mx-10 mb-2 tracking-wide text-primary/80
-      lg:mx-2 lg:px-10"
+       lg:px-10"
 			>
 				<p
 					class="text-center text-xl
-        text-primary/80"
+        text-primary/80 lg:tracking-wider"
 				>
 					Terinspirasi oleh <span class="font-bold">tradisi</span>, disempurnakan dengan teknologi.
 					Memadukan keunggulan alami rempah Indonesia dengan teknologi
@@ -407,7 +443,25 @@
 			<Button variant="primary" class="mx-auto lg:mt-6" href="/production">Read More</Button>
 		</div>
 	</section>
-	<section class="flex w-full overflow-x-auto text-white">
+
+	<!-- badge Desktop Screen -->
+	<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
+		<div
+			class=" mx-2 flex h-full w-full gap-4 overflow-hidden
+    lg:gap-20"
+		>
+			{#each badge as item}
+				<div
+					class="flex aspect-square h-full w-25 shrink-0 justify-center rounded-full align-middle
+        lg:w-32"
+				>
+					<img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
+				</div>
+			{/each}
+		</div>
+	</section>
+
+	<section class="flex w-full overflow-x-auto text-white lg:hidden">
 		<div class="flex h-full w-full flex-col gap-10 bg-primary py-10 pb-15 text-center lg:py-16">
 			<div class="flex flex-col gap-4">
 				<h2
@@ -439,7 +493,7 @@
 		</div>
 	</section>
 
-	<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
+	<section class="my-4 w-full overflow-hidden text-primary lg:my-10 lg:hidden" id="rollingBadge">
 		<div
 			class="carousel-track-badge mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-8"
@@ -456,24 +510,26 @@
 	</section>
 
 	<section id="partnership" class="mt-20 text-primary">
-		<div class="text-center font-heading text-4xl font-bold italic lg:text-5xl">
+		<div class="text-center font-heading text-4xl font-bold italic lg:hidden">
 			<h1 class="underline">#1 Balinese</h1>
 			<h1>Herbal Industry</h1>
 		</div>
 
-		<div class="hidden lg:flex lg:justify-center">
-			<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-full rounded-2xl" />
+		<div class="hidden lg:flex lg:justify-center xl:mx-10">
+			<div>
+				<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-full rounded-2xl" />
+			</div>
 			<img
 				src={BalineseHerbalIndustry}
 				alt="placeholder1"
 				class="aspect-square w-full rounded-2xl"
 			/>
 		</div>
-		<div class="-mx-2 my-6 flex justify-center overflow-x-hidden lg:hidden">
+		<div class="my-6 flex justify-center overflow-x-hidden lg:hidden">
 			<img
 				src={BalineseHerbalIndustry}
 				alt="placeholder1"
-				class="aspect-square w-sm max-w-md self-center rounded-2xl border border-black"
+				class="aspect-square max-w-full self-center rounded-2xl border border-black"
 			/>
 		</div>
 
