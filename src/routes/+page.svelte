@@ -407,28 +407,28 @@
 
 	<section
 		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
-  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-10"
+  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-10 lg:px-0"
 	>
 		<img
 			src={SacredHerbsForBody}
 			class="  aspect-square w-lg max-w-3xl self-center rounded-xl
-		  object-cover object-center lg:w-2xl lg:justify-self-end"
+		  object-cover object-center lg:-mr-30 lg:w-3xl lg:justify-self-end"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-       lg:mr-20 lg:justify-center lg:gap-10 lg:justify-self-start lg:pr-20"
+       lg:-ml-30 lg:justify-center lg:gap-10 lg:justify-self-start lg:p-20 lg:px-45"
 		>
 			<div
 				class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
-         lg:text-[2.15rem] lg:leading-12.5"
+          lg:text-[2.15rem] lg:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
 			</div>
 			<div
-				class="mx-10 mb-2 tracking-wide text-primary/80
-       lg:px-10"
+				class=" mb-2 tracking-wide text-primary/80
+       "
 			>
 				<p
 					class="text-center text-xl
@@ -450,7 +450,7 @@
 			class=" mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-20"
 		>
-			{#each badge as item}
+			{#each loopBadge as item}
 				<div
 					class="flex aspect-square h-full w-25 shrink-0 justify-center rounded-full align-middle
         lg:w-32"
@@ -516,14 +516,31 @@
 		</div>
 
 		<div class="hidden lg:flex lg:justify-center xl:mx-10">
-			<div>
-				<img src={BokashiCarePic} alt="placeholder1" class="aspect-square w-full rounded-2xl" />
+			<div class="relative aspect-square w-1/2 rounded-2xl">
+				<img
+					src={BokashiCarePic}
+					alt="placeholder1"
+					class="absolute inset-0 h-full w-full rounded-2xl"
+				/>
+
+				<button
+					onclick={nextSlide}
+					class="
+			absolute
+			top-1/2
+			right-3
+          z-50
+          translate-y-0.5
+      rounded-4xl
+              bg-white/50
+		"
+				>
+					<div class="flex w-12 gap-0">
+						<ChevronRight class="mx-auto h-10 w-10 font-black text-primary" />
+					</div>
+				</button>
 			</div>
-			<img
-				src={BalineseHerbalIndustry}
-				alt="placeholder1"
-				class="aspect-square w-full rounded-2xl"
-			/>
+			<img src={BalineseHerbalIndustry} alt="placeholder1" class="w-1/2 rounded-2xl" />
 		</div>
 		<div class="my-6 flex justify-center overflow-x-hidden lg:hidden">
 			<img
@@ -533,18 +550,33 @@
 			/>
 		</div>
 
-		<div class="text-center text-3xl font-bold">
+		<div class="text-center text-3xl font-bold lg:hidden">
 			<p>We're Open For</p>
 			<p class="">Partnership</p>
 		</div>
-		<div class="mt-6 px-6 text-center text-xl text-primary/80">
+		<div class="mt-6 px-6 text-center text-xl text-primary/80 lg:hidden">
 			<p>
 				Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di
 				bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
 			</p>
 		</div>
-		<div class="mt-8 flex justify-center">
+		<div class="mt-8 flex justify-center lg:hidden">
 			<Button variant="square" class="mx-auto" size="lg">LEARN MORE</Button>
+		</div>
+	</section>
+	<!-- Desktop only! -->
+	<section class="relative my-20 aspect-2/1 overflow-y-hidden">
+		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
+		<div class="absolute inset-0 bg-black/50"></div>
+		<div
+			class="absolute inset-0 mx-60 flex flex-col items-center justify-center gap-20 text-center text-white"
+		>
+			<h2 class="text-4xl">Kenapa Memilih Bokashi?</h2>
+			<p class="text-2xl">
+				Bokashi berkomitmen untuk mengembangkan produk herbal berbasis rempah nusantara yang ditanam
+				sendiri oleh petani lokal Indonesia. Setiap produk yang dihasilkan merupakan kombinasi hasil
+				bumi Tanah Air dengan teknologi yang mutakhir.
+			</p>
 		</div>
 	</section>
 
