@@ -298,7 +298,7 @@
 </script>
 
 <!-- sticky whatsapp button container -->
-<div class="relative">
+<div class="relative pb-10">
 	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
 			<a href="/">
@@ -318,7 +318,7 @@
 					<div class="flex h-full min-w-full flex-col lg:gap-4">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-2.5/1 lg:overflow-hidden"
+            lg:aspect-7/4 lg:overflow-hidden xl:aspect-2/1"
 						>
 							<img
 								src={item.image}
@@ -354,7 +354,9 @@
 									class="mx-20 flex w-full flex-col justify-center gap-8 px-1 text-left
             "
 								>
-									<div class="gap-1/3 hidden text-5xl font-black tracking-tight lg:block">
+									<div
+										class="gap-1/3 hidden text-4xl font-black tracking-tight lg:block xl:text-5xl"
+									>
 										{item.subtitle.id
 											.split('|')
 											.map((l) => l.trim())
@@ -407,21 +409,23 @@
 
 	<section
 		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
-  lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-10 lg:px-0"
+    lg:mt-10
+  lg:grid lg:h-lvh lg:grid-cols-2 lg:gap-10 lg:px-0 2xl:h-full"
 	>
 		<img
 			src={SacredHerbsForBody}
-			class="  aspect-square w-lg max-w-3xl self-center rounded-xl
-		  object-cover object-center lg:-mr-30 lg:w-3xl lg:justify-self-end"
+			class="  aspect-square w-md max-w-3xl self-center rounded-xl
+		  object-cover object-center lg:-mr-30 lg:w-xl lg:justify-self-end xl:w-2xl"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-       lg:-ml-30 lg:justify-center lg:gap-10 lg:justify-self-start lg:p-20 lg:px-45"
+      lg:-ml-10 lg:justify-center lg:gap-6 lg:justify-self-start lg:px-20
+      xl:-ml-30 xl:gap-10 xl:px-40"
 		>
 			<div
 				class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
-          lg:text-[2.15rem] lg:leading-12.5"
+          lg:text-3xl lg:leading-12.5 xl:text-4xl"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
@@ -441,23 +445,6 @@
 				</p>
 			</div>
 			<Button variant="primary" class="mx-auto lg:mt-6" href="/production">Read More</Button>
-		</div>
-	</section>
-
-	<!-- badge Desktop Screen -->
-	<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
-		<div
-			class=" mx-2 flex h-full w-full gap-4 overflow-hidden
-    lg:gap-20"
-		>
-			{#each loopBadge as item}
-				<div
-					class="flex aspect-square h-full w-25 shrink-0 justify-center rounded-full align-middle
-        lg:w-32"
-				>
-					<img src={item.image} alt={item.subtitle} class="max-h-full rounded-full" />
-				</div>
-			{/each}
 		</div>
 	</section>
 
@@ -493,7 +480,7 @@
 		</div>
 	</section>
 
-	<section class="my-4 w-full overflow-hidden text-primary lg:my-10 lg:hidden" id="rollingBadge">
+	<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
 		<div
 			class="carousel-track-badge mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-8"
@@ -509,23 +496,27 @@
 		</div>
 	</section>
 
-	<section id="partnership" class="mt-20 text-primary">
-		<div class="text-center font-heading text-4xl font-bold italic lg:hidden">
-			<h1 class="underline">#1 Balinese</h1>
-			<h1>Herbal Industry</h1>
-		</div>
+	<section
+		id="partnership"
+		class="mt-20 text-primary lg:mt-0 lg:flex lg:h-lvh lg:flex-col lg:justify-center"
+	>
+		<div>
+			<div class="text-center font-heading text-4xl font-bold italic lg:hidden">
+				<h1 class="underline">#1 Balinese</h1>
+				<h1>Herbal Industry</h1>
+			</div>
 
-		<div class="hidden lg:flex lg:justify-center xl:mx-10">
-			<div class="relative aspect-square w-1/2 rounded-2xl">
-				<img
-					src={BokashiCarePic}
-					alt="placeholder1"
-					class="absolute inset-0 h-full w-full rounded-2xl"
-				/>
+			<div class="mx-5 hidden lg:flex lg:justify-center xl:mx-10">
+				<div class="relative aspect-4/5 w-1/2 rounded-2xl">
+					<img
+						src={BokashiCarePic}
+						alt="placeholder1"
+						class="absolute inset-0 h-full w-full rounded-2xl"
+					/>
 
-				<button
-					onclick={nextSlide}
-					class="
+					<button
+						onclick={nextSlide}
+						class="
 			absolute
 			top-1/2
 			right-3
@@ -534,48 +525,49 @@
       rounded-4xl
               bg-white/50
 		"
-				>
-					<div class="flex w-12 gap-0">
-						<ChevronRight class="mx-auto h-10 w-10 font-black text-primary" />
-					</div>
-				</button>
+					>
+						<div class="flex w-12 gap-0">
+							<ChevronRight class="mx-auto h-10 w-10 font-black text-primary" />
+						</div>
+					</button>
+				</div>
+				<img src={BalineseHerbalIndustry} alt="placeholder1" class="w-1/2 rounded-2xl" />
 			</div>
-			<img src={BalineseHerbalIndustry} alt="placeholder1" class="w-1/2 rounded-2xl" />
-		</div>
-		<div class="my-6 flex justify-center overflow-x-hidden lg:hidden">
-			<img
-				src={BalineseHerbalIndustry}
-				alt="placeholder1"
-				class="aspect-square max-w-full self-center rounded-2xl border border-black"
-			/>
-		</div>
+			<div class="my-6 flex justify-center overflow-x-hidden lg:hidden">
+				<img
+					src={BalineseHerbalIndustry}
+					alt="placeholder1"
+					class="aspect-square max-w-full self-center rounded-2xl border border-black"
+				/>
+			</div>
 
-		<div class="text-center text-3xl font-bold lg:hidden">
-			<p>We're Open For</p>
-			<p class="">Partnership</p>
-		</div>
-		<div class="mt-6 px-6 text-center text-xl text-primary/80 lg:hidden">
-			<p>
-				Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di
-				bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
-			</p>
-		</div>
-		<div class="mt-8 flex justify-center lg:hidden">
-			<Button variant="square" class="mx-auto" size="lg">LEARN MORE</Button>
+			<div class="text-center text-3xl font-bold lg:hidden">
+				<p>We're Open For</p>
+				<p class="">Partnership</p>
+			</div>
+			<div class="mt-6 px-6 text-center text-xl text-primary/80 lg:hidden">
+				<p>
+					Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di
+					bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
+				</p>
+			</div>
+			<div class="mt-8 flex justify-center lg:hidden">
+				<Button variant="square" class="mx-auto" size="lg">LEARN MORE</Button>
+			</div>
 		</div>
 	</section>
 	<!-- Desktop only! -->
-	<section class="relative my-20 aspect-2/1 overflow-y-hidden">
+	<section class="relative my-20 aspect-video overflow-hidden">
 		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
 		<div class="absolute inset-0 bg-black/50"></div>
 		<div
-			class="absolute inset-0 mx-60 flex flex-col items-center justify-center gap-20 text-center text-white"
+			class="absolute inset-0 mx-8 flex flex-col items-center justify-center gap-20 text-center text-white xl:mx-30"
 		>
 			<h2 class="text-4xl">Kenapa Memilih Bokashi?</h2>
 			<p class="text-2xl">
 				Bokashi berkomitmen untuk mengembangkan produk herbal berbasis rempah nusantara yang ditanam
 				sendiri oleh petani lokal Indonesia. Setiap produk yang dihasilkan merupakan kombinasi hasil
-				bumi Tanah Air dengan teknologi yang mutakhir.
+				bumi Tanah Air dengan teknologi yang mutakhire
 			</p>
 		</div>
 	</section>
@@ -604,28 +596,6 @@
 		</div>
 	</section>
 
-	<section id="otherBusiness" class="mt-40 hidden lg:block">
-		<h1 class="text-center text-5xl">Other Business Line</h1>
-		<div class="mt-20 grid grid-cols-3 gap-20">
-			{#each otherBusiness as item}
-				<div>
-					<img
-						src={item.image}
-						alt={item.subtitle}
-						class="aspect-square w-sm rounded-5xl border border-black"
-					/>
-					<div class=" mt-10 px-2 text-center text-lg">
-						<a href={item.link}>
-							<h4 class="italic underline">{item.subtitle}</h4>
-						</a>
-						<p>
-							{item.paragraph}
-						</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
 	<section id="otherBusiness" class="mt-10 text-primary lg:hidden">
 		<h1 class="mx-auto text-center text-3xl">Other Business Line</h1>
 		<div class="grid grid-cols-1 justify-items-center">
@@ -649,6 +619,28 @@
 			<Button variant="square" size="lg" onclick={() => (showAll = !showAll)}
 				>{showAll ? 'VIEW LESS' : 'VIEW MORE'}</Button
 			>
+		</div>
+	</section>
+	<section id="otherBusiness" class="mt-40 hidden lg:block">
+		<h1 class="text-center text-5xl">Other Business Line</h1>
+		<div class="mt-20 grid grid-cols-3 gap-20">
+			{#each otherBusiness as item}
+				<div>
+					<img
+						src={item.image}
+						alt={item.subtitle}
+						class="mx-auto aspect-square w-sm rounded-5xl border border-black"
+					/>
+					<div class=" mt-10 px-2 text-center text-lg">
+						<a href={item.link}>
+							<h4 class="italic underline">{item.subtitle}</h4>
+						</a>
+						<p>
+							{item.paragraph}
+						</p>
+					</div>
+				</div>
+			{/each}
 		</div>
 	</section>
 </div>

@@ -113,7 +113,6 @@
 							</div>
 						{/each}
 					</div>
-					<!-- footer -->
 					<div class="mt-20">
 						<hr />
 					</div>
@@ -124,64 +123,7 @@
 		{@render children()}
 	</section>
 
-	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-lg text-white lg:text-lg">
-		<div class="hidden px-12 lg:block">
-			<div class="flex justify-between">
-				<div>
-					<img src={whatsapp} alt="" class="w-18" />
-					<h3 class="mt-4 text-3xl font-bold">Bokashi Indonesia</h3>
-				</div>
-				<div>
-					<a href="/" class="italic underline">About Us</a>
-					<div class="mt-8 flex flex-col text-left">
-						<a href="/">Our Story</a>
-						<a href="/">Ingredients</a>
-						<a href="/">Our Impact</a>
-						<a href="/">Our Journey</a>
-						<a href="/">Production</a>
-					</div>
-				</div>
-				<div>
-					<a href="/" class="italic underline">Shop</a>
-					<div class="mt-8 flex flex-col text-left">
-						<a href="/">Shopee Mall</a>
-						<a href="/">Tokopedia</a>
-						<a href="/">TikTok Shop </a>
-						<a href="/">Lazada</a>
-						<a href="/">Reseller</a>
-						<a href="/">Offline Store</a>
-					</div>
-				</div>
-				<div>
-					<a href="/" class="italic underline">Bantuan</a>
-					<div class="mt-8 flex flex-col text-left">
-						<a href="/">Contact</a>
-						<a href="/">Karir</a>
-						<a href="/">FAQs</a>
-					</div>
-				</div>
-			</div>
-			<div class="mt-12 flex justify-between px-8">
-				<a href="/">
-					<img src={InstagramIcon} alt="" class="mt-1 w-13 invert" />
-				</a>
-				<a href="/">
-					<img src={TiktokIcon} alt="" class="w-14 invert" />
-				</a>
-				<a href="/">
-					<img src={FacebookIcon} alt="" class="w-12 invert" />
-				</a>
-				<a href="/">
-					<Mail class="h-14 w-14 text-white" />
-				</a>
-				<a href="/">
-					<img src={whatsapp} alt="" class="w-14 brightness-[10] grayscale" />
-				</a>
-			</div>
-
-			<hr class="-mx-12 mt-8" />
-			<p class="text-center">© 2026 PT. Karya Pak Oles Tokcer Group. All Rights Reserved.</p>
-		</div>
+	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg">
 		<div class="lg:hidden">
 			<div class="mx-6">
 				<img src={whatsapp} alt="" class="w-12" />
@@ -245,6 +187,74 @@
 				<p>© 2026 PT. Karya Pak Oles Tokcer Group.</p>
 				<p>All Right Reserved.</p>
 			</div>
+		</div>
+		<!-- footer desktop -->
+		<div class="hidden px-12 lg:block">
+			<div class="flex justify-between">
+				<div>
+					<img src={whatsapp} alt="" class="w-18" />
+					<h3 class="mt-4 text-2xl font-semibold xl:text-3xl">Bokashi Indonesia</h3>
+					<p>Jl. Nusa Kambangan No.7X, Dauh Puri,</p>
+					<p>Kec. Denpasar Bar., Kota Denpasar,</p>
+					<p>Bali 80144</p>
+				</div>
+				<div>
+					<a href="/" class="italic underline">About Us</a>
+					<div class="mt-4 flex flex-col text-left xl:mt-8">
+						<a href="/">Our Story</a>
+						<a href="/">Ingredients</a>
+						<a href="/">Our Impact</a>
+						<a href="/">Our Journey</a>
+						<a href="/">Production</a>
+					</div>
+				</div>
+				<div>
+					<a href="/" class="italic underline">Shop</a>
+					<div class="mt-4 flex flex-col text-left xl:mt-8">
+						<a href="/">Shopee Mall</a>
+						<a href="/">Tokopedia</a>
+						<a href="/">TikTok Shop </a>
+						<a href="/">Lazada</a>
+						<a href="/">Reseller</a>
+						<a href="/">Offline Store</a>
+					</div>
+				</div>
+				<div>
+					<a href="/" class="italic underline">Bantuan</a>
+					<div class="mt-4 flex flex-col text-left xl:mt-8">
+						<a href="/">Contact</a>
+						<a href="/">Karir</a>
+						<a href="/">FAQs</a>
+					</div>
+				</div>
+			</div>
+			<div class="flex items-end justify-between pt-12">
+				<div class="">
+					<p>Working Hours</p>
+					<p>Monday - Friday : 08:00 - 16:00</p>
+					<p>Saturday : 08:00 - 13:00</p>
+				</div>
+				<div class=" flex justify-between gap-4 xl:gap-8">
+					<a href="/">
+						<img src={InstagramIcon} alt="" class="mt-1 w-11 invert" />
+					</a>
+					<a href="/">
+						<img src={TiktokIcon} alt="" class="w-12 invert" />
+					</a>
+					<a href="/">
+						<img src={FacebookIcon} alt="" class="w-12 invert" />
+					</a>
+					<a href="/">
+						<Mail class="h-13 w-13 text-white" />
+					</a>
+					<a href="/">
+						<img src={whatsapp} alt="" class="w-13 brightness-[10] grayscale" />
+					</a>
+				</div>
+			</div>
+
+			<hr class="-mx-12 mt-8" />
+			<p class="text-center">© 2026 PT. Karya Pak Oles Tokcer Group. All Rights Reserved.</p>
 		</div>
 	</section>
 </div>
