@@ -318,7 +318,7 @@
 					<div class="flex h-full min-w-full flex-col lg:gap-4">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-7/4 lg:overflow-hidden xl:aspect-2/1"
+            lg:aspect-2.5/1 lg:overflow-hidden xl:aspect-3/1"
 						>
 							<img
 								src={item.image}
@@ -351,11 +351,11 @@
 								class="absolute top-1/2 hidden -translate-y-1/2 grid-cols-2 text-secondary lg:grid"
 							>
 								<div
-									class="mx-20 flex w-full flex-col justify-center gap-8 px-1 text-left
+									class="ml-12 flex w-full flex-col justify-center gap-8 text-left xl:ml-20
             "
 								>
 									<div
-										class="gap-1/3 hidden text-4xl font-black tracking-tight lg:block xl:text-5xl"
+										class="gap-1/3 hidden text-4xl font-bold tracking-tight lg:block 2xl:text-5xl"
 									>
 										{item.subtitle.id
 											.split('|')
@@ -363,9 +363,9 @@
 											.join(' ')}
 									</div>
 
-									<div class="">
+									<div class="-mr-40">
 										<div
-											class=" w-full text-lg font-bold tracking-wider text-secondary
+											class=" w-full font-semibold tracking-wider text-secondary xl:text-lg
                 "
 										>
 											<p>{item.introDesktop.id}</p>
@@ -408,24 +408,24 @@
 	</section>
 
 	<section
-		class="relative my-20 flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary
-    lg:mt-10
-  lg:grid lg:h-lvh lg:grid-cols-2 lg:gap-10 lg:px-0 2xl:h-full"
+		class="relative flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
+    lg:grid
+  lg:h-lvh lg:grid-cols-2 lg:gap-10 lg:px-0 2xl:my-20 2xl:h-full"
 	>
 		<img
 			src={SacredHerbsForBody}
 			class="  aspect-square w-md max-w-3xl self-center rounded-xl
-		  object-cover object-center lg:-mr-30 lg:w-xl lg:justify-self-end xl:w-2xl"
+		  object-cover object-center lg:-mr-20 lg:w-lg lg:justify-self-end xl:w-2xl"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-      lg:-ml-10 lg:justify-center lg:gap-6 lg:justify-self-start lg:px-20
-      xl:-ml-30 xl:gap-10 xl:px-40"
+      lg:-ml-10 lg:justify-center lg:gap-6 lg:justify-self-start lg:px-15
+      xl:-ml-30 xl:gap-10 xl:px-35"
 		>
 			<div
-				class="-mt-8 flex flex-col text-center text-3xl leading-11 font-semibold tracking-wide
-          lg:text-3xl lg:leading-12.5 xl:text-4xl"
+				class="-mt-8 flex flex-col text-center text-3xl leading-11 tracking-wide
+          lg:text-3xl xl:text-4xl xl:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
@@ -435,8 +435,8 @@
        "
 			>
 				<p
-					class="text-center text-xl
-        text-primary/80 lg:tracking-wider"
+					class="text-center text-primary/80 lg:text-lg
+        lg:tracking-wider xl:text-xl"
 				>
 					Terinspirasi oleh <span class="font-bold">tradisi</span>, disempurnakan dengan teknologi.
 					Memadukan keunggulan alami rempah Indonesia dengan teknologi
@@ -444,7 +444,7 @@
 					tubuh dan kesehatan yang efektif, aman, dan selaras dengan alam.
 				</p>
 			</div>
-			<Button variant="primary" class="mx-auto lg:mt-6" href="/production">Read More</Button>
+			<Button variant="primary" class="mx-auto xl:mt-6" href="/production">Read More</Button>
 		</div>
 	</section>
 
@@ -480,7 +480,7 @@
 		</div>
 	</section>
 
-	<section class="my-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
+	<section class="mb-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
 		<div
 			class="carousel-track-badge mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-8"
@@ -561,13 +561,14 @@
 		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
 		<div class="absolute inset-0 bg-black/50"></div>
 		<div
-			class="absolute inset-0 mx-8 flex flex-col items-center justify-center gap-20 text-center text-white xl:mx-30"
+			class="absolute inset-0 mx-8 flex flex-col items-center
+      justify-center gap-12 text-center text-white xl:mx-20 xl:gap-20"
 		>
-			<h2 class="text-4xl">Kenapa Memilih Bokashi?</h2>
-			<p class="text-2xl">
+			<h2 class="text-3xl xl:text-4xl">Kenapa Memilih Bokashi?</h2>
+			<p class="text-xl xl:text-2xl">
 				Bokashi berkomitmen untuk mengembangkan produk herbal berbasis rempah nusantara yang ditanam
 				sendiri oleh petani lokal Indonesia. Setiap produk yang dihasilkan merupakan kombinasi hasil
-				bumi Tanah Air dengan teknologi yang mutakhire
+				bumi Tanah Air dengan teknologi yang mutakhir.
 			</p>
 		</div>
 	</section>
