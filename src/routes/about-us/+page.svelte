@@ -93,14 +93,16 @@
 	let showAll = $state(false);
 </script>
 
-<Hero src={hero} alt="images">OUR STORY OF PURPOSE</Hero>
+<Hero src={hero} alt="images">
+	<div>
+		<h1 class="">Our Story Of Purpose</h1>
+		<p class="mt-4 hidden text-xl lg:block">From Village Wisdom to Global Wellness</p>
+	</div>
+</Hero>
 <LgContainer class="text-sm">
-	<div class="lg:-mx-16">
+	<div class=" mt-4 lg:-mx-16 xl:mt-6">
 		<CenterText
-			heading="FROM VILLAGE WISDOM TO GLOBAL WELLNESS"
-			headingSizeMobile="2xl"
-			headingSizeDesktop="4xl"
-			headingParagraphSpace="1"
+			heading="From Village Wisdom to Global Wellness"
 			body={[
 				'Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak Bokashi.'
 			]}

@@ -69,7 +69,25 @@
 			</div>
 		</div>
 		<div class=" hidden bg-white py-4 text-center font-bold text-primary lg:block">
-			this is top navbar
+			<div class="flex justify-around">
+				<div class="flex items-end">
+					<img src={InstagramIcon} alt="" class=" h-8 w-8" />
+				</div>
+				<div class="flex items-end gap-6 text-sm font-medium">
+					{#each navigationLinks as item}
+						{@const isActive = page.url.pathname === item.href}
+						<a
+							href={item.href}
+							class="rounded-3xl px-4 py-2 decoration-2 hover:underline"
+							class:underline={isActive}
+							aria-current={isActive ? 'page' : undefined}>{item.label}</a
+						>
+					{/each}
+				</div>
+				<div class="flex items-center text-sm font-medium underline">
+					<a href="">Shop</a>
+				</div>
+			</div>
 		</div>
 	</section>
 

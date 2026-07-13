@@ -1,7 +1,7 @@
 <!-- Hero.svelte -->
 <script lang="ts">
 	let {
-		heading = 'this is heading',
+		heading = '',
 		body = [],
 		headingSizeMobile = '2xl',
 		headingSizeDesktop = '4xl',
@@ -21,8 +21,10 @@
 </script>
 
 {#if body.length > 0}
-	<div class="mt-6 flex w-full flex-col justify-center px-2 text-center lg:mt-4 lg:px-10" {...rest}>
-		<h2 class={headingClass} style="margin-bottom:{headingParagraphSpace}rem">{heading}</h2>
+	<div class="mt-6 flex w-full flex-col justify-center px-2 text-center lg:mt-0 lg:px-10" {...rest}>
+		{#if heading.length > 0}
+			<h2 class={headingClass} style="margin-bottom:{headingParagraphSpace}rem">{heading}</h2>
+		{/if}
 
 		<div class="flex flex-col gap-4 tracking-wide">
 			<div class="w-full font-body">

@@ -14,7 +14,7 @@
 
 <section class="w-full">
 	<div
-		class="relative aspect-{aspectRatio} overflow-hidden rounded-{rounded} {border
+		class="relative aspect-{aspectRatio} overflow-hidden xl:aspect-2.5/1 rounded-{rounded} {border
 			? 'border border-black'
 			: ''}"
 	>
