@@ -68,7 +68,7 @@
 				</button>
 			</div>
 		</div>
-		<div class=" hidden bg-white py-4 text-center font-bold text-primary lg:block">
+		<div class=" hidden bg-white/20 py-4 text-center font-bold text-primary lg:block">
 			<div class="flex justify-around">
 				<div class="flex items-end">
 					<img src={InstagramIcon} alt="" class=" h-8 w-8" />
@@ -78,7 +78,7 @@
 						{@const isActive = page.url.pathname === item.href}
 						<a
 							href={item.href}
-							class="rounded-3xl px-4 py-2 decoration-2 hover:underline"
+							class="rounded-3xl px-4 py-2 decoration-2 underline-offset-4 hover:underline"
 							class:underline={isActive}
 							aria-current={isActive ? 'page' : undefined}>{item.label}</a
 						>
