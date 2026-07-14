@@ -34,7 +34,7 @@
 	import logoRadioHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Hexon.webp';
 	import logoRadioPakoles from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Radio Pak Oles Fm.webp';
 	import logoWarungBukitHexon from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo Warung Bukit Hexon.webp';
-	import SacredHerbsForBody from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Sacred Herbs for Body,  Mind, and Soul.webp';
+	import SacredHerbsForBody from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Sacred Herbs for Body, Mind, and Soul(1).png';
 	//image and logo
 
 	// const isMobile = new MediaQuery('(max-width: 383px)');
@@ -301,19 +301,19 @@
 <!-- sticky whatsapp button container -->
 
 <div class="relative pb-10">
-	<!-- 	<div -->
-	<!-- 		style=" -->
-	<!--   position: fixed; -->
-	<!--   top: 0; -->
-	<!--   left: 50%; -->
-	<!--   transform: translateX(-50%); -->
-	<!--   width: 2px; -->
-	<!--   height: 100vh; -->
-	<!--   background-color: red; -->
-	<!--   z-index: 9999; -->
-	<!--   pointer-events: none; -->
-	<!-- " -->
-	<!-- 	></div> -->
+	<div
+		style="
+	   position: fixed; 
+	   top: 0; 
+	   left: 50%; 
+	   transform: translateX(-50%); 
+	   width: 2px; 
+	   height: 100vh; 
+	   background-color: red; 
+	   z-index: 9999; 
+	   pointer-events: none; 
+	 "
+	></div>
 	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
 			<a href="/">
@@ -333,7 +333,7 @@
 					<div class="flex h-full min-w-full flex-col lg:gap-4">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-[2.5/1] lg:overflow-hidden xl:aspect-[2.2/1]"
+            lg:aspect-[2.5/1] lg:overflow-hidden"
 						>
 							<img
 								src={item.image}
@@ -425,22 +425,23 @@
 	<section
 		class="relative my-20 flex min-h-lvh w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
     lg:grid
-  lg:h-lvh lg:grid-cols-2 lg:gap-10 lg:px-0 2xl:my-20 2xl:h-full"
+  lg:h-lvh lg:grid-cols-2 lg:gap-10 2xl:h-full"
 	>
 		<img
 			src={SacredHerbsForBody}
-			class="  aspect-square w-md max-w-3xl self-center rounded-xl
-		  object-cover object-center lg:-mr-20 lg:w-lg lg:justify-self-end xl:w-2xl"
+			class="w-xs max-w-3xl self-center
+      object-cover object-center
+       lg:w-md lg:justify-self-end xl:w-lg"
 			alt=""
 		/>
 		<div
 			class="flex flex-col gap-4
-      lg:-ml-10 lg:justify-center lg:gap-6 lg:justify-self-start lg:px-15
-      xl:-ml-30 xl:gap-10 xl:px-35"
+        lg:w-md lg:justify-center
+      lg:gap-6 lg:self-center lg:justify-self-start xl:w-lg xl:gap-10"
 		>
 			<div
-				class="-mt-8 flex flex-col text-center text-3xl leading-11 tracking-wide
-          lg:text-3xl xl:text-4xl xl:leading-12.5"
+				class=" flex flex-col text-center text-3xl leading-11 tracking-wide
+            lg:text-3xl xl:text-4xl xl:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
@@ -576,7 +577,7 @@
 		</div>
 	</section>
 	<!-- Desktop only! -->
-	<section class="relative my-20 aspect-video overflow-hidden">
+	<section class="relative my-20 hidden aspect-video overflow-hidden lg:block">
 		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
 		<div class="absolute inset-0 bg-black/50"></div>
 		<div
