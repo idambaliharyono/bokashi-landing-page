@@ -12,6 +12,7 @@
 
 	//image and logo
 
+	import kenapaMemilihBokashi from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /MOB.webp';
 	import MOBpic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /MOB.webp';
 	import BokashiCarePic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Bocare.webp';
 	import MaduWididanaPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Geruh.webp';
@@ -298,7 +299,21 @@
 </script>
 
 <!-- sticky whatsapp button container -->
+
 <div class="relative pb-10">
+	<!-- 	<div -->
+	<!-- 		style=" -->
+	<!--   position: fixed; -->
+	<!--   top: 0; -->
+	<!--   left: 50%; -->
+	<!--   transform: translateX(-50%); -->
+	<!--   width: 2px; -->
+	<!--   height: 100vh; -->
+	<!--   background-color: red; -->
+	<!--   z-index: 9999; -->
+	<!--   pointer-events: none; -->
+	<!-- " -->
+	<!-- 	></div> -->
 	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
 			<a href="/">
@@ -318,12 +333,12 @@
 					<div class="flex h-full min-w-full flex-col lg:gap-4">
 						<div
 							class="relative flex aspect-square shrink-0
-            lg:aspect-2.5/1 lg:overflow-hidden xl:aspect-3/1"
+            lg:aspect-[2.5/1] lg:overflow-hidden xl:aspect-[2.2/1]"
 						>
 							<img
 								src={item.image}
 								alt={item.subtitle.id}
-								class="w-full rounded-2xl object-cover object-center
+								class="w-full rounded-4xl object-cover object-center
               lg:scale-110"
 							/>
 
@@ -377,11 +392,11 @@
 							</div>
 						</div>
 						<div
-							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center
+							class="mt-4 flex w-full flex-col justify-center gap-4 px-1 text-center lg:mt-2
             "
 						>
 							<div
-								class="gap-1/3 mx-4 flex flex-col justify-center font-heading text-3xl font-black tracking-tight lg:hidden"
+								class="gap-1/3 mx-4 flex flex-col justify-center font-heading text-2xl font-black md:text-3xl lg:hidden"
 							>
 								{#each item.subtitle.id.split('|') as line}
 									<span>{line.trim()}</span>
@@ -390,8 +405,8 @@
 
 							<div class="flex flex-col gap-6">
 								<div
-									class="w-full font-body text-lg tracking-wider text-primary/80
-                 lg:px-20"
+									class="text-md w-full px-2 font-body text-primary/80 xl:px-10 xl:text-lg
+                 xl:tracking-wider"
 								>
 									<p class="lg:hidden">{item.intro.id}</p>
 									<p>{item.content.id}</p>
@@ -408,7 +423,7 @@
 	</section>
 
 	<section
-		class="relative flex w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
+		class="relative my-20 flex min-h-lvh w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
     lg:grid
   lg:h-lvh lg:grid-cols-2 lg:gap-10 lg:px-0 2xl:my-20 2xl:h-full"
 	>
@@ -531,7 +546,11 @@
 						</div>
 					</button>
 				</div>
-				<img src={BalineseHerbalIndustry} alt="placeholder1" class="w-1/2 rounded-2xl" />
+				<img
+					src={BalineseHerbalIndustry}
+					alt="placeholder1"
+					class="w-1/2 rounded-2xl object-cover"
+				/>
 			</div>
 			<div class="my-6 flex justify-center overflow-x-hidden lg:hidden">
 				<img
@@ -642,6 +661,24 @@
 					</div>
 				</div>
 			{/each}
+		</div>
+	</section>
+	<!-- In your homepage route, e.g., src/routes/+page.svelte -->
+
+	<section class="my-8 px-4">
+		<div class="mx-auto">
+			<!-- Responsive video container -->
+			<div class="relative w-full overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
+				<iframe
+					src="https://www.youtube.com/embed/wj4HXqtZyOw"
+					title="Test Video"
+					class="absolute top-0 left-0 h-full w-full"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+					loading="lazy"
+				>
+				</iframe>
+			</div>
 		</div>
 	</section>
 </div>

@@ -8,6 +8,7 @@
 	import { Mail, Menu, X } from '@lucide/svelte';
 	import { fly } from 'svelte/transition';
 	import { page } from '$app/state';
+	import LogoPakOles from '$lib/assets/circle-logo.webp';
 
 	interface Props {
 		href: string;
@@ -37,60 +38,81 @@
 		};
 	});
 	const navigationLinks = [
-		{ href: '/', label: 'Home' },
 		{ href: '/about-us', label: 'About Us' },
 		{ href: '/production', label: 'Production' },
-		{ href: '/songgoLangitPersada', label: 'PT Songgo Langit Persada' },
-		{ href: '/usada-pak-oles', label: 'Klinik Pijat Usada Pak Oles' },
-		{ href: '/villa-ipsa', label: 'Villa Ipsa' }
+		{ href: '/Contact-us', label: 'Contact Us' },
+		{ href: '/blogs', label: 'Blogs' }
 	];
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head><link rel="icon" href={LogoPakOles} /></svelte:head>
 <div
 	class="2xl:
   mx-auto
    sm:max-w-xl lg:max-w-[1921px]
  "
 >
-	<section id="topNav" class="sticky top-0 z-200 bg-white">
-		<div class="mx-1 flex justify-between text-2xl font-semibold text-primary lg:hidden">
-			<a href="/">
-				<div class="my-3 flex gap-2">
-					<img src={FacebookIcon} alt="" class="w-12" />
-					<h1 class="mt-3">Bokashi Indonesia</h1>
-				</div>
-			</a>
-
-			<div class="mt-6">
-				<button onclick={triggerSideBarMobile}>
-					<Menu class="h-8 w-8" />
-				</button>
+	<section id="topNav" class=" sticky top-0 z-200 bg-white">
+		<!-- mobileTopNav -->
+		<div
+			class="relative grid grid-cols-3 justify-between px-2 pt-3 pb-6 text-lg text-primary lg:hidden"
+		>
+			<button
+				onclick={triggerSideBarMobile}
+				class="mr-auto
+        cursor-pointer transition-transform duration-150 ease-out active:scale-90"
+			>
+				<!-- <Menu class=" h-8 w-8" /> -->
+				Menu
+			</button>
+			<div class="my-auto transition-transform ease-out active:scale-95">
+				<a href="/">
+					<img
+						src={LogoPakOles}
+						alt=""
+						class="mx-auto mt-auto h-10 w-10
+           "
+					/>
+				</a>
 			</div>
+			<a
+				href="/products"
+				class="my-auto ml-auto
+        cursor-pointer transition-transform duration-150 ease-out active:scale-90">Products</a
+			>
 		</div>
-		<div class=" hidden bg-white/20 py-4 text-center font-bold text-primary lg:block">
-			<div class="flex justify-around">
+		<!-- desktopTopNav -->
+		<div class="hidden bg-white/20 py-4 text-center font-bold text-primary lg:block">
+			<div class="mx-20 flex justify-between">
 				<div class="flex items-end">
-					<img src={InstagramIcon} alt="" class=" h-8 w-8" />
+					<a href="/">
+						<img
+							src={LogoPakOles}
+							alt=""
+							class="h-18 w-18 transition-transform duration-150 active:scale-95"
+						/>
+					</a>
 				</div>
-				<div class="flex items-end gap-6 text-sm font-medium">
+				<div class="flex items-end gap-4 text-sm font-medium xl:gap-6">
 					{#each navigationLinks as item}
 						{@const isActive = page.url.pathname === item.href}
 						<a
 							href={item.href}
-							class="rounded-3xl px-4 py-2 decoration-2 underline-offset-4 hover:underline"
+							class="my-auto rounded-3xl px-4 decoration-2 underline-offset-4 transition-transform duration-150
+              hover:underline active:scale-95 xl:text-lg"
 							class:underline={isActive}
 							aria-current={isActive ? 'page' : undefined}>{item.label}</a
 						>
 					{/each}
 				</div>
-				<div class="flex items-center text-sm font-medium underline">
-					<a href="">Shop</a>
+				<div class="flex items-center font-medium underline xl:text-lg">
+					<a href="/products" class="transition-transform duration-150 active:scale-95">Products</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- mobileTopNavChildren -->
 	<section class="font-heading">
 		{#if sideBarMobile}
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -104,7 +126,7 @@
 				<div
 					class=" mx-auto mt-15 mb-auto w-11/12 rounded-xl bg-white px-2 pt-8 pb-4"
 					onclick={(e) => e.stopPropagation()}
-					transition:fly={{ x: 200, duration: 300 }}
+					transition:fly={{ x: 200, duration: 600 }}
 				>
 					<!-- header -->
 					<div class="relative">
@@ -144,7 +166,7 @@
 	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg">
 		<div class="lg:hidden">
 			<div class="mx-6">
-				<img src={whatsapp} alt="" class="w-12" />
+				<img src={LogoPakOles} alt="" class="w-12" />
 				<h3 class="mt-4 text-xl font-bold">Bokashi Indonesia</h3>
 				<div class="mt-4 flex justify-between italic underline">
 					<a href="/about-us">About Us</a>
@@ -210,7 +232,7 @@
 		<div class="hidden px-12 lg:block">
 			<div class="flex justify-between">
 				<div>
-					<img src={whatsapp} alt="" class="w-18" />
+					<img src={LogoPakOles} alt="" class="w-18" />
 					<h3 class="mt-4 text-2xl font-semibold xl:text-3xl">Bokashi Indonesia</h3>
 					<p>Jl. Nusa Kambangan No.7X, Dauh Puri,</p>
 					<p>Kec. Denpasar Bar., Kota Denpasar,</p>
