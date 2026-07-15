@@ -49,7 +49,7 @@
 <div
 	class="2xl:
   mx-auto
-   sm:max-w-xl lg:max-w-[1921px]
+   text-base sm:max-w-xl lg:max-w-[1921px] xl:text-lg
  "
 >
 	<section id="topNav" class=" sticky top-0 z-200 bg-white">

@@ -80,7 +80,7 @@
 				id: 'Holistic Wellness | From Balinese | Heritage'
 			},
 			intro: {
-				id: 'Menghadirkan terapi enzim ala Jepang pertama di Indonesia.'
+				id: 'Terapi enzim ala Jepang pertama di Indonesia.'
 			},
 			introDesktop: {
 				id: 'Terapi kubur rempah ala Jepang pertama di Indonesia.'
@@ -301,19 +301,19 @@
 <!-- sticky whatsapp button container -->
 
 <div class="relative pb-10">
-	<div
-		style="
-	   position: fixed; 
-	   top: 0; 
-	   left: 50%; 
-	   transform: translateX(-50%); 
-	   width: 2px; 
-	   height: 100vh; 
-	   background-color: red; 
-	   z-index: 9999; 
-	   pointer-events: none; 
-	 "
-	></div>
+	<!-- <div -->
+	<!-- 	style=" -->
+	<!--    position: fixed;  -->
+	<!--    top: 0;  -->
+	<!--    left: 50%;  -->
+	<!--    transform: translateX(-50%);  -->
+	<!--    width: 2px;  -->
+	<!--    height: 100vh;  -->
+	<!--    background-color: red;  -->
+	<!--    z-index: 9999;  -->
+	<!--    pointer-events: none;  -->
+	<!--  " -->
+	<!-- ></div> -->
 	<div class="sticky top-[calc(88vh)] z-100 mb-0 h-0">
 		<div class="mr-6 ml-auto w-12 lg:w-16">
 			<a href="/">
@@ -322,7 +322,7 @@
 		</div>
 	</div>
 	<!-- hero section -->
-	<section class="relative w-full overflow-hidden text-primary">
+	<section class="relative w-full overflow-hidden text-primary lg:px-0">
 		<!-- slide content -->
 		<div class="relative">
 			<div
@@ -338,8 +338,8 @@
 							<img
 								src={item.image}
 								alt={item.subtitle.id}
-								class="w-full rounded-4xl object-cover object-center
-              lg:scale-110"
+								class="w-full rounded-4xl object-cover object-center px-1 lg:scale-110
+              lg:px-0"
 							/>
 
 							<!-- <div class="absolute inset-0 z-10 rounded-2xl bg-black/20"></div> -->
@@ -379,10 +379,7 @@
 									</div>
 
 									<div class="-mr-40">
-										<div
-											class=" w-full font-semibold tracking-wider text-secondary xl:text-lg
-                "
-										>
+										<div class=" w-full font-semibold tracking-wider text-secondary">
 											<p>{item.introDesktop.id}</p>
 										</div>
 									</div>
@@ -405,8 +402,8 @@
 
 							<div class="flex flex-col gap-6">
 								<div
-									class="text-md w-full px-2 font-body text-primary/80 xl:px-10 xl:text-lg
-                 xl:tracking-wider"
+									class="w-full px-1 font-body tracking-wider text-primary/80 xl:px-10
+                  xl:tracking-wider"
 								>
 									<p class="lg:hidden">{item.intro.id}</p>
 									<p>{item.content.id}</p>
@@ -431,29 +428,26 @@
 			src={SacredHerbsForBody}
 			class="w-xs max-w-3xl self-center
       object-cover object-center
-       lg:w-md lg:justify-self-end xl:w-lg"
+       lg:w-sm lg:justify-self-center xl:w-md"
 			alt=""
 		/>
 		<div
-			class="flex flex-col gap-4
-        lg:w-md lg:justify-center
-      lg:gap-6 lg:self-center lg:justify-self-start xl:w-lg xl:gap-10"
+			class="mx-auto flex w-sm flex-col gap-4
+        lg:w-xs lg:justify-center
+      lg:gap-8 lg:self-center lg:justify-self-center xl:w-sm xl:gap-10"
 		>
 			<div
-				class=" flex flex-col text-center text-3xl leading-11 tracking-wide
-            lg:text-3xl xl:text-4xl xl:leading-12.5"
+				class="mx-auto flex flex-col text-center text-2xl leading-8 font-bold tracking-wide
+            lg:text-2xl lg:font-normal xl:text-3xl xl:leading-12.5"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
 			</div>
 			<div
-				class=" mb-2 tracking-wide text-primary/80
+				class=" mx-auto mb-2 w-xs tracking-wider text-primary/80
        "
 			>
-				<p
-					class="text-center text-primary/80 lg:text-lg
-        lg:tracking-wider xl:text-xl"
-				>
+				<p class="text-center text-primary/80 lg:tracking-wider">
 					Terinspirasi oleh <span class="font-bold">tradisi</span>, disempurnakan dengan teknologi.
 					Memadukan keunggulan alami rempah Indonesia dengan teknologi
 					<span class="font-bold">Effective Microorganism </span> dari Jepang, Bokashi menghadirkan perawatan
@@ -468,12 +462,12 @@
 		<div class="flex h-full w-full flex-col gap-10 bg-primary py-10 pb-15 text-center lg:py-16">
 			<div class="flex flex-col gap-4">
 				<h2
-					class="font-heading text-3xl font-bold tracking-wide
+					class="font-heading text-2xl font-bold tracking-wide
         lg:text-5xl"
 				>
 					100% REMPAH ORGANIK
 				</h2>
-				<p class="text-xl tracking-wide lg:text-2xl">
+				<p class="text-base tracking-wide lg:text-2xl">
 					Ditanam oleh <span class="underline">petani lokal </span> di Indonesia
 				</p>
 			</div>
@@ -517,8 +511,8 @@
 		class="mt-20 text-primary lg:mt-0 lg:flex lg:h-lvh lg:flex-col lg:justify-center"
 	>
 		<div>
-			<div class="text-center font-heading text-4xl font-bold italic lg:hidden">
-				<h1 class="underline">#1 Balinese</h1>
+			<div class="text-center font-heading text-3xl font-bold italic lg:hidden">
+				<h1 class="mb-2 underline">#1 Balinese</h1>
 				<h1>Herbal Industry</h1>
 			</div>
 
@@ -561,11 +555,11 @@
 				/>
 			</div>
 
-			<div class="text-center text-3xl font-bold lg:hidden">
+			<div class="text-center text-2xl font-bold tracking-wide lg:hidden">
 				<p>We're Open For</p>
-				<p class="">Partnership</p>
+				<p class="">Partnerships</p>
 			</div>
-			<div class="mt-6 px-6 text-center text-xl text-primary/80 lg:hidden">
+			<div class="mt-6 px-6 text-center text-lg text-primary/80 lg:hidden">
 				<p>
 					Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di
 					bidang lingkungan, agribisnis, wellness, dan industri herbal bersama kami.
@@ -603,12 +597,12 @@
 							alt={item.subtitle}
 							class=" aspect-2/3 w-3xs rounded-4xl object-cover object-center"
 						/>
-						<div class="p-4 text-left text-xl text-primary/80">
+						<div class="p-4 text-left text-lg text-primary/80">
 							<h4 class="font-bold text-primary">{item.subtitle}</h4>
-							<p class="max-w-[12rem]">
+							<p class="max-w-[12rem] text-base">
 								{item.desc}
 							</p>
-							<p class="mt-6 font-bold text-primary">Rp {item.harga}</p>
+							<p class="mt-6 text-base font-bold text-primary">Rp {item.harga}</p>
 						</div>
 					</div>
 				{/each}
@@ -617,8 +611,8 @@
 		</div>
 	</section>
 
-	<section id="otherBusiness" class="mt-10 text-primary lg:hidden">
-		<h1 class="mx-auto text-center text-3xl">Other Business Line</h1>
+	<section id="otherBusiness" class="mt-10 text-primary/80 lg:hidden">
+		<h1 class="mx-auto mb-4 text-center text-2xl">Other Business Line</h1>
 		<div class="grid grid-cols-1 justify-items-center">
 			<div class="mb-4 flex flex-col items-center justify-center gap-8">
 				{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
@@ -626,11 +620,11 @@
 						<div class="mx-auto aspect-square w-full border border-black lg:w-3xs">
 							<img src={item.image} alt={item.subtitle} class="" />
 						</div>
-						<div class="mt-2 px-2 text-center text-xl">
+						<div class="mt-2 text-center">
 							<a href={item.link}>
-								<h4 class="italic underline">{item.subtitle}</h4>
+								<h4 class="text-lg italic underline">{item.subtitle}</h4>
 							</a>
-							<p>
+							<p class="tracking-wide">
 								{item.paragraph}
 							</p>
 						</div>
