@@ -41,7 +41,7 @@
 		{ href: '/about-us', label: 'About Us' },
 		{ href: '/production', label: 'Production' },
 		{ href: '/Contact-us', label: 'Contact Us' },
-		{ href: '/blogs', label: 'Blogs' }
+		{ href: '/blog', label: 'Blogs' }
 	];
 </script>
 
@@ -49,13 +49,13 @@
 <div
 	class="2xl:
   mx-auto
-   text-base sm:max-w-xl lg:max-w-[1921px] xl:text-lg
+   text-base sm:max-w-xl lg:max-w-[1921px] xl:text-lg 2xl:text-xl
  "
 >
 	<section id="topNav" class=" sticky top-0 z-200 bg-white">
 		<!-- mobileTopNav -->
 		<div
-			class="relative grid grid-cols-3 justify-between px-2 pt-3 pb-6 text-lg text-primary lg:hidden"
+			class="relative grid grid-cols-3 justify-between px-2 pt-3 pb-4 text-lg text-primary lg:hidden"
 		>
 			<button
 				onclick={triggerSideBarMobile}
@@ -70,7 +70,7 @@
 					<img
 						src={LogoPakOles}
 						alt=""
-						class="mx-auto mt-auto h-10 w-10
+						class="mx-auto mt-auto h-12 w-12
            "
 					/>
 				</a>
@@ -89,7 +89,7 @@
 						<img
 							src={LogoPakOles}
 							alt=""
-							class="h-18 w-18 transition-transform duration-150 active:scale-95"
+							class="h-14 w-14 transition-transform duration-150 active:scale-95 xl:h-16 xl:w-16 2xl:h-18 2xl:w-18"
 						/>
 					</a>
 				</div>
@@ -163,7 +163,7 @@
 		{@render children()}
 	</section>
 
-	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg">
+	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg 2xl:text-xl">
 		<div class="lg:hidden">
 			<div class="mx-6">
 				<img src={LogoPakOles} alt="" class="w-12" />
@@ -229,7 +229,7 @@
 			</div>
 		</div>
 		<!-- footer desktop -->
-		<div class="hidden px-12 lg:block">
+		<div class="hidden px-12 text-xs lg:block lg:text-sm 2xl:text-lg">
 			<div class="flex justify-between">
 				<div>
 					<img src={LogoPakOles} alt="" class="w-18" />

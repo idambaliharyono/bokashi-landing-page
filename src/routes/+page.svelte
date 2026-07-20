@@ -420,31 +420,33 @@
 	</section>
 
 	<section
-		class="relative my-20 flex min-h-lvh w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
+		class="relative flex min-h-lvh w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
     lg:grid
-  lg:h-lvh lg:grid-cols-2 lg:gap-10 2xl:h-full"
+  lg:h-lvh lg:grid-cols-2 2xl:h-full"
 	>
 		<img
 			src={SacredHerbsForBody}
 			class="w-xs max-w-3xl self-center
       object-cover object-center
-       lg:w-sm lg:justify-self-center xl:w-md"
+       lg:w-sm lg:justify-self-center xl:w-lg"
 			alt=""
 		/>
 		<div
 			class="mx-auto flex w-sm flex-col gap-4
         lg:w-xs lg:justify-center
-      lg:gap-8 lg:self-center lg:justify-self-center xl:w-sm xl:gap-10"
+      lg:gap-8 lg:self-center lg:justify-self-center
+      xl:w-lg xl:gap-10"
 		>
 			<div
 				class="mx-auto flex flex-col text-center text-2xl leading-8 font-bold tracking-wide
-            lg:text-2xl lg:font-normal xl:text-3xl xl:leading-12.5"
+            lg:text-2xl lg:font-normal
+        xl:text-3xl xl:leading-12.5 2xl:text-4xl"
 			>
 				<span>Sacred Herbs for Body,</span>
 				<span>Mind, and Soul</span>
 			</div>
 			<div
-				class=" mx-auto mb-2 w-xs tracking-wider text-primary/80
+				class=" mx-auto mb-2 w-xs tracking-wider text-primary/80 xl:w-md 2xl:w-lg
        "
 			>
 				<p class="text-center text-primary/80 lg:tracking-wider">
@@ -490,7 +492,7 @@
 		</div>
 	</section>
 
-	<section class="mb-4 w-full overflow-hidden text-primary lg:my-10" id="rollingBadge">
+	<section class="mb-4 h-full overflow-hidden text-primary lg:mb-10 2xl:mb-40" id="rollingBadge">
 		<div
 			class="carousel-track-badge mx-2 flex h-full w-full gap-4 overflow-hidden
     lg:gap-8"
@@ -665,7 +667,7 @@
 			<!-- Responsive video container -->
 			<div class="relative w-full overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
 				<iframe
-					src="https://www.youtube.com/embed/wj4HXqtZyOw"
+					src="https://www.youtube.com/embed/5CZ13ZuU2f8?si=iBeyHApSTPswtGzS"
 					title="Test Video"
 					class="absolute top-0 left-0 h-full w-full"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
