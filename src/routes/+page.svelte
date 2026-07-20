@@ -22,7 +22,7 @@
 	import TurmericPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (7).webp';
 	import SirihPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (9).webp';
 	import SambilotoPic from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Mobile ver (8).webp';
-	import logoBokashiFarm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo_ Bokashi Farm Waribang.webp';
+	import logoBokashiFarm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /13.webp';
 	import logoBalokEmas from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /logo- Balok Emas Wididana.webp';
 	import logoBpom from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo BPOM.webp';
 	import logoEm from '$lib/assets/1. HOME/WebP - minus logo bokashi farm /Logo- EM.webp';
@@ -619,7 +619,7 @@
 			<div class="mb-4 flex flex-col items-center justify-center gap-8">
 				{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 					<div class="px-2">
-						<div class="mx-auto aspect-square w-full border border-black lg:w-3xs">
+						<div class="mx-auto aspect-square w-full border border-black">
 							<img src={item.image} alt={item.subtitle} class="" />
 						</div>
 						<div class="mt-2 text-center">
@@ -640,23 +640,23 @@
 	</section>
 	<section id="otherBusiness" class="mt-40 hidden lg:block">
 		<h1 class="text-center text-5xl">Other Business Line</h1>
-		<div class="mt-20 grid grid-cols-3 gap-20">
+		<div class="mt-20 grid grid-cols-3 gap-y-20">
 			{#each otherBusiness as item}
-				<div>
-					<img
-						src={item.image}
-						alt={item.subtitle}
-						class="mx-auto aspect-square w-sm rounded-5xl border border-black"
-					/>
-					<div class=" mt-10 px-2 text-center text-lg">
-						<a href={item.link}>
+				<a href={item.link}>
+					<div class="mx-auto w-xs xl:w-sm 2xl:w-md">
+						<img
+							src={item.image}
+							alt={item.subtitle}
+							class="mx-auto aspect-square rounded-5xl border border-black/50"
+						/>
+						<div class=" mt-10 px-2 text-center text-lg">
 							<h4 class="italic underline">{item.subtitle}</h4>
-						</a>
-						<p>
-							{item.paragraph}
-						</p>
+							<p>
+								{item.paragraph}
+							</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</section>
