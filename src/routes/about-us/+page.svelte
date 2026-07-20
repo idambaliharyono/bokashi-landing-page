@@ -22,6 +22,8 @@
 	import ImpactPic2 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Penyerapan Tenaga Kerja Lokal & Lansia.webp';
 	import ImpactPic3 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/Pusat Edukasi Industri Herbal No.1 Di Bali.webp';
 	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import Heading3 from '$lib/components/Heading3.svelte';
 
 	const heroNumbers = [
 		{
@@ -99,95 +101,133 @@
 		<p class="mt-4 hidden text-xl lg:block">From Village Wisdom to Global Wellness</p>
 	</div>
 </Hero>
-<LgContainer class="text-sm">
-	<div class=" mt-4 lg:-mx-16 xl:mt-6">
-		<CenterText
-			heading="From Village Wisdom to Global Wellness"
-			body={[
-				'Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak Bokashi.'
-			]}
-		/>
-	</div>
-	<div
-		class="mx-4 mt-0 grid
-    grid-cols-3 gap-2 p-1 lg:mt-4 lg:gap-12 lg:px-10"
-	>
-		{#each heroNumbers as item}
-			<div class="mi rounded-2xl bg-secondary px-4 py-4 text-center text-primary lg:px-14 lg:py-12">
-				<h4 class="text-xl font-bold lg:text-3xl">{item.number}+</h4>
-				<p class="lg:mt-2 lg:text-xl">{item.body}</p>
-			</div>
-		{/each}
-	</div>
-	<div class="my-8 text-center text-xl font-bold text-primary lg:text-3xl">OUR JOURNEY</div>
-	<div class="overflow-clip">
+<div class="hidden lg:block">
+	<section class="mx-auto mt-4 w-4/5 text-center text-primary/80">
+		<Paragraph
+			>Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan
+			lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak
+			Bokashi.</Paragraph
+		>
+	</section>
+
+	<section class="my-30 grid grid-cols-2">
+		<div
+			class="mx-auto flex w-md flex-col items-center justify-center gap-6 text-center xl:w-lg xl:gap-8 2xl:w-xl"
+		>
+			<Heading3 class="font-bold">OUR JOURNEY</Heading3>
+			<Paragraph>
+				Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami
+				berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak
+				Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan
+				nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan alami
+				yang berkelanjutan bagi masyarakat luas.
+			</Paragraph>
+		</div>
 		<img
 			src={DadongBandungPic}
 			alt="Dadong Bandung"
-			class="relative left-1/2 z-0 aspect-6/5 w-full max-w-5xl -translate-x-1/2
-   lg:w-3xl"
+			class="mx-auto aspect-3/4 w-md border border-primary/80 object-cover xl:w-lg 2xl:w-xl"
 		/>
-	</div>
-	<div class="z-10 lg:px-16">
-		<CenterText
-			heading="EMPOWERING LOCAL WISDOM"
-			headingSizeMobile="base"
-			headingSizeDesktop="3xl"
-			body={[
-				'Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan alami yang berkelanjutan bagi masyarakat luas.'
-			]}
-			headingParagraphSpace="1"
-		/>
-	</div>
-	<div class="-mx-1 bg-primary px-3 py-8 lg:px-0 lg:py-12">
-		<img
-			src={IntegrasiTeknologiJepangPic}
-			alt="Integrasi Teknologi Jepang"
-			class="mx-auto aspect-square w-sm rounded-3xl lg:aspect-square lg:w-2xl"
-		/>
-		<div class="lg:-my-8 lg:mb-0 lg:px-16">
+	</section>
+</div>
+<LgContainer class="text-sm">
+	<div class="lg:hidden">
+		<!-- mobile hero section text -->
+		<div class=" mt-4 lg:-mx-16 xl:mt-6">
 			<CenterText
-				heading="#1 EM TECHNOLOGY IN INDONESIA"
-				paragraphColor="white"
-				headingColor="white"
-				headingSizeDesktop="3xl"
-				headingSizeMobile="lg"
+				class="lg:hidden"
+				heading="From Village Wisdom to Global Wellness"
 				body={[
-					'Sebagai pemegang lisensi tunggal teknologi Effective Microorganisms (EM) di Indonesia, Pak Oles mengintegrasikan inovasi fermentasi asal Jepang tersebut dengan kearifan lokal Bali. Melalui riset mendalam sejak tahun 1995, pemanfaatan teknologi EM ini menjadi fondasi utama dalam menjamin standar kualitas dan efektivitas produk herbal kami yang telah dipercaya lintas generasi. Komitmen kami terhadap keunggulan teknologi ini memastikan setiap produk yang dihasilkan selaras dengan prinsip kesehatan alami yang berkelanjutan bagi masyarakat luas.'
+					'Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak Bokashi.'
+				]}
+			/>
+		</div>
+
+		<!-- mobile statistics -->
+		<div
+			class="mx-4 mt-0 grid
+    grid-cols-3 gap-2 p-1 lg:mt-4 lg:gap-12 lg:px-10"
+		>
+			{#each heroNumbers as item}
+				<div
+					class="mi rounded-2xl bg-secondary px-4 py-4 text-center text-primary lg:px-14 lg:py-12"
+				>
+					<h4 class="text-xl font-bold lg:text-3xl">{item.number}+</h4>
+					<p class="lg:mt-2 lg:text-xl">{item.body}</p>
+				</div>
+			{/each}
+		</div>
+
+		<div class="my-8 text-center text-xl font-bold text-primary lg:text-3xl">OUR JOURNEY</div>
+		<div class="overflow-clip">
+			<img
+				src={DadongBandungPic}
+				alt="Dadong Bandung"
+				class="relative left-1/2 z-0 aspect-6/5 w-full max-w-5xl -translate-x-1/2
+   lg:w-3xl"
+			/>
+		</div>
+		<div class="z-10 lg:px-16">
+			<CenterText
+				heading="EMPOWERING LOCAL WISDOM"
+				headingSizeMobile="base"
+				headingSizeDesktop="3xl"
+				body={[
+					'Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan alami yang berkelanjutan bagi masyarakat luas.'
 				]}
 				headingParagraphSpace="1"
 			/>
-			<CenterText />
 		</div>
-	</div>
-	<div class="  px-3 pt-4 lg:py-4">
-		<div class="mx-auto aspect-square w-xs overflow-hidden lg:w-2xl">
+		<div class="-mx-1 bg-primary px-3 py-8 lg:px-0 lg:py-12">
 			<img
-				src={MobPic}
+				src={IntegrasiTeknologiJepangPic}
 				alt="Integrasi Teknologi Jepang"
-				class="aspect-square h-full w-full scale-125 self-center rounded-3xl"
+				class="mx-auto aspect-square w-sm rounded-3xl lg:aspect-square lg:w-2xl"
 			/>
+			<div class="lg:-my-8 lg:mb-0 lg:px-16">
+				<CenterText
+					heading="#1 EM TECHNOLOGY IN INDONESIA"
+					paragraphColor="white"
+					headingColor="white"
+					headingSizeDesktop="3xl"
+					headingSizeMobile="lg"
+					body={[
+						'Sebagai pemegang lisensi tunggal teknologi Effective Microorganisms (EM) di Indonesia, Pak Oles mengintegrasikan inovasi fermentasi asal Jepang tersebut dengan kearifan lokal Bali. Melalui riset mendalam sejak tahun 1995, pemanfaatan teknologi EM ini menjadi fondasi utama dalam menjamin standar kualitas dan efektivitas produk herbal kami yang telah dipercaya lintas generasi. Komitmen kami terhadap keunggulan teknologi ini memastikan setiap produk yang dihasilkan selaras dengan prinsip kesehatan alami yang berkelanjutan bagi masyarakat luas.'
+					]}
+					headingParagraphSpace="1"
+				/>
+				<CenterText />
+			</div>
 		</div>
-		<div class="-mx-2.5 mt-4 lg:px-16">
-			<CenterText
-				headingSizeMobile="lg"
-				headingSizeDesktop="3xl"
-				heading="High Quality, Science-Backed Products"
-				body={[
-					'Berlandaskan latar belakang pendidikan di Fakultas Pertanian Universitas Udayana dan University of the Ryukyus, Jepang, Dr. Gede Ngurah Wididana (Pak Oles) mengintegrasikan keahlian agrikulturnya dengan teknologi Effective Microorganisms (EM). Implementasi inovasi fermentasi asal Okinawa tersebut menjadi fondasi utama dalam riset dan pengembangan kami untuk menjamin standar kualitas tinggi pada setiap produk herbal yang dihasilkan secara konsisten hingga saat ini.'
-				]}
-				headingParagraphSpace="0.5"
-			/>
+		<div class="  px-3 pt-4 lg:py-4">
+			<div class="mx-auto aspect-square w-xs overflow-hidden lg:w-2xl">
+				<img
+					src={MobPic}
+					alt="Integrasi Teknologi Jepang"
+					class="aspect-square h-full w-full scale-125 self-center rounded-3xl"
+				/>
+			</div>
+			<div class="-mx-2.5 mt-4 lg:px-16">
+				<CenterText
+					headingSizeMobile="lg"
+					headingSizeDesktop="3xl"
+					heading="High Quality, Science-Backed Products"
+					body={[
+						'Berlandaskan latar belakang pendidikan di Fakultas Pertanian Universitas Udayana dan University of the Ryukyus, Jepang, Dr. Gede Ngurah Wididana (Pak Oles) mengintegrasikan keahlian agrikulturnya dengan teknologi Effective Microorganisms (EM). Implementasi inovasi fermentasi asal Okinawa tersebut menjadi fondasi utama dalam riset dan pengembangan kami untuk menjamin standar kualitas tinggi pada setiap produk herbal yang dihasilkan secara konsisten hingga saat ini.'
+					]}
+					headingParagraphSpace="0.5"
+				/>
+			</div>
 		</div>
 	</div>
 	<section class="mt-0">
-		<div class="mt-0 flex flex-col gap-4 lg:mt-4 lg:gap-10">
+		<div class="mt-0 flex flex-col gap-4 lg:mt-4 lg:gap-6">
 			{#each imagesVertical as item}
-				<div class="aspect-video w-full overflow-hidden rounded-xl lg:rounded-5xl">
+				<div class="aspect-video w-full overflow-hidden rounded-xl lg:aspect-2.5/1 lg:rounded-2xl">
 					<img
 						src={item.image}
 						alt={item.subtitle}
-						class="h-full w-full object-cover object-center"
+						class="h-full w-full scale-110 object-cover object-center"
 					/>
 				</div>
 			{/each}
