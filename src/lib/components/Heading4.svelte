@@ -4,7 +4,7 @@
 
 <span
 	{...rest}
-	class={`block tracking-widest text-primary/80 lg:tracking-wide xl:text-lg xl:tracking-normal 2xl:text-xl     ${className}`}
+	class={`text-md block text-center text-primary/80 lg:text-xl  xl:text-2xl  ${className}`}
 >
 	{@render children?.()}
 </span>

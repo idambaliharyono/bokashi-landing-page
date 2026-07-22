@@ -7,6 +7,7 @@
 	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import Button from '$lib/components/Button.svelte';
 	import LgContainer from '$lib/components/LgContainer.svelte';
+	import Heading4 from '$lib/components/Heading4.svelte';
 
 	// images etc
 	import hero from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/OUR STORY  OF PURPOSE.webp';
@@ -24,6 +25,7 @@
 	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Heading3 from '$lib/components/Heading3.svelte';
+	import { H } from '../../../.svelte-kit/output/server/chunks/dev';
 
 	const heroNumbers = [
 		{
@@ -129,6 +131,40 @@
 			class="mx-auto aspect-3/4 w-md border border-primary/80 object-cover xl:w-lg 2xl:w-xl"
 		/>
 	</section>
+	<section class="relative mb-35 grid grid-cols-2 xl:mb-40">
+		<div
+			class="absolute bottom-0 z-1 grid aspect-4.5/1 w-full translate-y-1/2 grid-cols-2
+      bg-primary xl:aspect-5/1 2xl:aspect-6/1"
+		>
+			<div></div>
+			<div class="mx-auto my-auto w-full font-light">
+				<Heading4 class=" text-white">1.000.000++ Produk Minyak Oles Bokashi</Heading4>
+				<Heading4 class="text-white">telah terjual di Bali dan seluruh</Heading4>
+				<Heading4 class="text-white">Indonesia</Heading4>
+			</div>
+		</div>
+		<div class=" mx-auto aspect-3/4 w-md overflow-hidden border border-primary/80 xl:w-lg 2xl:w-xl">
+			<img
+				src={IntegrasiTeknologiJepangPic}
+				alt="Dadong Bandung"
+				class="relative z-10 h-full w-full object-cover"
+			/>
+		</div>
+		<div
+			class="mx-auto -mt-20 flex w-md flex-col items-center justify-center gap-6 pr-2 text-justify xl:w-xl xl:gap-8 2xl:w-2xl"
+		>
+			<Heading3 class="font-bold">EMPOWERING LOCAL WISDOM</Heading3>
+			<Paragraph>
+				Sebagai pemegang lisensi tunggal teknologi Effective Microorganisms (EM) di Indonesia, Pak
+				Oles mengintegrasikan inovasi fermentasi asal Jepang tersebut dengan kearifan lokal Bali.
+				Melalui riset mendalam sejak tahun 1995, pemanfaatan teknologi EM ini menjadi fondasi utama
+				dalam menjamin standar kualitas dan efektivitas produk herbal kami yang telah dipercaya
+				lintas generasi. Komitmen kami terhadap keunggulan teknologi ini memastikan setiap produk
+				yang dihasilkan selaras dengan prinsip kesehatan alami yang berkelanjutan bagi masyarakat
+				luas.
+			</Paragraph>
+		</div>
+	</section>
 </div>
 <LgContainer class="text-sm">
 	<div class="lg:hidden">
@@ -220,24 +256,36 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- horizontal photo grid -->
 	<section class="mt-0">
-		<div class="mt-0 flex flex-col gap-4 lg:mt-4 lg:gap-6">
+		<div class="mx-auto mt-0 flex flex-col gap-4 lg:mt-4 lg:w-19/20 lg:gap-6">
 			{#each imagesVertical as item}
-				<div class="aspect-video w-full overflow-hidden rounded-xl lg:aspect-2.5/1 lg:rounded-2xl">
+				<div class=" aspect-video w-full overflow-hidden rounded-xl lg:aspect-2.5/1 lg:rounded-2xl">
 					<img
 						src={item.image}
 						alt={item.subtitle}
-						class="h-full w-full scale-110 object-cover object-center"
+						class=" h-full w-full scale-110 object-cover object-center"
 					/>
 				</div>
 			{/each}
+			<div class="hidden lg:block">
+				<Heading3 class="mb-4 font-bold">#1 EM TECHNOLOGY IN INDONESIA</Heading3>
+				<Paragraph class="text-center">
+					Berlandaskan latar belakang pendidikan di Fakultas Pertanian Universitas Udayana dan
+					University of the Ryukyus, Jepang, Dr. Gede Ngurah Wididana (Pak Oles) mengintegrasikan
+					keahlian agrikulturnya dengan teknologi Effective Microorganisms (EM). Implementasi
+					inovasi fermentasi asal Okinawa tersebut menjadi fondasi utama dalam riset dan
+					pengembangan kami untuk menjamin standar kualitas tinggi pada setiap produk herbal yang
+					dihasilkan secara konsisten hingga saat ini.
+				</Paragraph>
+			</div>
 		</div>
 	</section>
-	<div class="lg:mx-36">
+	<div class="">
 		<section>
-			<div
-				class="mx-2 mt-1 flex flex-col gap-4 p-4 text-left tracking-wide text-primary lg:my-6 lg:text-xl"
-			>
+			<!-- visimisi mobile -->
+			<div class="mx-2 mt-1 flex flex-col gap-4 p-4 text-left tracking-wide text-primary lg:hidden">
 				<h4 class="text-center text-xl font-bold lg:text-3xl">GROWING WITH PURPOSE</h4>
 				<div class="flex flex-col lg:mt-4">
 					<h4 class="text-center text-xl font-bold lg:text-3xl">VISI</h4>
@@ -269,11 +317,23 @@
 					</ul>
 				</div>
 			</div>
+			<div class="relative my-8 hidden aspect-4/1 w-full overflow-hidden lg:block xl:aspect-3/1">
+				<img src={hero} alt="komitmen" class=" w-full scale-110" />
+				<div class="absolute inset-0 bg-black/50"></div>
+				<div class="absolute top-1/2 left-10 w-md -translate-y-1/2 xl:w-lg">
+					<Paragraph class="text-justify text-white">
+						Kami berkomitmen penuh pada pemanfaatan tanaman herbal lokal melalui teknologi Effective
+						Microorganisms (EM) yang berkelanjutan. Tim peneliti dan praktisi kami bekerja
+						berdampingan untuk mengolah kekayaan alam tersebut guna menghadirkan solusi alami yang
+						bermakna bagi masyarakat.
+					</Paragraph>
+				</div>
+			</div>
 		</section>
 		<section>
 			<div
 				class="mx-2 rounded-xl bg-primary p-4 text-justify font-bold text-white
-      lg:px-8 lg:py-6 lg:text-xl"
+      lg:hidden"
 			>
 				<p class="">
 					Kami berkomitmen penuh pada pemanfaatan tanaman herbal lokal melalui teknologi Effective
@@ -283,7 +343,68 @@
 				</p>
 			</div>
 		</section>
-		<section id="otherBusiness" class="mt-10 text-primary">
+		<section>
+			<div class="grid grid-cols-[2fr_3fr]">
+				<div>
+					<img
+						src={DadongBandungPic}
+						alt=""
+						class="mx-auto aspect-3/4 w-full border border-primary object-cover"
+					/>
+				</div>
+				<div class=" mx-auto flex w-xl flex-col justify-center gap-8 lg:mt-4">
+					<div>
+						<Paragraph class="text-center font-bold">VISI</Paragraph>
+						<ul class="list-disc px-2 text-primary/80">
+							<li>
+								Menjadi perusahaan jamu tradisional kelas dunia yang memproduksi produk kesehatan
+								berkualitas tinggi, bersertifikat halal, dan bermanfaat bagi masyarakat global.
+							</li>
+						</ul>
+					</div>
+					<div class="">
+						<Paragraph class="text-center font-bold">MISI</Paragraph>
+						<ul
+							class="block list-disc tracking-widest text-primary/80 lg:tracking-wide xl:text-lg xl:tracking-normal 2xl:text-xl"
+						>
+							<li>
+								Menerapkan Good Manufacturing Practices (GMP/CPOTB) sesuai dengan regulasi kesehatan
+								nasional.
+							</li>
+							<li>
+								Melakukan riset dan inovasi berkelanjutan dalam bidang obat herbal dan solusi
+								kesehatan berbasis EM (Effective Microorganisms).
+							</li>
+							<li>
+								Memastikan setiap produk aman, efektif, dan dapat dijangkau oleh semua kalangan.
+							</li>
+							<li>
+								Menjunjung tinggi integritas, transparansi, dan komitmen terhadap keunggulan di
+								setiap aspek bisnis.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid grid-cols-2">
+				<div class="mx-auto flex w-xl flex-col justify-center gap-8 lg:mt-4">
+					<Heading3 class="font-bold">OUR IMPACT</Heading3>
+					{#each otherBusiness as item}
+						<ul class="-mb-8 list-disc pl-4 text-lg font-bold text-primary/80">
+							<li>
+								{item.subtitle}
+							</li>
+						</ul>
+						<Paragraph>{item.paragraph}</Paragraph>
+					{/each}
+				</div>
+				<div>
+					<img src={placeholder1} alt="" class="mx-auto aspect-3/4 w-xl border border-primary" />
+				</div>
+			</div>
+			<div class="flex flex-col lg:mt-4"></div>
+		</section>
+		<section id="otherBusiness" class="mt-10 text-primary lg:hidden">
 			<h1 class="mx-auto mb-4 text-center text-2xl font-bold lg:text-3xl">OUR IMPACT</h1>
 			<div class="grid grid-cols-1 justify-items-center lg:mt-6">
 				<div class="mb-4 flex flex-col items-center justify-center gap-4">
