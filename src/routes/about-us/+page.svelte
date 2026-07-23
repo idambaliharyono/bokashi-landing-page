@@ -25,7 +25,6 @@
 	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Heading3 from '$lib/components/Heading3.svelte';
-	import { H } from '../../../.svelte-kit/output/server/chunks/dev';
 
 	const heroNumbers = [
 		{

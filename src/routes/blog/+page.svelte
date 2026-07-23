@@ -10,11 +10,13 @@
 		<a href={item.link} class="group">
 			<div class=" w-full items-center px-2 lg:w-xs lg:px-0 xl:w-sm 2xl:w-md">
 				<div class="relative overflow-hidden rounded-2xl">
-					<img
-						src={item.image}
-						alt={item.date}
-						class="w-full transition-transform duration-300 group-hover:scale-125"
-					/>
+					<div class="relative aspect-video w-full overflow-hidden">
+						<img
+							src={item.image}
+							alt={item.date}
+							class="absolute h-full w-full transition-transform duration-300 group-hover:scale-125"
+						/>
+					</div>
 					<div class="absolute inset-0 bg-black/50"></div>
 					<h1
 						class="absolute top-1/2 z-10 -translate-y-1/2 px-2 text-center font-bold text-white duration-100 group-active:scale-105 max-lg:text-2xl"

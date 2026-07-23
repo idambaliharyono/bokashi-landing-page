@@ -15,6 +15,14 @@
 		children: import('svelte').Snippet;
 	}
 	let { children }: Props = $props();
+	const LINKS = {
+		shopee:
+			'https://shopee.co.id/minyakolesbokashi_official?categoryId=100001&entryPoint=ShopByPDP&itemId=9550065039',
+		tokopedia: 'https://www.tokopedia.com/minyak-oles-bokashi-official',
+		lazada:
+			'https://www.lazada.co.id/shop/minyak-oles-bokashi-shop/?spm=a2o4j.pdp_revamp.seller.1.2b881d071OjiZa&itemId=6760254556&channelSource=pdp',
+		tiktok: 'https://www.tiktok.com/@bokashi_indonesia'
+	};
 
 	let sideBarMobile = $state(false);
 	function triggerSideBarMobile() {
@@ -170,38 +178,44 @@
 				<h3 class="mt-4 text-xl font-bold">Bokashi Indonesia</h3>
 				<div class="mt-4 flex justify-between italic underline">
 					<a href="/about-us">About Us</a>
-					<a href="shopee.com">Shop</a>
+					<a href="/product">Shop</a>
 				</div>
 				<div class="my-4 flex flex-col">
 					<div class="flex justify-between">
-						<a href="/about-us">Our Story</a>
-						<a href="shopee.com">Shopee Mall</a>
+						<a href="/about-us" target="_blank" rel="noopener noreferrer">Our Story</a>
+						<a href={LINKS.shopee} target="_blank" rel="noopener noreferrer">Shopee Mall</a>
 					</div>
 					<div class="flex justify-between">
 						<a href="/about-us">Ingredients</a>
-						<a href="shopee.com">Tokopedia</a>
+						<a href={LINKS.tokopedia} target="_blank" rel="noopener noreferrer">Tokopedia</a>
 					</div>
 					<div class="flex justify-between">
-						<a href="/about-us">Our Impact</a>
-						<a href="shopee.com">TikTok Shop</a>
+						<a href="/production" target="_blank" rel="noopener noreferrer">Our Impact</a>
+						<a href={LINKS.tiktok} target="_blank" rel="noopener noreferrer">TikTok Shop</a>
 					</div>
 					<div class="flex justify-between">
 						<a href="/about-us">Our Journey</a>
-						<a href="shopee.com">Lazada</a>
+						<a href={LINKS.lazada} target="_blank" rel="noopener noreferrer">Lazada</a>
 					</div>
 					<div class="flex justify-between">
 						<a href="/about-us">Production</a>
-						<a href="shopee.com">Reseller</a>
+						<a href="/contact-us">Reseller</a>
 					</div>
-					<a href="/" class="text-right">Offline Store</a>
+					<a href="/contact-us" class="text-right">Offline Store</a>
 				</div>
 				<div>
 					<a href="/help" class="italic underline">Bantuan</a>
 				</div>
 				<div class="mt-6 flex flex-col">
-					<a href="/help" class="italic underline">Contact</a>
-					<a href="/help" class="italic underline">Karir</a>
-					<a href="/help" class="italic underline">FAQs</a>
+					<a href="/contact-us" target="_blank" rel="noopener noreferrer" class="italic underline"
+						>Contact</a
+					>
+					<a href="/contact-us" target="_blank" rel="noopener noreferrer" class="italic underline"
+						>Karir</a
+					>
+					<a href="/contact-us" target="_blank" rel="noopener noreferrer" class="italic underline"
+						>FAQs</a
+					>
 				</div>
 
 				<div class="mt-12 flex justify-between">
@@ -251,20 +265,20 @@
 				<div>
 					<a href="/" class="italic underline">Shop</a>
 					<div class="mt-4 flex flex-col text-left xl:mt-8">
-						<a href="/">Shopee Mall</a>
-						<a href="/">Tokopedia</a>
-						<a href="/">TikTok Shop </a>
-						<a href="/">Lazada</a>
-						<a href="/">Reseller</a>
-						<a href="/">Offline Store</a>
+						<a href={LINKS.shopee} target="_blank" rel="noopener noreferrer">Shopee Mall</a>
+						<a href={LINKS.tokopedia} target="_blank" rel="noopener noreferrer">Tokopedia</a>
+						<a href={LINKS.tiktok} target="_blank" rel="noopener noreferrer">TikTok Shop </a>
+						<a href={LINKS.lazada} target="_blank" rel="noopener noreferrer">Lazada</a>
+						<a href="/contact-us">Reseller</a>
+						<a href="/contact-us">Offline Store</a>
 					</div>
 				</div>
 				<div>
 					<a href="/" class="italic underline">Bantuan</a>
 					<div class="mt-4 flex flex-col text-left xl:mt-8">
-						<a href="/">Contact</a>
-						<a href="/">Karir</a>
-						<a href="/">FAQs</a>
+						<a href="/contact-us">Contact</a>
+						<a href="/contact-us">Karir</a>
+						<a href="/contact-us">FAQs</a>
 					</div>
 				</div>
 			</div>
