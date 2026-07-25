@@ -171,6 +171,7 @@
 		{@render children()}
 	</section>
 
+	<!-- footer mobile -->
 	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg 2xl:text-xl">
 		<div class="lg:hidden">
 			<div class="mx-6">
@@ -182,23 +183,23 @@
 				</div>
 				<div class="my-4 flex flex-col">
 					<div class="flex justify-between">
-						<a href="/about-us" target="_blank" rel="noopener noreferrer">Our Story</a>
+						<a href="/about-us" target="_blank" rel="noopener noreferrer">Production</a>
 						<a href={LINKS.shopee} target="_blank" rel="noopener noreferrer">Shopee Mall</a>
 					</div>
 					<div class="flex justify-between">
-						<a href="/about-us">Ingredients</a>
+						<a href="/about-us">Contact Us</a>
 						<a href={LINKS.tokopedia} target="_blank" rel="noopener noreferrer">Tokopedia</a>
 					</div>
 					<div class="flex justify-between">
-						<a href="/production" target="_blank" rel="noopener noreferrer">Our Impact</a>
+						<a href="/blog" target="_blank" rel="noopener noreferrer">Blogs</a>
 						<a href={LINKS.tiktok} target="_blank" rel="noopener noreferrer">TikTok Shop</a>
 					</div>
 					<div class="flex justify-between">
-						<a href="/about-us">Our Journey</a>
+						<div></div>
 						<a href={LINKS.lazada} target="_blank" rel="noopener noreferrer">Lazada</a>
 					</div>
 					<div class="flex justify-between">
-						<a href="/about-us">Production</a>
+						<div></div>
 						<a href="/contact-us">Reseller</a>
 					</div>
 					<a href="/contact-us" class="text-right">Offline Store</a>
@@ -207,9 +208,6 @@
 					<a href="/help" class="italic underline">Bantuan</a>
 				</div>
 				<div class="mt-6 flex flex-col">
-					<a href="/contact-us" target="_blank" rel="noopener noreferrer" class="italic underline"
-						>Contact</a
-					>
 					<a href="/contact-us" target="_blank" rel="noopener noreferrer" class="italic underline"
 						>Karir</a
 					>
@@ -255,11 +253,9 @@
 				<div>
 					<a href="/" class="italic underline">About Us</a>
 					<div class="mt-4 flex flex-col text-left xl:mt-8">
-						<a href="/">Our Story</a>
-						<a href="/">Ingredients</a>
-						<a href="/">Our Impact</a>
-						<a href="/">Our Journey</a>
 						<a href="/">Production</a>
+						<a href="/">Contact Us</a>
+						<a href="/">Blogs</a>
 					</div>
 				</div>
 				<div>
@@ -276,7 +272,6 @@
 				<div>
 					<a href="/" class="italic underline">Bantuan</a>
 					<div class="mt-4 flex flex-col text-left xl:mt-8">
-						<a href="/contact-us">Contact</a>
 						<a href="/contact-us">Karir</a>
 						<a href="/contact-us">FAQs</a>
 					</div>
