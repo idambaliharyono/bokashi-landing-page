@@ -3,7 +3,6 @@
 	let {
 		src = '',
 		alt = 'hero section',
-		overlayOpacity = 'black/50',
 		aspectRatio = 'video',
 		rounded = 'xl',
 		border = false,
@@ -20,14 +19,12 @@
 	>
 		<img {src} {alt} class="absolute aspect-{aspectRatio} rounded-{rounded} scale-110" />
 
-		<div class="absolute inset-0 from-transparent to-{overlayOpacity}"></div>
+		<div class="absolute inset-0 bg-black/30"></div>
 
 		<div
-			class="absolute inset-0 z-10 flex items-center justify-center text-center font-heading text-5xl leading-tight font-bold text-white"
+			class="absolute inset-0 z-10 flex items-center justify-center text-center font-heading text-3xl leading-tight font-bold text-white text-shadow-lg lg:text-4xl"
 		>
-			<h3 class="text-shadow-lg">
-				{@render children?.()}
-			</h3>
+			{@render children?.()}
 		</div>
 	</div>
 </section>

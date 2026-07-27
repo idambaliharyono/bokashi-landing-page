@@ -422,7 +422,7 @@
 	<section
 		class="relative flex min-h-lvh w-full flex-col justify-center gap-6 overflow-hidden px-2 text-primary lg:mt-10
     lg:grid
-  lg:h-lvh lg:grid-cols-2 2xl:h-full"
+  lg:h-lvh lg:grid-cols-2 2xl:my-40 2xl:h-full 2xl:min-h-0"
 	>
 		<img
 			src={SacredHerbsForBody}
@@ -510,7 +510,7 @@
 
 	<section
 		id="partnership"
-		class="mt-20 text-primary lg:mt-0 lg:flex lg:h-lvh lg:flex-col lg:justify-center"
+		class="mt-20 text-primary lg:mt-0 lg:flex lg:h-lvh lg:flex-col lg:justify-center 2xl:h-full"
 	>
 		<div>
 			<div class="text-center font-heading text-3xl font-bold italic lg:hidden">

@@ -98,8 +98,11 @@
 
 <Hero src={hero} alt="images">
 	<div>
-		<h1 class="">Our Story Of Purpose</h1>
-		<p class="mt-4 hidden text-xl lg:block">From Village Wisdom to Global Wellness</p>
+		<h1 class="text-secondary text-shadow-lg text-shadow-primary/50">OUR STORY OF PURPOSE</h1>
+		<Paragraph
+			class="mt-4 hidden text-xl text-secondary text-shadow-lg text-shadow-primary/50 lg:block"
+			>From Village Wisdom to Global Wellness</Paragraph
+		>
 	</div>
 </Hero>
 <div class="hidden lg:block">

@@ -11,6 +11,6 @@
 	--radius-6xl: 5rem;
 	--radius-5xl: 3rem;
 }
-/* * { */
-/* 	outline: 1px solid red; */
-/* } */
+* {
+	outline: 1px solid red;
+}

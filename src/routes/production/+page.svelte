@@ -7,6 +7,7 @@
 	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import Button from '$lib/components/Button.svelte';
 	import LgContainer from '$lib/components/LgContainer.svelte';
+	import Paragraph from '$lib/components/Paragraph.svelte';
 
 	const imagesVertical = [
 		{
@@ -80,7 +81,22 @@
 	}
 </script>
 
-<Hero src={hero} alt="images">OUR PRODUCTION HOUSE</Hero>
+<Hero src={hero} alt="images">
+	<div>
+		<h1
+			class="
+text-secondary text-shadow-lg text-shadow-primary/50
+      "
+		>
+			OUR PRODUCTION HOUSE
+		</h1>
+		<Paragraph
+			class="
+      mt-4 hidden text-xl text-secondary text-shadow-lg text-shadow-primary/50 lg:block"
+			>From Village Wisdom to Global Wellness</Paragraph
+		>
+	</div>
+</Hero>
 
 <LgContainer>
 	<CenterText
