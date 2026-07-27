@@ -112,17 +112,30 @@
 	</section>
 
 	<section class="my-30 grid grid-cols-2">
-		<div
-			class="mx-auto flex w-md flex-col items-center justify-center gap-6 text-center xl:w-lg xl:gap-8 2xl:w-xl"
-		>
-			<Heading3 class="font-bold">OUR JOURNEY</Heading3>
-			<Paragraph>
-				Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami
-				berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak
-				Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan
-				nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan alami
-				yang berkelanjutan bagi masyarakat luas.
-			</Paragraph>
+		<div>
+			<div
+				class="mx-auto flex w-md flex-col items-center justify-center gap-6 text-center xl:w-xl xl:gap-8 2xl:w-xl"
+			>
+				<Heading3 class="font-bold">OUR JOURNEY</Heading3>
+				<Paragraph class="text-justify ">
+					Berawal dari Lengis Arak Nyuh karya Dadong Bandung pada era 1980-an di Desa Bengkel, kami
+					berkomitmen untuk melestarikan kearifan lokal yang sempat terhenti. Melalui dedikasi Pak
+					Oles, jejak tradisi ini dihidupkan kembali sebagai fondasi Bokashi. Kami mengintegrasikan
+					nilai sejarah turun-temurun dengan inovasi modern untuk menghadirkan solusi kesehatan
+					alami yang berkelanjutan bagi masyarakat luas.
+				</Paragraph>
+			</div>
+			<!-- spacer -->
+			<div class="aspect-8.5/1 w-full"></div>
+			<!-- spacer -->
+			<div class="flex justify-evenly gap-6">
+				{#each heroNumbers.slice(0, 2) as item}
+					<div class="rounded-full bg-secondary px-8 py-4 text-center text-primary">
+						<Heading4 class="font-bold">{item.number}+</Heading4>
+						<Paragraph class="lg:mt-2 lg:text-xl">{item.body}</Paragraph>
+					</div>
+				{/each}
+			</div>
 		</div>
 		<img
 			src={DadongBandungPic}
@@ -130,7 +143,7 @@
 			class="mx-auto aspect-3/4 w-md border border-primary/80 object-cover xl:w-lg 2xl:w-xl"
 		/>
 	</section>
-	<section class="relative mb-35 grid grid-cols-2 xl:mb-40">
+	<section class="relative grid grid-cols-2">
 		<div
 			class="absolute bottom-0 z-1 grid aspect-4.5/1 w-full translate-y-1/2 grid-cols-2
       bg-primary xl:aspect-5/1 2xl:aspect-6/1"
@@ -170,7 +183,7 @@
 		<!-- mobile hero section text -->
 		<div class=" mt-4 lg:-mx-16 xl:mt-6">
 			<CenterText
-				class="lg:hidden"
+				class="text-center lg:hidden"
 				heading="From Village Wisdom to Global Wellness"
 				body={[
 					'Terinspirasi dari ramuan herbal Dadong Bandung di Desa Bengkel, Pak Oles memadukan kearifan lokal dengan ilmu pengetahuan dan teknologi modern dari Jepang, untuk melahirkan Minyak Bokashi.'
@@ -180,8 +193,8 @@
 
 		<!-- mobile statistics -->
 		<div
-			class="mx-4 mt-0 grid
-    grid-cols-3 gap-2 p-1 lg:mt-4 lg:gap-12 lg:px-10"
+			class="mt-0 grid
+    grid-cols-3 gap-2 p-1"
 		>
 			{#each heroNumbers as item}
 				<div
@@ -257,7 +270,10 @@
 	</div>
 
 	<!-- horizontal photo grid -->
-	<section class="mt-0">
+	<section class="">
+		<!-- spacer -->
+		<div class="aspect-8.5/1 w-full"></div>
+		<!-- spacer -->
 		<div class="mx-auto mt-0 flex flex-col gap-4 lg:mt-4 lg:w-19/20 lg:gap-6">
 			{#each imagesVertical as item}
 				<div class=" aspect-video w-full overflow-hidden rounded-xl lg:aspect-2.5/1 lg:rounded-2xl">
@@ -343,19 +359,21 @@
 			</div>
 		</section>
 		<section>
-			<div class="grid grid-cols-[2fr_3fr]">
+			<div class="hidden grid-cols-2 lg:grid">
 				<div>
 					<img
 						src={DadongBandungPic}
 						alt=""
-						class="mx-auto aspect-3/4 w-full border border-primary object-cover"
+						class="mx-auto aspect-3/4 w-xl border border-primary object-cover"
 					/>
 				</div>
-				<div class=" mx-auto flex w-xl flex-col justify-center gap-8 lg:mt-4">
+				<div class=" mx-auto flex w-xl flex-col justify-center gap-8 px-2 lg:mt-4">
 					<div>
 						<Paragraph class="text-center font-bold">VISI</Paragraph>
-						<ul class="list-disc px-2 text-primary/80">
-							<li>
+						<ul
+							class="list-disc text-primary/80 lg:tracking-wide xl:text-lg xl:tracking-normal 2xl:text-xl"
+						>
+							<li class="text-justify">
 								Menjadi perusahaan jamu tradisional kelas dunia yang memproduksi produk kesehatan
 								berkualitas tinggi, bersertifikat halal, dan bermanfaat bagi masyarakat global.
 							</li>
@@ -385,7 +403,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid grid-cols-2">
+			<div class="hidden grid-cols-2 lg:grid">
 				<div class="mx-auto flex w-xl flex-col justify-center gap-8 lg:mt-4">
 					<Heading3 class="font-bold">OUR IMPACT</Heading3>
 					{#each otherBusiness as item}

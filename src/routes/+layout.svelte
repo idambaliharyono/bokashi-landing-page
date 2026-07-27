@@ -8,7 +8,7 @@
 	import { Mail, Menu, X } from '@lucide/svelte';
 	import { fly } from 'svelte/transition';
 	import { page } from '$app/state';
-	import LogoPakOles from '$lib/assets/circle-logo.webp';
+	import LogoPakOles from '$lib/assets/logo.png';
 
 	interface Props {
 		href: string;
@@ -78,7 +78,7 @@
 					<img
 						src={LogoPakOles}
 						alt=""
-						class="mx-auto mt-auto h-12 w-12
+						class="mx-auto mt-auto h-12 w-auto
            "
 					/>
 				</a>
@@ -97,7 +97,7 @@
 						<img
 							src={LogoPakOles}
 							alt=""
-							class="h-14 w-14 transition-transform duration-150 active:scale-95 xl:h-16 xl:w-16 2xl:h-18 2xl:w-18"
+							class="h-14 w-auto transition-transform duration-150 active:scale-95 xl:h-16 2xl:h-18"
 						/>
 					</a>
 				</div>
@@ -175,7 +175,7 @@
 	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg 2xl:text-xl">
 		<div class="lg:hidden">
 			<div class="mx-6">
-				<img src={LogoPakOles} alt="" class="w-12" />
+				<img src={LogoPakOles} alt="" class="h-12 w-auto" />
 				<h3 class="mt-4 text-xl font-bold">Bokashi Indonesia</h3>
 				<div class="mt-4 flex justify-between italic underline">
 					<a href="/about-us">About Us</a>
@@ -244,7 +244,7 @@
 		<div class="hidden px-12 text-xs lg:block lg:text-sm 2xl:text-lg">
 			<div class="flex justify-between">
 				<div>
-					<img src={LogoPakOles} alt="" class="w-18" />
+					<img src={LogoPakOles} alt="" class="h-auto w-18" />
 					<h3 class="mt-4 text-2xl font-semibold xl:text-3xl">Bokashi Indonesia</h3>
 					<p>Jl. Nusa Kambangan No.7X, Dauh Puri,</p>
 					<p>Kec. Denpasar Bar., Kota Denpasar,</p>

@@ -518,7 +518,7 @@
 				<h1>Herbal Industry</h1>
 			</div>
 
-			<div class="mx-5 hidden lg:flex lg:justify-center xl:mx-10">
+			<div class="hidden w-19/20 lg:flex lg:justify-center xl:mx-10">
 				<div class="relative aspect-4/5 w-1/2 rounded-2xl">
 					<img
 						src={BokashiCarePic}
@@ -572,6 +572,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- Desktop only! -->
 	<section class="relative my-20 hidden aspect-video overflow-hidden lg:block">
 		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
@@ -662,10 +663,10 @@
 	</section>
 	<!-- In your homepage route, e.g., src/routes/+page.svelte -->
 
-	<section class="my-8 px-4">
-		<div class="mx-auto">
+	<section class="my-8">
+		<div class="mx-auto aspect-2/1 w-19/20">
 			<!-- Responsive video container -->
-			<div class="relative w-full overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
+			<div class="relative overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
 				<iframe
 					src="https://www.youtube.com/embed/5CZ13ZuU2f8?si=iBeyHApSTPswtGzS"
 					title="Test Video"
