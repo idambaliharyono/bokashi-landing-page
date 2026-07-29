@@ -8,6 +8,8 @@
 	import Button from '$lib/components/Button.svelte';
 	import LgContainer from '$lib/components/LgContainer.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
+	import Heading3 from '$lib/components/Heading3.svelte';
+	import Heading4 from '$lib/components/Heading4.svelte';
 
 	const imagesVertical = [
 		{
@@ -79,6 +81,35 @@
 	function toggle(index: number) {
 		open = open === index ? null : index;
 	}
+
+	const MobileHorizontalImages = [
+		{
+			index: 1,
+			subtitle: 'Coconut Oil',
+			image: placeholder1
+		},
+		{
+			index: 2,
+			subtitle: 'Ginger',
+			image: placeholder1
+		},
+		{
+			index: 3,
+			subtitle: 'Turmeric',
+			image: placeholder1
+		},
+		{
+			index: 4,
+			subtitle: 'Sirih',
+			image: placeholder1
+		},
+		{
+			index: 5,
+			subtitle: 'Sambiloto',
+			image: placeholder1
+		}
+	];
+	const loopMobileImages = [...MobileHorizontalImages, ...MobileHorizontalImages];
 </script>
 
 <Hero src={hero} alt="images">
@@ -99,32 +130,100 @@ text-secondary text-shadow-lg text-shadow-primary/50
 </Hero>
 
 <LgContainer>
-	<CenterText
-		heading="STORY OF INGREDIENTS"
-		headingSizeMobile="2xl"
-		headingSizeDesktop="4xl"
-		body={[
-			'Berawal dari alam Indonesia yang kaya dan subur, Bokashi memilih bahan-bahan terbaik yang tumbuh selaras dengan tanah dan iklim tropis. Setiap bahan membawa manfaat alami yang telah lama dikenal dalam perawatan tradisional.',
-			'Melalui proses fermentasi dan teknologi Effective Microorganisms (EM), kekuatan alam tersebut diolah dengan cara yang lembut dan terjaga, agar bekerja lebih efektif dan seimbang.',
-			'Setiap produk Bokashi lahir dari kesederhanaan alam, diproses dengan ketelitian, dan dihadirkan sebagai perawatan alami yang jujur dan menenangkan.'
-		]}
-	/>
-	<section>
-		<!-- horizontal images  -->
-		<!-- dropdown expandable -->
-		<div class="flex flex-col">
-			{#each rempah as item, index}
-				<button onclick={() => toggle(index)} class="w-full">
-					<div class="mb-4 flex justify-between bg-secondary">
-						<p>{item.name}</p>
-						<h1>+</h1>
-					</div>
-					{#if open === index}
-						<div class="-mt-4 mb-4 bg-secondary text-left">{item.use}</div>
-					{/if}
-				</button>
-			{/each}
+	<div
+		class="mx-auto mt-6 flex w-full flex-col gap-4 text-center lg:w-9/10 2xl:mt-6 2xl:w-full 2xl:gap-6"
+	>
+		<Heading3 class="font-bold lg:hidden">STORY OF INGREDIENTS</Heading3>
+		<Paragraph
+			>Berawal dari alam Indonesia yang kaya dan subur, Bokashi memilih bahan-bahan terbaik yang
+			tumbuh selaras dengan tanah dan iklim tropis. Setiap bahan membawa manfaat alami yang telah
+			lama dikenal dalam perawatan tradisional.</Paragraph
+		>
+		<Paragraph
+			>Melalui proses fermentasi dan teknologi Effective Microorganisms (EM), kekuatan alam tersebut
+			diolah dengan cara yang lembut dan terjaga, agar bekerja lebih efektif dan seimbang.</Paragraph
+		>
+		<Paragraph
+			>Setiap produk Bokashi lahir dari kesederhanaan alam, diproses dengan ketelitian, dan
+			dihadirkan sebagai perawatan alami yang jujur dan menenangkan.</Paragraph
+		>
+	</div>
+
+	<!-- mobile horizontal images  -->
+	<section class="flex w-full overflow-x-auto text-white lg:hidden">
+		<div class="flex h-full w-full flex-col gap-10 py-10 pb-15 text-center lg:py-16">
+			<!-- carausel  -->
+			<div class="carousel-track-wrapper overflow-x-auto">
+				<!-- sliding carausel content -->
+				<div class="carousel-track flex h-full gap-12">
+					{#each loopMobileImages as item}
+						<div class="aspect-3/4 w-xs">
+							<img
+								src={item.image}
+								alt={item.subtitle}
+								class="h-full w-full rounded-xl border border-primary object-center"
+							/>
+						</div>
+					{/each}
+				</div>
+			</div>
 		</div>
+	</section>
+
+	<section>
+		<div class="block grid-cols-2 lg:mt-20 lg:mb-40 lg:grid">
+			<div
+				class="mx-auto hidden w-md items-center justify-center gap-6 text-center lg:block xl:w-xl xl:gap-8 2xl:w-xl"
+			>
+				<img
+					src={placeholder1}
+					class="aspect-3/4 w-full border border-primary object-cover"
+					alt=""
+				/>
+			</div>
+			<div
+				class="relative mx-auto w-full items-center justify-center text-center lg:w-md xl:w-xl 2xl:w-xl"
+			>
+				<div class="block lg:absolute">
+					<div class="mb-4 w-full rounded-full bg-secondary px-6 py-3">
+						<Heading3 class="font-bold">Natural Herb</Heading3>
+					</div>
+					{#each rempah as item, index}
+						<button onclick={() => toggle(index)} class="w-full">
+							<div
+								class="mb-2 flex justify-between bg-secondary px-6 py-2 lg:mb-4 lg:px-4
+              {open === index ? 'rounded-t-2xl' : 'rounded-full'}"
+							>
+								<Paragraph>{item.name}</Paragraph>
+								{#if open === index}
+									<span class="text-3xl">-</span>
+								{:else}
+									<span>+</span>
+								{/if}
+							</div>
+							{#if open === index}
+								<div class="-mt-6 mb-4 rounded-b-2xl bg-secondary px-6 py-2 text-left lg:px-4">
+									<Paragraph class="text-justify">
+										{item.use}
+									</Paragraph>
+								</div>
+							{/if}
+						</button>
+					{/each}
+				</div>
+			</div>
+		</div>
+		<!-- dropdown expandable -->
+	</section>
+	<section class="block">
+		<Heading4 class="font-bold">OUR PRODUCTION FACILITIES</Heading4>
+		<img
+			src={placeholder2}
+			class="mx-auto aspect-video w-full rounded-2xl border border-primary object-cover lg:w-19/20"
+			alt=""
+		/>
+	</section>
+	<section>
 		<div class="rounded-xl bg-primary px-4 py-8 text-white">
 			<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
 				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
@@ -210,3 +309,30 @@ text-secondary text-shadow-lg text-shadow-primary/50
 		{/each}
 	</div>
 </LgContainer>
+
+<style>
+	.carousel-track {
+		animation: scroll-left 20s linear infinite;
+		width: max-content;
+	}
+	.carousel-track-wrapper::-webkit-scrollbar {
+		display: none;
+	}
+	.carousel-track-badge {
+		animation: scroll-left 10s linear infinite;
+		width: max-content;
+	}
+
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	.carousel-track:hover {
+		animation-play-state: paused;
+	}
+</style>

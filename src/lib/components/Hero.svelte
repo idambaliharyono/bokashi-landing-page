@@ -22,7 +22,7 @@
 		<div class="absolute inset-0 bg-black/30"></div>
 
 		<div
-			class="absolute inset-0 z-10 flex items-center justify-center text-center font-heading text-3xl leading-tight font-bold text-white text-shadow-lg lg:text-4xl"
+			class="absolute inset-0 z-10 flex items-center justify-center text-center font-heading text-3xl leading-tight font-bold text-white text-shadow-lg lg:text-4xl 2xl:text-6xl"
 		>
 			{@render children?.()}
 		</div>

@@ -115,7 +115,7 @@
 	</section>
 
 	<section class="my-30 grid grid-cols-2">
-		<div>
+		<div class="flex flex-col justify-center align-middle">
 			<div
 				class="mx-auto flex w-md flex-col items-center justify-center gap-6 text-center xl:w-xl xl:gap-8 2xl:w-xl"
 			>
@@ -131,9 +131,9 @@
 			<!-- spacer -->
 			<div class="aspect-8.5/1 w-full"></div>
 			<!-- spacer -->
-			<div class="flex justify-evenly gap-6">
+			<div class="flex justify-evenly gap-2 xl:gap-6">
 				{#each heroNumbers.slice(0, 2) as item}
-					<div class="rounded-full bg-secondary px-8 py-4 text-center text-primary">
+					<div class="rounded-full bg-secondary px-5 py-2 text-center text-primary xl:px-8 xl:py-4">
 						<Heading4 class="font-bold">{item.number}+</Heading4>
 						<Paragraph class="lg:mt-2 lg:text-xl">{item.body}</Paragraph>
 					</div>

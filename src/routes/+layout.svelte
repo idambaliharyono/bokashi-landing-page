@@ -63,7 +63,7 @@
 	<section id="topNav" class=" sticky top-0 z-200 bg-white">
 		<!-- mobileTopNav -->
 		<div
-			class="relative grid grid-cols-3 justify-between px-2 pt-3 pb-4 text-lg text-primary lg:hidden"
+			class="relative grid grid-cols-3 justify-between px-2 pt-2 pb-2 text-lg text-primary lg:hidden"
 		>
 			<button
 				onclick={triggerSideBarMobile}
@@ -78,7 +78,7 @@
 					<img
 						src={LogoPakOles}
 						alt=""
-						class="mx-auto mt-auto h-12 w-auto
+						class="mx-auto mt-auto h-auto w-18
            "
 					/>
 				</a>
@@ -90,14 +90,14 @@
 			>
 		</div>
 		<!-- desktopTopNav -->
-		<div class="hidden bg-white/20 py-4 text-center font-bold text-primary lg:block">
+		<div class="hidden bg-white/20 py-3 text-center font-bold text-primary lg:block">
 			<div class="mx-20 flex justify-between">
 				<div class="flex items-end">
 					<a href="/">
 						<img
 							src={LogoPakOles}
 							alt=""
-							class="h-14 w-auto transition-transform duration-150 active:scale-95 xl:h-16 2xl:h-18"
+							class="h-auto w-22 transition-transform duration-150 active:scale-95 xl:w-23 2xl:w-24"
 						/>
 					</a>
 				</div>
@@ -175,7 +175,9 @@
 	<section id="footer" class=" z-51 mt-10 bg-primary pt-10 pb-2 text-white xl:text-lg 2xl:text-xl">
 		<div class="lg:hidden">
 			<div class="mx-6">
-				<img src={LogoPakOles} alt="" class="h-12 w-auto" />
+				<a href="/">
+					<img src={LogoPakOles} alt="" class="h-auto w-18" />
+				</a>
 				<h3 class="mt-4 text-xl font-bold">Bokashi Indonesia</h3>
 				<div class="mt-4 flex justify-between italic underline">
 					<a href="/about-us">About Us</a>
@@ -244,7 +246,7 @@
 		<div class="hidden px-12 text-xs lg:block lg:text-sm 2xl:text-lg">
 			<div class="flex justify-between">
 				<div>
-					<img src={LogoPakOles} alt="" class="h-auto w-18" />
+					<img src={LogoPakOles} alt="" class="h-auto w-20 xl:w-22 2xl:w-24" />
 					<h3 class="mt-4 text-2xl font-semibold xl:text-3xl">Bokashi Indonesia</h3>
 					<p>Jl. Nusa Kambangan No.7X, Dauh Puri,</p>
 					<p>Kec. Denpasar Bar., Kota Denpasar,</p>
