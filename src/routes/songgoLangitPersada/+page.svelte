@@ -15,18 +15,33 @@
 	const imagesHorizontal = [
 		{
 			index: 1,
-			subtitle: 'Coconut Oil',
-			image: placeholder1
+			subtitle: 'em pertanian',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Pertanian_tszpl0.webp'
 		},
 		{
 			index: 2,
-			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			subtitle: 'em peternakan',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_peternakan_sovqvl.webp'
 		},
 		{
 			index: 3,
-			subtitle: 'Coconut Oil',
-			image: placeholder2
+			subtitle: 'em perikanan',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Perairan_fo7imo.webp'
+		},
+		{
+			index: 4,
+			subtitle: 'em toilet',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_toilet_f9byln.webp'
+		},
+		{
+			index: 5,
+			subtitle: 'minyak rajas',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034564/minyak_rajas_hgpgfb.webp'
 		}
 	];
 	const loopHorizontal = [...imagesHorizontal, ...imagesHorizontal];
@@ -34,27 +49,17 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034557/Galeri_2_ftwiok.webp'
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034557/Galeri_3_ojzurk.webp'
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
-		},
-		{
-			index: 4,
-			subtitle: 'Coconut Oil',
 			image: placeholder1
-		},
-		{
-			index: 5,
-			subtitle: 'Coconut Oil',
-			image: placeholderPhone
 		}
 	];
 </script>
@@ -97,13 +102,13 @@
 		<!-- carausel  -->
 		<div class="relative h-full w-full overflow-x-auto">
 			<!-- sliding carausel content -->
-			<div class="carousel-track flex h-full gap-8">
+			<div class="carousel-track flex h-full gap-10">
 				{#each loopHorizontal as item}
-					<div class="relative aspect-2/3 w-xs">
+					<div class="relative aspect-2/3 w-xs overflow-hidden rounded-2xl border border-primary">
 						<img
 							src={item.image}
 							alt={item.subtitle}
-							class="h-full w-full rounded-xl object-cover"
+							class="h-full w-full scale-110 object-cover"
 						/>
 					</div>
 				{/each}
@@ -122,7 +127,7 @@
 
 <section class="mt-6">
 	<h2 class="mx-auto text-center text-2xl font-bold tracking-tight text-primary">
-		PRODUK EM 4 INDONESIA
+		KEGIATAN PERUSAHAAN
 	</h2>
 	<div class="mt-4 flex flex-col gap-4 px-2">
 		{#each imagesVertical as item}

@@ -19,17 +19,32 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034561/ipsa_1_dyelml.webp'
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034561/ipsa_2_niwknu.webp'
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034561/ipsa_3_kr0iop.webp'
+		},
+		{
+			index: 4,
+			subtitle: 'Coconut Oil',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034561/ipsa_4_pes6fc.webp'
+		},
+		{
+			index: 5,
+			subtitle: 'Coconut Oil',
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034561/ipsa_4_2_wfaxwb.webp'
 		}
 	];
 	const loopHorizontal = [...imagesHorizontal, ...imagesHorizontal];
@@ -37,17 +52,20 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034562/kamar_1_fq4i8e.webp'
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034562/kamar_2_l6wept.webp'
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034562/kamar_3_cl42os.webp'
 		}
 	];
 </script>

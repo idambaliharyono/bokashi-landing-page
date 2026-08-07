@@ -229,7 +229,7 @@
 				headingParagraphSpace="1"
 			/>
 		</div>
-		<div class="-mx-1 bg-primary px-3 py-8 lg:px-0 lg:py-12">
+		<div class="-mx-1 rounded-md bg-primary px-3 py-8 lg:px-0 lg:py-12">
 			<img
 				src={IntegrasiTeknologiJepangPic}
 				alt="Integrasi Teknologi Jepang"
@@ -336,16 +336,21 @@
 				</div>
 			</div>
 			<div class="relative my-8 hidden aspect-4/1 w-full overflow-hidden lg:block xl:aspect-3/1">
-				<img src={hero} alt="komitmen" class=" w-full scale-110" />
-				<div class="absolute inset-0 bg-black/50"></div>
-				<div class="absolute top-1/2 left-10 w-md -translate-y-1/2 xl:w-lg">
-					<Paragraph class="text-justify text-white">
-						Kami berkomitmen penuh pada pemanfaatan tanaman herbal lokal melalui teknologi Effective
-						Microorganisms (EM) yang berkelanjutan. Tim peneliti dan praktisi kami bekerja
-						berdampingan untuk mengolah kekayaan alam tersebut guna menghadirkan solusi alami yang
-						bermakna bagi masyarakat.
-					</Paragraph>
-				</div>
+				<img
+					src="https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034563/Kami_berkomitmen_lkjzav.webp"
+					class="object-cover"
+					alt=""
+				/>
+				<!-- <img src={hero} alt="komitmen" class=" w-full scale-110" /> -->
+				<!-- <div class="absolute inset-0 bg-black/50"></div> -->
+				<!-- <div class="absolute top-1/2 left-10 w-md -translate-y-1/2 xl:w-lg"> -->
+				<!-- 	<Paragraph class="text-justify text-white"> -->
+				<!-- 		Kami berkomitmen penuh pada pemanfaatan tanaman herbal lokal melalui teknologi Effective -->
+				<!-- 		Microorganisms (EM) yang berkelanjutan. Tim peneliti dan praktisi kami bekerja -->
+				<!-- 		berdampingan untuk mengolah kekayaan alam tersebut guna menghadirkan solusi alami yang -->
+				<!-- 		bermakna bagi masyarakat. -->
+				<!-- 	</Paragraph> -->
+				<!-- </div> -->
 			</div>
 		</section>
 		<section>
@@ -419,7 +424,11 @@
 					{/each}
 				</div>
 				<div>
-					<img src={placeholder1} alt="" class="mx-auto aspect-3/4 w-xl border border-primary" />
+					<img
+						src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034564/OUR_IMPACT_vxqii6.webp"
+						alt=""
+						class="mx-auto aspect-3/4 w-xl border border-primary"
+					/>
 				</div>
 			</div>
 			<div class="flex flex-col lg:mt-4"></div>
@@ -430,8 +439,12 @@
 				<div class="mb-4 flex flex-col items-center justify-center gap-4">
 					{#each showAll ? otherBusiness : otherBusiness.filter((item) => item.index < 4) as item}
 						<div class="">
-							<div class="mx-auto mb-2 aspect-square w-full lg:w-2xl">
-								<img src={item.image} alt={item.subtitle} class="rounded-xl lg:rounded-5xl" />
+							<div class="mx-auto mb-2 aspect-square w-full rounded-xl lg:w-2xl">
+								<img
+									src={item.image}
+									alt={item.subtitle}
+									class="h-full w-full object-cover lg:rounded-5xl"
+								/>
 							</div>
 							<div class=" text-center lg:w-full lg:px-16 lg:text-xl">
 								<h4 class=" font-semibold italic underline">{item.subtitle}</h4>

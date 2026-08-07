@@ -15,27 +15,33 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034558/FACILITIES_1_bqy8bs.webp'
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034558/FACILITIES_2_eii1ti.webp'
 		},
 		{
 			index: 3,
 			subtitle: 'Coconut Oil',
-			image: placeholder2
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034558/FACILITIES_3_jbwmbn.webp'
 		},
 		{
 			index: 4,
 			subtitle: 'Coconut Oil',
-			image: placeholder1
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034559/FACILITIES_4_a0wmmw.webp'
 		},
 		{
 			index: 5,
 			subtitle: 'Coconut Oil',
-			image: placeholderPhone
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034559/FACILITIES_5_ctcpce.webp'
+		},
+
+		{
+			index: 6,
+			subtitle: 'Coconut Oil',
+			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/v1784034555/FACILITIES_6_srpzpe.webp'
 		}
 	];
 
@@ -112,23 +118,31 @@
 	const loopMobileImages = [...MobileHorizontalImages, ...MobileHorizontalImages];
 </script>
 
-<Hero src={hero} alt="images">
-	<div>
-		<h1
-			class="
+<div class="lg:hidden">
+	<Hero src={hero} alt="images">
+		<div>
+			<h1
+				class="
 text-secondary text-shadow-lg text-shadow-primary/50
       "
-		>
-			OUR PRODUCTION HOUSE
-		</h1>
-		<Paragraph
-			class="
+			>
+				OUR PRODUCTION HOUSE
+			</h1>
+			<Paragraph
+				class="
       mt-4 hidden text-xl text-secondary text-shadow-lg text-shadow-primary/50 lg:block"
-			>From Village Wisdom to Global Wellness</Paragraph
-		>
-	</div>
-</Hero>
-
+				>From Village Wisdom to Global Wellness</Paragraph
+			>
+		</div>
+	</Hero>
+</div>
+<div class="overflow-hidden">
+	<img
+		src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034565/Production-_tulisan_zcayt4.webp"
+		alt=""
+		class="mx-auto hidden aspect-2.5/1 w-full scale-110 object-cover lg:block"
+	/>
+</div>
 <LgContainer>
 	<div
 		class="mx-auto mt-6 flex w-full flex-col gap-4 text-center lg:w-9/10 2xl:mt-6 2xl:w-full 2xl:gap-6"
@@ -176,7 +190,7 @@ text-secondary text-shadow-lg text-shadow-primary/50
 				class="mx-auto hidden w-md items-center justify-center gap-6 text-center lg:block xl:w-xl xl:gap-8 2xl:w-xl"
 			>
 				<img
-					src={placeholder1}
+					src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034564/OUR_IMPACT_2_xuezsj.webp"
 					class="aspect-3/4 w-full border border-primary object-cover"
 					alt=""
 				/>
@@ -191,7 +205,7 @@ text-secondary text-shadow-lg text-shadow-primary/50
 					{#each rempah as item, index}
 						<button onclick={() => toggle(index)} class="w-full">
 							<div
-								class="mb-2 flex justify-between bg-secondary px-6 py-2 lg:mb-4 lg:px-4
+								class="mb-3 flex justify-between bg-secondary px-6 py-2 lg:mb-4 lg:px-4
               {open === index ? 'rounded-t-2xl' : 'rounded-full'}"
 							>
 								<Paragraph>{item.name}</Paragraph>
@@ -218,7 +232,7 @@ text-secondary text-shadow-lg text-shadow-primary/50
 	<section class="block">
 		<Heading4 class="font-bold">OUR PRODUCTION FACILITIES</Heading4>
 		<img
-			src={placeholder2}
+			src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034555/FACILITIES_kiowm1.webp"
 			class="mx-auto aspect-video w-full rounded-2xl border border-primary object-cover lg:w-19/20"
 			alt=""
 		/>
@@ -268,7 +282,9 @@ text-secondary text-shadow-lg text-shadow-primary/50
 		</div>
 		<div class="mt-4 flex flex-col gap-4 px-2">
 			{#each imagesVertical as item}
-				<div class="aspect-video w-full overflow-hidden rounded-2xl border border-black">
+				<div
+					class="aspect-video w-full overflow-hidden rounded-3xl border border-black lg:rounded-2xl"
+				>
 					<img
 						src={item.image}
 						alt={item.subtitle}
@@ -289,24 +305,12 @@ text-secondary text-shadow-lg text-shadow-primary/50
 			<Button variant="secondary" class="mx-auto">COLABORATE WITH US</Button>
 		</div>
 	</section>
-	<div class="mb-4 rounded-3xl bg-secondary px-4 py-4 text-center text-primary lg:px-12">
+	<div class="mb-4 rounded-3xl bg-secondary px-4 py-4 text-center text-primary lg:hidden lg:px-12">
 		<h4 class="text-xl font-bold">500+</h4>
 		<p>
 			Ahli dan Akademisi telah berkunjung dan belajar langsung soal pengelolaan industri herbal di
 			Bokashi
 		</p>
-	</div>
-
-	<div class="mt-4 flex flex-col gap-4 px-2">
-		{#each imagesVertical as item}
-			<div class="aspect-square w-full overflow-hidden rounded-2xl border border-black">
-				<img
-					src={item.image}
-					alt={item.subtitle}
-					class="h-full w-full object-cover object-center"
-				/>
-			</div>
-		{/each}
 	</div>
 </LgContainer>
 

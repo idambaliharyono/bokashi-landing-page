@@ -575,19 +575,24 @@
 
 	<!-- Desktop only! -->
 	<section class="relative my-20 hidden aspect-video overflow-hidden lg:block">
-		<img src={slides2} class="absolute inset-0 scale-120" alt="" />
-		<div class="absolute inset-0 bg-black/50"></div>
-		<div
-			class="absolute inset-0 mx-8 flex flex-col items-center
-      justify-center gap-12 text-center text-white xl:mx-20 xl:gap-20"
-		>
-			<h2 class="text-3xl xl:text-4xl">Kenapa Memilih Bokashi?</h2>
-			<p class="text-xl xl:text-2xl">
-				Bokashi berkomitmen untuk mengembangkan produk herbal berbasis rempah nusantara yang ditanam
-				sendiri oleh petani lokal Indonesia. Setiap produk yang dihasilkan merupakan kombinasi hasil
-				bumi Tanah Air dengan teknologi yang mutakhir.
-			</p>
-		</div>
+		<img
+			src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034563/Kenapa_bokashi_tulisan_lrr8nt.webp"
+			class="w-full object-cover"
+			alt=""
+		/>
+		<!-- <img src={slides2} class="absolute inset-0 scale-120" alt="" /> -->
+		<!-- <div class="absolute inset-0 bg-black/50"></div> -->
+		<!-- <div -->
+		<!-- 	class="absolute inset-0 mx-8 flex flex-col items-center -->
+		<!--     justify-center gap-12 text-center text-white xl:mx-20 xl:gap-20" -->
+		<!-- > -->
+		<!-- 	<h2 class="text-3xl xl:text-4xl">Kenapa Memilih Bokashi?</h2> -->
+		<!-- 	<p class="text-xl xl:text-2xl"> -->
+		<!-- 		Bokashi berkomitmen untuk mengembangkan produk herbal berbasis rempah nusantara yang ditanam -->
+		<!-- 		sendiri oleh petani lokal Indonesia. Setiap produk yang dihasilkan merupakan kombinasi hasil -->
+		<!-- 		bumi Tanah Air dengan teknologi yang mutakhir. -->
+		<!-- 	</p> -->
+		<!-- </div> -->
 	</section>
 
 	<section id="produk" class="mt-12 w-full overflow-x-hidden text-center">
