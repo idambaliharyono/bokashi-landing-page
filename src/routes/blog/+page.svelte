@@ -1,39 +1,70 @@
 <script lang="ts">
+	import placeholder1 from '$lib/assets/27002.jpg';
 	import type { PageData } from './$types';
 	import Button from '$lib/components/Button.svelte';
 	let { data }: { data: PageData } = $props();
-	console.log(data.posts);
+	let counts = [1, 2, 3, 4, 5, 6];
 </script>
 
 <div class="grid grid-cols-1 justify-items-center gap-y-6 lg:grid-cols-3">
-	{#each data.posts as item (item.id)}
-		<a href={item.link} class="group">
-			<div class=" w-full items-center px-2 lg:w-xs lg:px-0 xl:w-sm 2xl:w-md">
-				<div class="relative overflow-hidden rounded-2xl">
-					<div class="relative aspect-video w-full overflow-hidden">
-						<img
-							src={item.image}
-							alt={item.date}
-							class="absolute h-full w-full transition-transform duration-300 group-hover:scale-125"
-						/>
+	{#await data.posts}
+		<!-- skeleton -->
+		{#each counts as count}
+			<div class="flex w-full flex-col">
+				<div class=" w-full items-center px-2 lg:w-xs lg:px-0 xl:w-sm 2xl:w-md">
+					<div class="relative overflow-hidden rounded-2xl">
+						<div class="relative aspect-video w-full overflow-hidden">
+							<img
+								src={placeholder1}
+								alt="placeholder"
+								class="absolute h-full w-full animate-pulse transition-transform duration-300 group-hover:scale-125"
+							/>
+						</div>
+						<div class="absolute inset-0 bg-black/50"></div>
 					</div>
-					<div class="absolute inset-0 bg-black/50"></div>
-					<h1
-						class="absolute top-1/2 z-10 -translate-y-1/2 px-2 text-center font-bold text-white duration-100 group-active:scale-105 max-lg:text-2xl"
-					>
-						{item.title}
-					</h1>
-					<p class="absolute top-2 right-4 text-white">{item.date}</p>
+				</div>
+				<div
+					class="mt-2 flex w-full flex-col items-center justify-center gap-2 px-4 lg:w-xs lg:px-2 xl:w-sm 2xl:w-md"
+				>
+					{#each counts as count}
+						<div class="h-2 w-full rounded bg-gray-200"></div>
+					{/each}
 				</div>
 			</div>
-			<div class="flex w-full items-center justify-center lg:w-xs lg:px-0 xl:w-sm 2xl:w-md">
-				<p class="mt-2 px-2 text-justify leading-relaxed text-primary/80">{item.intro}</p>
-			</div>
-		</a>
-
-		<!-- content here -->
-	{/each}
+		{/each}
+	{:then posts}
+		{#each posts as item}
+			<a href={item.link} class="group">
+				<div class=" w-full items-center px-2 lg:w-xs lg:px-0 xl:w-sm 2xl:w-md">
+					<div class="relative overflow-hidden rounded-2xl">
+						<div class="relative aspect-video w-full overflow-hidden">
+							<img
+								src={item.image}
+								alt={item.date}
+								class="absolute h-full w-full transition-transform duration-300 group-hover:scale-125"
+							/>
+						</div>
+						<div class="absolute inset-0 bg-black/60"></div>
+						<h1
+							class="absolute top-1/2 z-10 -translate-y-1/2 px-2 text-center font-bold text-white duration-100 group-active:scale-105 max-lg:text-2xl"
+						>
+							{item.title}
+						</h1>
+					</div>
+				</div>
+				<div
+					class="flex w-full flex-col items-center justify-center px-4 lg:w-xs lg:px-2 xl:w-sm 2xl:w-md"
+				>
+					<span class="mt-2 mr-auto font-bold text-primary">{item.date}</span>
+					<p class="text-justify leading-relaxed text-primary/80">{item.intro}</p>
+				</div>
+			</a>
+		{/each}
+	{:catch error}
+		<p>Failed to load: {error.message}</p>
+	{/await}
 </div>
+
 <div class="mt-8 -mb-2.5 flex justify-center align-middle">
 	<Button href="https://www.pakolesonline.com/" class="mx-auto text-center">Read More</Button>
 </div>

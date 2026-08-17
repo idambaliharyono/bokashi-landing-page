@@ -21,8 +21,7 @@ const SELECTORS = {
 	intro: '.item-details .td-excerpt',
 	datePost: '.item-details .td-module-meta-info .td-post-date'
 };
-
-export async function load({ fetch }) {
+async function scrapePosts(fetch: typeof globalThis.fetch): Promise<Post[]> {
 	let html: string;
 	try {
 		const res = await fetch(SOURCE_URL);
@@ -65,5 +64,10 @@ export async function load({ fetch }) {
 			console.error(`error at parsing post[${i}]:`, err);
 		}
 	});
-	return { posts };
+	return posts;
+}
+export async function load({ fetch }) {
+	return {
+		posts: scrapePosts(fetch)
+	};
 }

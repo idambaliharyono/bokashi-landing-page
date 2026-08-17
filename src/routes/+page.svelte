@@ -574,9 +574,9 @@
 	</section>
 
 	<!-- Desktop only! -->
-	<section class="relative my-20 hidden aspect-video overflow-hidden lg:block">
+	<section class="relative mx-2 my-20 hidden aspect-video overflow-hidden lg:block">
 		<img
-			src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034563/Kenapa_bokashi_tulisan_lrr8nt.webp"
+			src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034563/Kenapa_bokashi_tulisan_lrr8nt.webp"
 			class="w-full object-cover"
 			alt=""
 		/>
