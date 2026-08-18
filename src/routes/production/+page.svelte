@@ -10,6 +10,8 @@
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Heading3 from '$lib/components/Heading3.svelte';
 	import Heading4 from '$lib/components/Heading4.svelte';
+	import { Minus, Plus } from '@lucide/svelte';
+	import Spacer from '$lib/components/Spacer.svelte';
 
 	const imagesVertical = [
 		{
@@ -210,14 +212,14 @@ text-secondary text-shadow-lg text-shadow-primary/50
 							>
 								<Paragraph>{item.name}</Paragraph>
 								{#if open === index}
-									<span class="text-3xl">-</span>
+									<Minus class="w-10"></Minus>
 								{:else}
-									<span>+</span>
+									<Plus></Plus>
 								{/if}
 							</div>
 							{#if open === index}
 								<div class="-mt-6 mb-4 rounded-b-2xl bg-secondary px-6 py-2 text-left lg:px-4">
-									<Paragraph class="text-justify">
+									<Paragraph class="pr-4 text-justify">
 										{item.use}
 									</Paragraph>
 								</div>
@@ -230,18 +232,30 @@ text-secondary text-shadow-lg text-shadow-primary/50
 		<!-- dropdown expandable -->
 	</section>
 	<section class="block">
-		<Heading4 class="font-bold">OUR PRODUCTION FACILITIES</Heading4>
+		<Heading3 class="mb-4 font-bold">OUR PRODUCTION FACILITIES</Heading3>
 		<img
 			src="https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034555/FACILITIES_kiowm1.webp"
-			class="mx-auto aspect-video w-full rounded-2xl border border-primary object-cover lg:w-19/20"
+			class="mx-auto aspect-video w-full rounded-2xl object-cover lg:w-19/20"
 			alt=""
 		/>
 	</section>
-	<section>
-		<div class="rounded-xl bg-primary px-4 py-8 text-white">
-			<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
-				<div>
+	<Spacer class="hidden lg:block"></Spacer>
+	<section class="mt-6 lg:mt-0">
+		<div
+			class="rounded-xl bg-primary px-4 py-8 text-white lg:relative lg:flex lg:gap-4 lg:pt-30 lg:pb-10"
+		>
+			<div
+				class="top-0 left-0 hidden w-full -translate-y-1/2 justify-start gap-4 px-4 lg:absolute lg:flex"
+			>
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-40 rounded-full" />
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-40 rounded-full" />
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-40 rounded-full" />
+			</div>
+			<div
+				class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center lg:w-1/4 lg:justify-start"
+			>
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full lg:hidden" />
+				<div class="">
 					<h6 class="italic underline">Good Manufacturing Practice</h6>
 					<p>
 						Produk kami telah tersertifikasi Good Manufacturing Practice dan Cara Pembuatan Obat
@@ -249,9 +263,11 @@ text-secondary text-shadow-lg text-shadow-primary/50
 					</p>
 				</div>
 			</div>
-			<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
-				<div>
+			<div
+				class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center lg:w-1/4 lg:justify-start"
+			>
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full lg:hidden" />
+				<div class="">
 					<h6 class="italic underline">EM Technology</h6>
 
 					<p>
@@ -260,8 +276,10 @@ text-secondary text-shadow-lg text-shadow-primary/50
 					</p>
 				</div>
 			</div>
-			<div class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center">
-				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full" />
+			<div
+				class="mx-auto mb-8 flex flex-col justify-center gap-4 text-center lg:w-1/4 lg:justify-start"
+			>
+				<img src={hero} alt="sss" class="mx-auto aspect-square w-25 rounded-full lg:hidden" />
 				<div>
 					<h6 class="italic underline">Halal and BPOM Certified</h6>
 
@@ -276,9 +294,9 @@ text-secondary text-shadow-lg text-shadow-primary/50
 
 	<section class="mt-6">
 		<div class="mx-2 rounded-xl border border-primary p-4">
-			<h2 class="mx-auto text-center text-lg tracking-tight text-primary">
+			<h3 class="mx-auto text-center text-lg tracking-wider text-primary">
 				GET CLOSER TO OUR STANDARIZED PRODUCTION FACILITIES
-			</h2>
+			</h3>
 		</div>
 		<div class="mt-4 flex flex-col gap-4 px-2">
 			{#each imagesVertical as item}
@@ -295,14 +313,14 @@ text-secondary text-shadow-lg text-shadow-primary/50
 		</div>
 	</section>
 	<section class="my-8">
-		<div class="flex flex-col justify-center">
+		<div class="flex flex-col justify-center lg:mx-auto lg:w-3/4">
 			<CenterText
 				heading="PARTNERSHIP"
 				body={[
 					'Tertarik riset, magang, atau kerjasama maklon produk untuk brandmu? Wujudkan kolaborasi di bidang lingkungan, agribisnis, wellness, dan industri herbal.'
 				]}
 			/>
-			<Button variant="secondary" class="mx-auto">COLABORATE WITH US</Button>
+			<Button variant="primary" class="mx-auto">COLABORATE WITH US</Button>
 		</div>
 	</section>
 	<div class="mb-4 rounded-3xl bg-secondary px-4 py-4 text-center text-primary lg:hidden lg:px-12">

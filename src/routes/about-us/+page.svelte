@@ -25,6 +25,7 @@
 	import ImpactPic4 from '$lib/assets/2. ABOUT US- Story of purpose/Webp-minus csr/3.webp';
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Heading3 from '$lib/components/Heading3.svelte';
+	import Spacer from '$lib/components/Spacer.svelte';
 
 	const heroNumbers = [
 		{
@@ -366,6 +367,8 @@
 				</p>
 			</div>
 		</section>
+
+		<!-- visi-misi-desktop -->
 		<section>
 			<div class="hidden grid-cols-2 lg:grid">
 				<div>
@@ -411,6 +414,7 @@
 					</div>
 				</div>
 			</div>
+			<Spacer></Spacer>
 			<div class="hidden grid-cols-2 lg:grid">
 				<div class="mx-auto flex w-xl flex-col justify-center gap-8 lg:mt-4">
 					<Heading3 class="font-bold">OUR IMPACT</Heading3>
@@ -433,6 +437,8 @@
 			</div>
 			<div class="flex flex-col lg:mt-4"></div>
 		</section>
+		<!-- visi-misi-desktop -->
+
 		<section id="otherBusiness" class="mt-10 text-primary lg:hidden">
 			<h1 class="mx-auto mb-4 text-center text-2xl font-bold lg:text-3xl">OUR IMPACT</h1>
 			<div class="grid grid-cols-1 justify-items-center lg:mt-6">
@@ -443,16 +449,12 @@
 								<img
 									src={item.image}
 									alt={item.subtitle}
-									class="h-full w-full object-cover lg:rounded-5xl"
+									class="h-full w-full rounded-2xl object-cover lg:rounded-5xl"
 								/>
 							</div>
 							<div class=" text-center lg:w-full lg:px-16 lg:text-xl">
-								<h4 class=" font-semibold italic underline">{item.subtitle}</h4>
-								<div class="mx-auto w-[18rem] lg:w-full">
-									<p>
-										{item.paragraph}
-									</p>
-								</div>
+								<Heading4 class=" font-semibold italic underline">{item.subtitle}</Heading4>
+								<Paragraph>{item.paragraph}</Paragraph>
 							</div>
 						</div>
 					{/each}
