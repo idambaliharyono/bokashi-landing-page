@@ -50,12 +50,14 @@
 		{
 			index: 1,
 			subtitle: 'Coconut Oil',
-			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034557/Galeri_2_ftwiok.webp'
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034557/Galeri_2_ftwiok.webp'
 		},
 		{
 			index: 2,
 			subtitle: 'Coconut Oil',
-			image: 'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034557/Galeri_3_ojzurk.webp'
+			image:
+				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto, f_auto/v1784034557/Galeri_3_ojzurk.webp'
 		},
 		{
 			index: 3,
@@ -115,34 +117,35 @@
 				{/each}
 			</div>
 		</div>
-    <SlidingCarausel items=[
-
-		{
-			subtitle:'em pertanian',
-			image:
-				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Pertanian_tszpl0.webp'
-		},
-		{
-			subtitle: 'em peternakan',
-			image:
-				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_peternakan_sovqvl.webp'
-		},
-		{
-			subtitle: 'em perikanan',
-			image:
-				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Perairan_fo7imo.webp'
-		},
-		{
-			subtitle: 'em toilet',
-			image:
-				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_toilet_f9byln.webp'
-		},
-		{
-			subtitle: 'minyak rajas',
-			image:
-				'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034564/minyak_rajas_hgpgfb.webp'
-		}
-      ]></SlidingCarausel>
+		<SlidingCarausel
+			items={[
+				{
+					subtitle: 'em pertanian',
+					image:
+						'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Pertanian_tszpl0.webp'
+				},
+				{
+					subtitle: 'em peternakan',
+					image:
+						'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_peternakan_sovqvl.webp'
+				},
+				{
+					subtitle: 'em perikanan',
+					image:
+						'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034556/EM_Perairan_fo7imo.webp'
+				},
+				{
+					subtitle: 'em toilet',
+					image:
+						'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034557/EM_toilet_f9byln.webp'
+				},
+				{
+					subtitle: 'minyak rajas',
+					image:
+						'https://res.cloudinary.com/rv4m5nbg/image/upload/f_auto,q_auto/v1784034564/minyak_rajas_hgpgfb.webp'
+				}
+			]}
+		></SlidingCarausel>
 	</div>
 </section>
 <section class="mt-4 flex flex-col gap-4 px-3 text-justify text-primary">
