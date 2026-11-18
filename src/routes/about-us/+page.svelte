@@ -1,10 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
-	import verticalPlaceholder from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import CenterText from '$lib/components/CenterText.svelte';
-	import placeholder1 from '$lib/assets/27002.jpg';
-	import placeholder2 from '$lib/assets/5563.jpg';
-	import placeholderPhone from '$lib/assets/placeholder-portrait-9-16.jpg';
 	import Button from '$lib/components/Button.svelte';
 	import LgContainer from '$lib/components/LgContainer.svelte';
 	import Heading4 from '$lib/components/Heading4.svelte';

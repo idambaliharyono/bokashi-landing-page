@@ -1,31 +1,23 @@
 <script lang="ts">
-	import { imgSet, img } from '$lib/image';
+	import CarauselProduct from '$lib/components/CarauselProduct.svelte';
 	import type { PageData } from './$types';
+	import Heading4 from '$lib/components/Heading4.svelte';
 
 	let { data }: { data: PageData } = $props();
+	const beauty = $derived(data.products.filter((p) => p.tag === 'beauty'));
+	const health = $derived(data.products.filter((p) => p.tag === 'health'));
 </script>
 
-<h1>Produk</h1>
+<div class="mt-8 text-left font-bold">
+	<Heading4 class="px-2 text-left lg:px-4">PRODUK</Heading4>
 
-<section>
-	{#each data.products as p (p.id)}
-		<a href="/products/{p.slug}">
-			<img
-				src={img(p.cover)}
-				srcset={imgSet(p.cover)}
-				class="max-w-40"
-				loading="lazy"
-				alt={p.name}
-			/>
-			<h2>{p.name}</h2>
-		</a>
-	{/each}
-	<h2>Health Product</h2>
-	<!-- product photo roll -->
-	<div></div>
-	<!-- product photo roll -->
-</section>
+	<section>
+		<Heading4 class="lg:px- px-2 text-left">Health</Heading4>
+		<CarauselProduct item={health}></CarauselProduct>
+	</section>
 
-<section>
-	<h2>Beauty Product</h2>
-</section>
+	<section>
+		<Heading4 class="px-2 text-left lg:px-4">Beauty</Heading4>
+		<CarauselProduct item={beauty}></CarauselProduct>
+	</section>
+</div>
