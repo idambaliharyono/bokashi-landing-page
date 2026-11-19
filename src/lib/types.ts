@@ -8,7 +8,7 @@ export interface Product {
 	slug: string;
 	name: string;
 	desc: string;
-	ukuran: LabeledItem[];
+	ukuran: string;
 	ukuranMetric: string;
 	tag: string;
 	kegunaan: LabeledItem[];
@@ -18,9 +18,9 @@ export interface Product {
 	shopee: string;
 	tokopedia: string;
 	lazada: string;
-	certification: string[];
+	certification: string;
 	r2Cover: string;
-	r2Other: string[];
+	r2Other: string;
 }
 
 export type ProductSummary = Pick<Product, 'slug' | 'name' | 'tag' | 'id'> & {

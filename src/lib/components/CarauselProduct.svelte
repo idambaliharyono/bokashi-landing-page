@@ -16,7 +16,11 @@
 	<div class="carausel-track-wrapper overflow-auto">
 		<div class="carausel-track flex h-full gap-12" style="--duration: {duration}s">
 			{#each loop as item, i (i)}
-				<a href="./products/{item.slug}" class="w-xs shrink-0">
+				<a
+					href="/products/{item.slug}"
+					class="w-xs shrink-0 transition-transform
+           focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black active:scale-95"
+				>
 					<div
 						class="aspect-3/4 w-full overflow-hidden
              rounded-2xl bg-gray-100"
@@ -26,7 +30,9 @@
 							srcset={imgSet(item.cover)}
 							sizes="320px"
 							loading="lazy"
-							class="h-full w-full object-cover object-center mix-blend-multiply brightness-95 transition-transform duration-400 hover:scale-125"
+							class="h-full w-full object-cover object-center mix-blend-multiply
+              brightness-95 transition-all duration-500
+              hover:scale-125 hover:brightness-100"
 							alt={item.name}
 						/>
 					</div>
