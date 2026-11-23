@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { img, imgSet } from '$lib/image';
 
-	let { item, speed = 60 } = $props();
+	let { item, speed = 60, aspect = '3/4' } = $props();
 
 	const ITEM_WIDTH = 320;
 	const GAP = 48;
@@ -22,8 +22,9 @@
            focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black active:scale-95"
 				>
 					<div
-						class="aspect-3/4 w-full overflow-hidden
+						class=" w-full overflow-hidden
              rounded-2xl bg-gray-100"
+						style:aspect-ratio={aspect}
 					>
 						<img
 							src={img(item.cover, 800)}

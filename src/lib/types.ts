@@ -11,8 +11,8 @@ export interface Product {
 	ukuran: string;
 	ukuranMetric: string;
 	tag: string;
-	kegunaan: LabeledItem[];
-	caraPakai: LabeledItem[];
+	kegunaan: string;
+	caraPakai: string;
 	storageRecommendation: string[];
 	komposisi: string;
 	shopee: string;
