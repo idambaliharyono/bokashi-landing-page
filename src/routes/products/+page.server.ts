@@ -4,7 +4,6 @@ import { getProducts } from '$lib/server/product';
 
 export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	const products: Product[] = await getProducts(fetch);
-
 	setHeaders({ 'cache-control': 'public, max-age=300, s-maxage=3600' });
 
 	const list: ProductSummary[] = products.map((p) => ({
@@ -15,5 +14,11 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 		cover: p.r2Cover
 	}));
 
-	return { products: list };
+	// return { products: list};
+	return {
+		products: (async () => {
+			await new Promise((r) => setTimeout(r, 3000));
+			return list;
+		})()
+	};
 };

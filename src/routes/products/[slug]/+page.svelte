@@ -49,6 +49,14 @@
 		{ url: product.tokopedia, image: tokopediaLogo },
 		{ url: product.lazada, image: lazadaLogo }
 	]);
+
+	const certGridCols = $derived(
+		certification.length >= 3
+			? 'grid-cols-3'
+			: certification.length === 2
+				? 'grid-cols-2'
+				: 'grid-cols-1'
+	);
 </script>
 
 <section class="mx-2 mt-2 flex flex-col lg:mx-20 lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-4">
@@ -72,8 +80,8 @@
 	<!-- mobile carausel -->
 
 	<!-- Paragraph product info -->
-	<div class="rounded-2xl bg-primary p-6 text-white">
-		<Heading3 class="text-left font-bold text-white">{product.name}</Heading3>
+	<div class="rounded-2xl bg-primary p-6 text-secondary">
+		<Heading3 class="text-left font-bold text-secondary">{product.name}</Heading3>
 		<span class="text-sm">Tersedia dalam ukuran:</span>
 		{#each ukuran as u, i}
 			<span class="text-sm">{u}{i < ukuran.length - 1 ? ',' : ''} </span>
@@ -88,7 +96,7 @@
 			{product.desc}
 		</Paragraph>
 
-		<div class="my-4 flex w-fit items-center gap-4 bg-secondary px-3 py-1">
+		<div class="my-8 flex w-fit items-center gap-4 bg-secondary px-3 py-1">
 			{#each links as item}
 				<a href={item.url} class="border border-red-50">
 					<img src={item.image} alt="" class="h-auto w-6" />
@@ -96,35 +104,39 @@
 			{/each}
 		</div>
 		<div>
-			<Paragraph class="font-bold text-white">Kegunaan:</Paragraph>
+			<Paragraph class="font-bold text-secondary">KEGUNAAN:</Paragraph>
 			{#each kegunaan as item}
 				<ul>
 					<li class="list-item">- {item}</li>
 				</ul>
 			{/each}
-			<!-- <Paragraph class="font-light text-white">{product.kegunaan}</Paragraph> -->
+			<!-- <Paragraph class="font-light text-secondary">{product.kegunaan}</Paragraph> -->
 		</div>
-		<div class="my-4">
-			<Paragraph class=" font-bold text-white">Cara pakai:</Paragraph>
-			{#each caraPakai as item}
-				<ul>
-					<li class="list-item">- {item}</li>
-				</ul>
-			{/each}
-			<!-- <Paragraph class="font-light text-white">{product.kegunaan}</Paragraph> -->
+		<div class="my-8">
+			<Paragraph class=" font-bold text-secondary ">CARA PAKAI:</Paragraph>
+			<ul>
+				{#each caraPakai as item}
+					<li class="list-item">
+						{#if caraPakai.length > 1}-
+						{/if}{item}
+					</li>
+				{/each}
+			</ul>
 		</div>
 		<div class="mt-8 text-center">
-			<h3 class="-mb-2 text-xs text-secondary">KOMPOSISI:</h3>
-			{#each product.komposisi as item}
-				<span class="text-xs">{item}</span>
-			{/each}
-			<!-- <Paragraph class="font-light text-white">{product.kegunaan}</Paragraph> -->
+			<h3 class="text-xs text-secondary">KOMPOSISI:</h3>
+			<p class="leading-2">
+				{#each product.komposisi as item}
+					<span class=" text-xs">{item}</span>
+				{/each}
+			</p>
+			<!-- <Paragraph class="font-light text-secondary">{product.kegunaan}</Paragraph> -->
 		</div>
 	</div>
 
 	<!-- Paragraph product info -->
 
-	<div class="aspect-2/3 rounded-2xl bg-gray-200 xl:sticky xl:top-4 xl:self-start">
+	<div class="hidden aspect-2/3 rounded-2xl bg-gray-200 lg:sticky lg:top-37 lg:block lg:self-start">
 		<img
 			src={img(product.r2Cover, 800)}
 			srcset={imgSet(product.r2Cover)}
@@ -137,9 +149,9 @@
 	</div>
 	<!-- desktop carausel -->
 	<div
-		class="relative aspect-2/3 overflow-auto overflow-y-hidden rounded-2xl bg-gray-50
-    [scrollbar-width:none] xl:sticky xl:top-4
-    xl:self-start"
+		class="relative hidden aspect-2/3 overflow-auto overflow-y-hidden rounded-2xl bg-gray-50 [scrollbar-width:none]
+    lg:sticky lg:top-37 lg:block
+    lg:self-start"
 	>
 		<!-- button -->
 		{#if otherImg.length > 1}
@@ -183,15 +195,15 @@
 	</div>
 	<!-- desktop carausel -->
 </section>
+
 {#if certification.length > 1}
-	<section class="mx-2 lg:mx-20">
+	<section class="mx-2 mt-14 lg:mx-20">
 		<div
-			class=" mb-20 grid grid-cols-2 gap-4 rounded-xl
-      bg-primary px-5 py-2 text-center text-white lg:grid-cols-3
-    xl:rounded-2xl xl:px-8 xl:py-4"
+			class="grid {certGridCols} gap-4 rounded-xl
+      bg-primary px-5 py-2 text-center text-secondary xl:rounded-2xl xl:px-8 xl:py-4"
 		>
 			{#each certification as c}
-				<Paragraph class="text-sm  text-white xl:text-base">{c}</Paragraph>
+				<Paragraph class="text-sm  text-secondary xl:text-base">{c}</Paragraph>
 			{/each}
 		</div>
 	</section>
@@ -199,11 +211,13 @@
 
 <section>
 	<div
-		class="mx-2 mb-20 rounded-full bg-secondary px-5 py-2 text-center text-primary xl:mx-4 xl:px-8 xl:py-4"
+		class="mx-2 mt-14 mb-20 rounded-full bg-secondary px-5 py-2 text-center text-primary lg:mx-20 xl:mx-4
+    xl:px-8 xl:py-4"
 	>
-		<Paragraph class="text-sm font-bold xl:text-base"
-			>Simpan di tempat kering, sejuk, dan terlindungi dari cahaya matahari</Paragraph
-		>
+		<p class="font-bold text-primary">
+			{product.storageRecommendation ||
+				'Simpan di tempat kering, sejuk, terlindungi dari cahaya matahari langsung'}
+		</p>
 	</div>
 </section>
 

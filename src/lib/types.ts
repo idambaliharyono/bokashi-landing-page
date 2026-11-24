@@ -13,7 +13,7 @@ export interface Product {
 	tag: string;
 	kegunaan: string;
 	caraPakai: string;
-	storageRecommendation: string[];
+	storageRecommendation: string;
 	komposisi: string;
 	shopee: string;
 	tokopedia: string;
